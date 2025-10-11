@@ -34,3 +34,20 @@ Both variables showed similar patterns. Upon further research, we found that NAF
 Revenue was aggregated by Location to calculate the average revenue per site. The results were sorted by mean revenue to highlight the Top 10 locations with the highest average slot machine revenue. The plot shows that the top three Marine bases have significantly higher mean slot machine revenue compared to other Army bases, suggesting a potential concentration of gambling activity at these locations.
 
 ## 3. Monthly Revenue Trend
+
+
+# Data Cleaning Steps - Navy revenue
+Presenting the distribution and yearly trends of slot machine revenue across countries and individual installations.
+
+# Visualization Findings - Navy revenue
+
+## 1.Average Slot Revenue per Installation by Country (FY18–FY24)
+The bar chart illustrates the average slot machine revenue per installation across different countries. Among all, Japan stands out significantly, generating the highest average revenue per installation.
+This exceptional figure may suggest that U.S. military bases in Japan experience higher engagement or potential gambling-related concerns compared to other overseas locations.
+
+## 2.Slot Machine Revenue by Installation (FY18–FY24)
+The line chart further breaks down slot machine revenue trends by individual installations.
+The analysis clearly identifies Yokosuka and Sasebo, both located in Japan, as the top two installations with the highest slot revenues.
+This finding aligns with the previous chart, reinforcing the observation that Japanese-based installations are key contributors to overall slot revenue among U.S. overseas bases.
+
+
