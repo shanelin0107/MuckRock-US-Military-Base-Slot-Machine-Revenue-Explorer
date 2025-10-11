@@ -20,7 +20,7 @@ For columns representing months or dates, the following cleaning logic is used:
 ---
 
 
-# Visualization Findings
+# Visualization Findings - Marine revenue
 we draw three plot to explore the relationship between revenue, army base loation and time.
 
 ## 1. Distribution of Numerical Columns
