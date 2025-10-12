@@ -34,6 +34,15 @@ Both variables showed similar patterns. Upon further research, we found that NAF
 Revenue was aggregated by Location to calculate the average revenue per site. The results were sorted by mean revenue to highlight the Top 10 locations with the highest average slot machine revenue. The plot shows that the top three Marine bases have significantly higher mean slot machine revenue compared to other Army bases, suggesting a potential concentration of gambling activity at these locations.
 
 ## 3. Monthly Revenue Trend
+This analysis helps us understand the time-based dynamics of gambling engagement across all military bases. We examined two subgroups:
+- The mean monthly revenue across all locations.
+- The mean monthly revenue across the Top 10 highest-revenue locations.
+
+Two plots were generated:
+- The first shows how average revenue changes over time
+- The second aggregates revenue by month (across different years) to identify which months generally have higher average revenue.
+
+The results indicate that the Top 10 bases do not differ significantly from other bases in their overall and seasonal trends. Both gambling activity among soldiers dropped sharply in 2020, likely due to the COVID-19 pandemic. There is a clear seasonal pattern — soldiers tend to gamble more in March and May, a trend that warrants further investigation.
 
 
 # Data Cleaning Steps - Navy revenue
