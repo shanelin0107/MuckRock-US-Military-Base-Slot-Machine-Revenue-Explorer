@@ -44,8 +44,12 @@ Two plots were generated:
 
 The results indicate that the Top 10 bases do not differ significantly from other bases in their overall and seasonal trends. Both gambling activity among soldiers dropped sharply in 2020, likely due to the COVID-19 pandemic. There is a clear seasonal pattern — soldiers tend to gamble more in March and May, a trend that warrants further investigation.
 
+---
 
-# Data Cleaning Steps - Navy revenue
+# Data - Navy revenue
+We divided the Navy revenue data into two CSV files. The first file, Navy Revenue Table, presents the revenue by country and installation from FY18 to FY24. The second file, Monthly Revenue Report, provides a detailed breakdown of monthly revenues for each installation.
+
+# Visualization Findings- Navy revenue
 Presenting the distribution and yearly trends of slot machine revenue across countries and individual installations.
 
 # Visualization Findings - Navy revenue
