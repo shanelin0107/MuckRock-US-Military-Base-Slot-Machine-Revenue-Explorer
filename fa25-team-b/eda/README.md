@@ -52,8 +52,6 @@ We divided the Navy revenue data into two CSV files. The first file, Navy Revenu
 # Visualization Findings- Navy revenue
 Presenting the distribution and yearly trends of slot machine revenue across countries and individual installations.
 
-# Visualization Findings - Navy revenue
-
 ## 1.Average Slot Revenue per Installation by Country (FY18–FY24)
 The bar chart illustrates the average slot machine revenue per installation across different countries. Among all, Japan stands out significantly, generating the highest average revenue per installation.
 This exceptional figure may suggest that U.S. military bases in Japan experience higher engagement or potential gambling-related concerns compared to other overseas locations.
