@@ -48,11 +48,26 @@ The results indicate that the Top 10 bases do not differ significantly from othe
 
 ---
 
-# Data - Navy revenue
-We divided the Navy revenue data into two CSV files. The first file, Navy Revenue Table, presents the revenue by country and installation from FY18 to FY24. The second file, Monthly Revenue Report, provides a detailed breakdown of monthly revenues for each installation.
 
 ## Visualization Findings- Navy revenue
 Presenting the distribution and yearly trends of slot machine revenue across countries and individual installations.
+
+# Data - Navy revenue report 1
+
+### 1. Year-wise Total Revenue (FY16–FY22)
+
+The bar charts display total Slot Machine Revenue and NAFI Reimbursements by fiscal year. Both categories show a generally increasing trend over time, with FY22 recording the highest overall revenue. Although slight fluctuations occur during intermediate years, the overall pattern suggests consistent financial growth and operational expansion across the Navy’s global network.
+
+### 2. Country-wise Total Revenue (FY16–FY22)
+
+The comparative horizontal bar chart highlights striking regional disparities. Japan dominates both Slot and NAFI revenues, far surpassing all other countries combined. Italy and Spain rank next but at much lower levels, while Korea, Malaysia, and Greece contribute marginally. This distribution emphasizes Japan’s crucial role in sustaining the overall revenue structure of the Navy’s overseas programs.
+
+### 3. Time-Trend Analysis (FY16–FY22)
+
+The line charts trace revenue trends by country across fiscal years. Japan consistently maintains the highest revenue levels and exhibits steady growth after a temporary decline around FY20. Italy and Spain demonstrate moderate and stable contributions, while other countries remain comparatively low. These trends collectively illustrate Japan’s sustained dominance and the gradual strengthening of key regional installations over the observed period.
+
+# Data - Navy revenue report 2
+We divided the Navy revenue data into two CSV files. The first file, Navy Revenue Table, presents the revenue by country and installation from FY18 to FY24. The second file, Monthly Revenue Report, provides a detailed breakdown of monthly revenues for each installation.
 
 ### 1.Average Slot Revenue per Installation by Country (FY18–FY24)
 The bar chart illustrates the average slot machine revenue per installation across different countries. Among all, Japan stands out significantly, generating the highest average revenue per installation.
@@ -62,5 +77,90 @@ This exceptional figure may suggest that U.S. military bases in Japan experience
 The line chart further breaks down slot machine revenue trends by individual installations.
 The analysis clearly identifies Yokosuka and Sasebo, both located in Japan, as the top two installations with the highest slot revenues.
 This finding aligns with the previous chart, reinforcing the observation that Japanese-based installations are key contributors to overall slot revenue among U.S. overseas bases.
+
+---
+
+# Data - Financial Statements
+The Financial Statements data can be broken up into four sections
+ - Overall Asset/Liability Balance for a given month
+ - Actual vs Budgeted Operating Results for a given month 
+ - Operating Revenues by Branch of Service over several previous months
+ - Revenue by Base for a given month (as well as YTD revenue)
+
+Unfortunately, due to difficulties in finding proper tools to parse this data, I only have access to a partial  Overall Asset/Liability Balance for this data analysis. This will limit the ability to perform more complex analysis of the full dataset, but there are still insights that can be gleaned
+
+### 1. Total Operational Cash On Hand Compared To Total Equity
+This line chart compares the monthly Operational Cash compared to the total Equity of the Army Recreation Machine Program. Prior to 2022, Cash was recorded under a single line item, but after this it is split into Restricted Cash and Operational Cash. This analysis shows that while cash steadily grew from 2020 until the beginning of 2023, it has downturned sharply due to the complete depletion of Restricted Cash, which began to decline starting in 2022 and sharpened in 2023. As well, it is notable that the total equity has remained at the exact same value (down to the cent) since 10/31/2021. This is not a parsing error, as review of the original dataset confirms all entries past this point have the *exact* same value.
+
+### 2. Total Asset Value Compared To Assets - Deprecation (Combined Asset Value)
+This line chart displays the trend of  Asset Values in comparison to the Combined Asset value, which takes into account asset deprecation. Combined asset values steadily declined from ~$16 million in 2020 to under $7 million at the end of 2022, before shooting up to $20 million by April of 2024, due in part to both a decrease in deprecation alongside an increase in asset value.
+
+
+
+
+# Data - FY2024 Asset Report (EGMs by Region, Service)
+
+## Data Extraction & Cleaning Steps - FY2024 Asset Report
+
+### 1. Data Extraction
+The “EGMs by Region, Service” table was extracted directly from the **FY2024 Asset Report (PDF)** using a Python-based PDF parsing pipeline.  
+This process involved:
+- Identifying and isolating the **EGMs by Region, Service** section from each monthly page.
+- Capturing tabular structures using `pdfplumber` and converting them into a structured CSV format.
+- Automatically extracting and standardizing the `Period`, `Region`, `Army`, `Navy`, `Marine_Corps`, `Airforce`, and `Total` columns.
+
+### 2. Data Cleaning
+After extraction, the dataset underwent cleaning to ensure analytical consistency:
+- Removed all rows labeled **“Total”** under the `Region` column to avoid double-counting.
+- Normalized numeric values by removing commas and converting them to float.
+- Standardized month and year information into integer columns (`Month`, `Year`).
+- Sorted the final dataset chronologically by `Year`, `Month`, and `Region`.
+
+---
+
+## Visualization Findings - FY2024 Asset Report
+
+### 1. Share of EGMs by Region
+A pie chart was generated to visualize the share of EGMs across **Europe**, **Japan**, and **Korea** in FY2024.  
+The analysis shows:
+- **Europe** holds the largest share of EGMs (**39.4%**).  
+- **Japan** follows closely with **37.8%**.  
+- **Korea** accounts for **22.8%** of total EGMs.  
+
+This distribution indicates that Europe remains the most significant operational area for EGMs, while Japan continues to play a comparably strong role in overall slot machine operations.
+
+### 2. Overall EGM Composition by Service
+A second pie chart summarizes the overall EGM composition by military branch.  
+The results show:
+- **Army** dominates with **55.7%** of total EGMs.  
+- **Navy** accounts for **25.4%**.  
+- **Marine Corps** contributes **19.0%**.  
+- **Airforce** has no recorded EGMs (0%).  
+
+This finding highlights that the **Army operates more than half of all EGMs**, making it the primary service managing gambling operations across regions.
+
+### 3. EGM Distribution by Service and Region
+A grouped bar chart compares EGM counts by service branch across Europe, Japan, and Korea.  
+The analysis reveals that:
+- **Europe** leads in Army-operated EGMs.  
+- **Japan** shows the strongest presence of Marine Corps EGMs.  
+- **Korea** maintains moderate Army dominance but fewer Navy installations.  
+
+These variations suggest region-specific differences in the allocation and management of EGMs among the military branches.
+
+### 4. Monthly EGM Trend by Region
+A line chart displays monthly changes in EGM totals throughout FY2024.  
+Key observations include:
+- **Europe’s** EGM totals remain consistently higher than other regions across all months.  
+- **Japan’s** EGM count stays relatively stable with minimal fluctuation.  
+- **Korea’s** EGM levels show a slight decline during mid-year but recover toward year-end.  
+
+This pattern suggests stable EGM operations overall, with **Europe serving as the steady core region** of slot machine activity.
+
+Through the analysis of the **EGMs by Region, Service** dataset from the **FY2024 Asset Report**,  
+it is evident that the **Army and Europe** dominate the global distribution of EGMs.  
+The findings imply a centralized concentration of gambling operations within European installations  
+and a consistently strong presence in Japan.  
+These insights help illuminate operational priorities and regional engagement trends across military branches.
 
 
