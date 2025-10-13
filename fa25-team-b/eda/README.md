@@ -64,3 +64,73 @@ The analysis clearly identifies Yokosuka and Sasebo, both located in Japan, as t
 This finding aligns with the previous chart, reinforcing the observation that Japanese-based installations are key contributors to overall slot revenue among U.S. overseas bases.
 
 
+
+# Data - FY2024 Asset Report (EGMs by Region, Service)
+
+## Data Extraction & Cleaning Steps - FY2024 Asset Report
+
+### 1. Data Extraction
+The “EGMs by Region, Service” table was extracted directly from the **FY2024 Asset Report (PDF)** using a Python-based PDF parsing pipeline.  
+This process involved:
+- Identifying and isolating the **EGMs by Region, Service** section from each monthly page.
+- Capturing tabular structures using `pdfplumber` and converting them into a structured CSV format.
+- Automatically extracting and standardizing the `Period`, `Region`, `Army`, `Navy`, `Marine_Corps`, `Airforce`, and `Total` columns.
+
+### 2. Data Cleaning
+After extraction, the dataset underwent cleaning to ensure analytical consistency:
+- Removed all rows labeled **“Total”** under the `Region` column to avoid double-counting.
+- Normalized numeric values by removing commas and converting them to float.
+- Standardized month and year information into integer columns (`Month`, `Year`).
+- Sorted the final dataset chronologically by `Year`, `Month`, and `Region`.
+
+---
+
+## Visualization Findings - FY2024 Asset Report
+
+### 1. Share of EGMs by Region
+A pie chart was generated to visualize the share of EGMs across **Europe**, **Japan**, and **Korea** in FY2024.  
+The analysis shows:
+- **Europe** holds the largest share of EGMs (**39.4%**).  
+- **Japan** follows closely with **37.8%**.  
+- **Korea** accounts for **22.8%** of total EGMs.  
+
+This distribution indicates that Europe remains the most significant operational area for EGMs, while Japan continues to play a comparably strong role in overall slot machine operations.
+
+### 2. Overall EGM Composition by Service
+A second pie chart summarizes the overall EGM composition by military branch.  
+The results show:
+- **Army** dominates with **55.7%** of total EGMs.  
+- **Navy** accounts for **25.4%**.  
+- **Marine Corps** contributes **19.0%**.  
+- **Airforce** has no recorded EGMs (0%).  
+
+This finding highlights that the **Army operates more than half of all EGMs**, making it the primary service managing gambling operations across regions.
+
+### 3. EGM Distribution by Service and Region
+A grouped bar chart compares EGM counts by service branch across Europe, Japan, and Korea.  
+The analysis reveals that:
+- **Europe** leads in Army-operated EGMs.  
+- **Japan** shows the strongest presence of Marine Corps EGMs.  
+- **Korea** maintains moderate Army dominance but fewer Navy installations.  
+
+These variations suggest region-specific differences in the allocation and management of EGMs among the military branches.
+
+### 4. Monthly EGM Trend by Region
+A line chart displays monthly changes in EGM totals throughout FY2024.  
+Key observations include:
+- **Europe’s** EGM totals remain consistently higher than other regions across all months.  
+- **Japan’s** EGM count stays relatively stable with minimal fluctuation.  
+- **Korea’s** EGM levels show a slight decline during mid-year but recover toward year-end.  
+
+This pattern suggests stable EGM operations overall, with **Europe serving as the steady core region** of slot machine activity.
+
+---
+
+## Key Insight Summary
+Through the analysis of the **EGMs by Region, Service** dataset from the **FY2024 Asset Report**,  
+it is evident that the **Army and Europe** dominate the global distribution of EGMs.  
+The findings imply a centralized concentration of gambling operations within European installations  
+and a consistently strong presence in Japan.  
+These insights help illuminate operational priorities and regional engagement trends across military branches.
+
+
