@@ -54,6 +54,18 @@ We divided the Navy revenue data into two CSV files. The first file, Navy Revenu
 ## Visualization Findings- Navy revenue
 Presenting the distribution and yearly trends of slot machine revenue across countries and individual installations.
 
+### 1. Year-wise Total Revenue (FY16–FY22)
+
+The bar charts display total Slot Machine Revenue and NAFI Reimbursements by fiscal year. Both categories show a generally increasing trend over time, with FY22 recording the highest overall revenue. Although slight fluctuations occur during intermediate years, the overall pattern suggests consistent financial growth and operational expansion across the Navy’s global network.
+
+### 2. Country-wise Total Revenue (FY16–FY22)
+
+The comparative horizontal bar chart highlights striking regional disparities. Japan dominates both Slot and NAFI revenues, far surpassing all other countries combined. Italy and Spain rank next but at much lower levels, while Korea, Malaysia, and Greece contribute marginally. This distribution emphasizes Japan’s crucial role in sustaining the overall revenue structure of the Navy’s overseas programs.
+
+### 3. Time-Trend Analysis (FY16–FY22)
+
+The line charts trace revenue trends by country across fiscal years. Japan consistently maintains the highest revenue levels and exhibits steady growth after a temporary decline around FY20. Italy and Spain demonstrate moderate and stable contributions, while other countries remain comparatively low. These trends collectively illustrate Japan’s sustained dominance and the gradual strengthening of key regional installations over the observed period.
+
 ### 1.Average Slot Revenue per Installation by Country (FY18–FY24)
 The bar chart illustrates the average slot machine revenue per installation across different countries. Among all, Japan stands out significantly, generating the highest average revenue per installation.
 This exceptional figure may suggest that U.S. military bases in Japan experience higher engagement or potential gambling-related concerns compared to other overseas locations.
