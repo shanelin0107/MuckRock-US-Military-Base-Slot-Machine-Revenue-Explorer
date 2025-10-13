@@ -124,9 +124,6 @@ Key observations include:
 
 This pattern suggests stable EGM operations overall, with **Europe serving as the steady core region** of slot machine activity.
 
----
-
-## Key Insight Summary
 Through the analysis of the **EGMs by Region, Service** dataset from the **FY2024 Asset Report**,  
 it is evident that the **Army and Europe** dominate the global distribution of EGMs.  
 The findings imply a centralized concentration of gambling operations within European installations  
