@@ -63,4 +63,22 @@ The line chart further breaks down slot machine revenue trends by individual ins
 The analysis clearly identifies Yokosuka and Sasebo, both located in Japan, as the top two installations with the highest slot revenues.
 This finding aligns with the previous chart, reinforcing the observation that Japanese-based installations are key contributors to overall slot revenue among U.S. overseas bases.
 
+---
+
+# Data - Financial Statements
+The Financial Statements data can be broken up into four sections
+ - Overall Asset/Liability Balance for a given month
+ - Actual vs Budgeted Operating Results for a given month 
+ - Operating Revenues by Branch of Service over several previous months
+ - Revenue by Base for a given month (as well as YTD revenue)
+
+Unfortunately, due to difficulties in finding proper tools to parse this data, I only have access to a partial  Overall Asset/Liability Balance for this data analysis. This will limit the ability to perform more complex analysis of the full dataset, but there are still insights that can be gleaned
+
+### 1. Total Operational Cash On Hand Compared To Total Equity
+This line chart compares the monthly Operational Cash compared to the total Equity of the Amry Recreation Machine Program. Prior to 2022, Cash was recorded under a single line item, but after this it is split into Restricted Cash and Operational Cash. This analysis shows that while cash steadily grew from 2020 until the beginning of 2023, it has downturned sharply in due to the complete depletion of Restricted Cash, which began to decline starting in 2022 and sharpened in 2023. As well, it is notable that the total equity has remained at the exact same value (down to the cent) since 10/31/2021. This is not a parsing error, as review of the original dataset confirms all entries past this point have the *exact* same value.
+
+### 2. Total Asset Value Compared To Assets - Deprecation (Combined Asset Value)
+This line chart displays the trend of  Asset Values in comparison to the Combined Asset value, which takes into account asset deprecation. Combined asset values steadily declined from ~$16 million in 2020 to under $7 million at the end of 2022, before shooting up to $20 million by April of 2024, due in part to both a decrease in deprecation alongside an increase in asset value.
+
+
 
