@@ -48,11 +48,11 @@ The results indicate that the Top 10 bases do not differ significantly from othe
 
 ---
 
-# Data - Navy revenue
-We divided the Navy revenue data into two CSV files. The first file, Navy Revenue Table, presents the revenue by country and installation from FY18 to FY24. The second file, Monthly Revenue Report, provides a detailed breakdown of monthly revenues for each installation.
 
 ## Visualization Findings- Navy revenue
 Presenting the distribution and yearly trends of slot machine revenue across countries and individual installations.
+
+# Data - Navy revenue report 1
 
 ### 1. Year-wise Total Revenue (FY16–FY22)
 
@@ -65,6 +65,9 @@ The comparative horizontal bar chart highlights striking regional disparities. J
 ### 3. Time-Trend Analysis (FY16–FY22)
 
 The line charts trace revenue trends by country across fiscal years. Japan consistently maintains the highest revenue levels and exhibits steady growth after a temporary decline around FY20. Italy and Spain demonstrate moderate and stable contributions, while other countries remain comparatively low. These trends collectively illustrate Japan’s sustained dominance and the gradual strengthening of key regional installations over the observed period.
+
+# Data - Navy revenue report 2
+We divided the Navy revenue data into two CSV files. The first file, Navy Revenue Table, presents the revenue by country and installation from FY18 to FY24. The second file, Monthly Revenue Report, provides a detailed breakdown of monthly revenues for each installation.
 
 ### 1.Average Slot Revenue per Installation by Country (FY18–FY24)
 The bar chart illustrates the average slot machine revenue per installation across different countries. Among all, Japan stands out significantly, generating the highest average revenue per installation.
