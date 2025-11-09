@@ -9,9 +9,9 @@ import re
 import csv
 
 ## INSTRUCTIONS FOR USAGE
-##  1. Set path to the folder where you are storing the Financial Statements.pdf file
-##  2. Download the FinancialTexts.txt file and put it in the same folder (this parser uses a Linux based text extraction
-##      tool which requires a custom install, so I've provided the post-extraction text to be read in directly)
+##  1. Set path to the folder where you want to store the output of this parser
+##  2. Download the FinancialTexts.txt file and put it said folder (this parser uses a Linux based text extraction
+##      tool which requires a custom install, so I've provided the post-extraction text to be read in directly instead of the pdf)
 ##  3. Run the file, the CSVs will be created in the same folder.
 
 path = r"C:\Users\Cameron\Documents\muckrock" 
