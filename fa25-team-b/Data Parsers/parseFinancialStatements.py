@@ -8,13 +8,11 @@ import numpy as np
 import re
 import csv
 
-path = r"C:\Users\Cameron\Documents\muckrock"
-pdf = r"\Financial Statements.pdf"
+#path = r"C:\Users\Cameron\Documents\muckrock"
+path = r"C:\Users\Cameron\Downloads\mucktest"
+#pdf = r"\Financial Statements.pdf"
+pdf = r"\FSTEST-pages-1-ocr.pdf"
 csvs = [r'\FinancialStatement.csv', r'\ActualVsBudget.csv', r'\BranchBudget.csv', r'\GamingRevenue.csv']
-
-def getOCRText(pdf: str, idx: int) -> str:
-    #TODO
-    return pdf
 
 #Getting page type from title
 def determinePageType(page: str) -> str:
@@ -71,6 +69,7 @@ def numCleanup(numStr: str) -> str:
 
     removeSpace = re.sub(r'[\s+]', '', numStr.strip()) #remove spaces
     badChars = re.sub(r'[;,._·\"\']', '', removeSpace) #remove characters that we don't want (add back in decimal later)
+    print(numStr)
     if badChars[-1] == '-': #we need to remove erroneous characters so we can check if minus is in expected place
         trailingMinus = '-' #save trailing minus before we erase all instances of character
     removeMinus = re.sub(r'[-]', '', badChars) #now we can remove all minus instances
@@ -271,22 +270,20 @@ def runProcess(pdf: str) -> None:
                 "None" : []} #dict storing pages by type
 
     #read in PDF
-    #text = subprocess.check_output(['pdftotext', '-layout', path + pdf, '-']).decode('utf-8')
-    with open(path + r'\FinancialTexts.txt') as f:
-        text = f.read()
+    text = subprocess.check_output(['pdftotext', '-layout', path + pdf, '-']).decode('utf-8')
+    #with open(path + r'\FinancialTexts.txt') as f:
+    #    text = f.read()
 
     pages = text.split('\f') #split into pages
 
     for i in range(len(pages)):
-        if len(pages[i]) == 0: #if the page does not have text to parse, we must use OCR to get data
-            pages[i] = getOCRText(pdf, i)
-
-        pageType[determinePageType(pages[i])].append(pages[i]) #otherwise append page to its list in dict
+        if len(pages[i]) != 0: #if the page does not have text to parse, we must use OCR to get data
+            pageType[determinePageType(pages[i])].append(pages[i]) #otherwise append page to its list in dict
 
     #call to parse each type of page
-    #parseFinancials(pageType["FinancialStatement"])
-    #parseTotalBudget(pageType["OperatingBudget"])
-    #parseBranchBudget(pageType["OperatingBranchBudget"])
+    parseFinancials(pageType["FinancialStatement"])
+    parseTotalBudget(pageType["OperatingBudget"])
+    parseBranchBudget(pageType["OperatingBranchBudget"])
     parseRevenue(pageType["RevenueStatement"])
 
 runProcess(pdf)
