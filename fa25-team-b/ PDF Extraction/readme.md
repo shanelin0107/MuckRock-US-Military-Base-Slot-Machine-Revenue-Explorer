@@ -9,4 +9,13 @@
 
 <h4 align="center">A template for the project readme file. </h4> <change to repo short description>
 
-# 1. Data Extraction
+# 1. Project Overview
+
+# 2. Methodology
+
+# 3. Data Extraction Workflow
+## 3.1. Asset Report
+## 3.2. Marine Revenue
+## 3.3. Navy Revenue Report
+## 3.4. Financial Statements
+## 3.5. District Revenue
