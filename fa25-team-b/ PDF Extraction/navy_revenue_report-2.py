@@ -23,7 +23,7 @@ import pandas as pd
 # =========================================================
 # CONFIG (edit PDF_PATH if needed)
 # =========================================================
-PDF_PATH = Path(r"D:\venv\ds701\Navy Report\Navy Revenue Report FY20-FY24-1.pdf")
+PDF_PATH = Path(r"D:\venv\ds701\Navy Report\Navy Revenue Report FY20-FY24-2.pdf")
 OUT_DIR  = PDF_PATH.parent
 
 # =========================================================
@@ -498,3 +498,4 @@ if __name__ == "__main__":
     print(f" - NAFI Reimbursements:  {nafi_out}")
     print(f" - Monthly Summary:      {monthly_out}")
     print(f"   Rows: {n_rows} | Installations: {n_inst}")
+
