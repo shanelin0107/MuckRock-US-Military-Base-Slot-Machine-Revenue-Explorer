@@ -197,7 +197,7 @@ The resulting CSV follows this schema:
 ### Reproducibility
 Run the following notebook to reproduce extraction:
 ```bash
-notebooks/parse_district_revenues.ipynb
+PDF Extraction/District_Revenues_FY20_FY24.ipynb
 ```
 Steps performed:
 1. Mount Google Drive (if running in Colab).
