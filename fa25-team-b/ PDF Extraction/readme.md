@@ -41,6 +41,68 @@ pip install -r requirements.txt
 **4. Exported CSVs will appear in the output folder and are aligned for merging with other fiscal years.**
 
 ## 1.2. Marine Revenue
+`Marine_Revenue_FY20_FY24.ipynb` uses **`pdfplumber`** to extract structured tables from the **Marine_Revenue_FY20–FY24.pdf** report into clean CSV files for downstream analysis or upload to Datasette. The notebook automates the end-to-end process of parsing,  Its main workflow includes:
+
+-  **Table Extraction**: Automatically detects and extracts table structures page by page.
+
+-  **Data Cleaning & Alignment**: Fixes common OCR and layout issues such as misaligned columns, inconsistent spacing, and merged rows.
+
+-  **Output Generation**: Produces a detailed CSV where each row corresponds to a standardized, structured data record.
+
+>  **Default Output Columns:**
+
+>  `Loc #`, `Location`, `Month`, `Revenue`, `NAFI Amt`, `Annual Revenue`, `Annual NAFI`
+
+
+### Functional Features
+
+-  **Adjustable Extraction Parameters**
+
+Fine-tune thresholds like `BASE_Y_TOL`, `BASE_X_JOIN`, and `BASE_GAP_RATIO` to handle varying table layouts and line spacing. Apply subtle left-shifts (e.g., `BASE_LEFT_SHIFT_MONTH`, `BASE_LEFT_SHIFT_REVENUE`) to align misparsed text into the correct columns.
+| Parameter | Description |
+|------------|-------------|
+| `BASE_Y_TOL` | Vertical merge tolerance for row alignment |
+| `BASE_X_JOIN` | Horizontal character join tolerance |
+| `BASE_GAP_RATIO` | Whitespace threshold for smart joins |
+| `BASE_EDGE_PAD` | Extra padding around column cut lines |
+| `BASE_LEFT_SHIFT_MONTH` / `BASE_LEFT_SHIFT_REVENUE` | Pixel-level left correction for specific columns |
+| `BASE_DROP_MIN` | Minimum number of non-empty columns to keep a row |
+
+ 
+-  **Page-Specific Overrides**
+
+To handle problematic pages, use the `SPECIAL_PARAMS` dictionary to define custom parameter sets for individual pages that deviate from the standard layout.
+  
+
+-  **Clean Filtering & Validation**
+
+Automatically removes rows with too few non-empty fields (`BASE_DROP_MIN`) to maintain data integrity and prevent inclusion of noise.
+
+### Output Description
+**File name:** 
+`Marine_Revenue_FY20-FY24_summary table.csv`
+| Column              | Description                                                  |
+| -------------------- | ------------------------------------------------------------ |
+| `Page`              | Actual page number from the PDF (1-based)                    |
+| `Country`           | Country name (normalized, e.g., `Japan`, `Korea`)            |
+| `Installation`      | Installation name (normalized, e.g., `Camp Fuji`, `Iwakuni`) |
+| `FY16`              | Monetary value converted to numeric (`$`, `,`, `( )` handled) |
+| `FY17`              | Same as above                                                |
+| `FY18`              | Same as above                                                |
+| `FY19`              | Same as above                                                |
+| `FY20 thru SEP`     | Same as above                                                |
+| `Annualized FY20`   | Same as above                                                |
+   
+ `Marine_Revenue_FY20-FY24_detail.csv`
+| Column | Description |
+|---------|-------------|
+| `Loc #` | Location ID |
+| `Location` | Facility/installation name |
+| `Month` | Month label (can later be standardized to numeric month) |
+| `Revenue` | Monthly revenue |
+| `NAFI Amt` | NAFI amount |
+| `Annual Revenue` | Year-to-date total revenue |
+| `Annual NAFI` | Year-to-date total NAFI |
 
 ## 1.3. Navy Revenue Report
 We divided the Navy revenue report into two parts. The first part is the revenue and reimbursement summary, which aggregates installation-level revenue by country from FY16 to FY24. The second part is the Navy_Revenue_Report_monthly_summary.csv, a detailed monthly breakdown derived from the summary data that captures installation-level trends and temporal fluctuations across fiscal years.
