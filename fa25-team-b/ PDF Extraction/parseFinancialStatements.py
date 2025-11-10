@@ -8,6 +8,9 @@ import numpy as np
 import re
 import csv
 
+## FinancialTexts.txt is located at this drive path (which is linked in the README)
+##  - MuckRock: US Military Base Slot Machine Revenue Explorer\Team B\TeamB_Exported_Data\FinancialStatements
+
 ## INSTRUCTIONS FOR USAGE
 ##  1. Set path to the folder where you want to store the output of this parser
 ##  2. Download the FinancialTexts.txt file and put it said folder (this parser uses a Linux based text extraction
