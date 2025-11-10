@@ -169,6 +169,41 @@ Additional development work focused on standardizing the Navy Revenue extraction
 ## 1.4. Financial Statements
 The Financial Statements pdf required a bit of expirimentation for both OCR tools as well as formatted text extraction. Due to the size of the document, some extraction libraries and most online tools for OCR would not process the file. For text extraction, we ended up using poppler-utils, which had the best balance between quality of the table formatting during extraction alongside time to extract. For OCR, we initially tried using python libraries, but none worked particularly well or quickly. To solve this, we ended up splitting the document into chunks, running them through Adobe Express's OCR tool, then recombining them into one pdf. This was a successful approach, and the rest of the work done was in cleaning minor issues in extraction/formatting before loading data into our CSV files.
 ## 1.5. District Revenue
+This module focuses on parsing and structuring revenue data from the **_District Revenues FY20–FY24.pdf_** document, one of the most complex ARMP source files due to its inconsistent table layouts and mixed fiscal formats across pages.
+
+### Extraction Summary
+Data were extracted using **[PyMuPDF (`fitz`)](https://pymupdf.readthedocs.io/en/latest/)** to precisely capture text positions and reconstruct multi-page tables.
+
+Key parsing logic includes:
+- **Coordinate-based region filtering** : restricted to pages where the layout contains fiscal-year headers (FY20–FY24) and monetary values aligned in consistent columns.  
+- **Regex pattern matching** : isolates *Country / Installation* blocks and detects table breaks between regions.  
+- **Dynamic page filtering** : only pages with revenue tables (excluding summary or memo text) were processed to reduce noise.  
+- **Normalization pipeline** : cleans monetary fields (`$, commas, spaces`), unifies fiscal-year columns, and merges split multi-line installation names.
+
+### Output & Structure
+The resulting CSV follows this schema:
+
+| Column | Description |
+|:--|:--|
+| `Service` | Military branch (Army, Navy, Marine Corps) |
+| `Category` | Revenue or Reimbursement |
+| `Region` | Region label extracted from header |
+| `Base` | Base name |
+| `Location` | Facility name |
+| `Month` | Month label |
+| `Year` | Fiscal Year label |
+| `Amount` | Monthly Revenue figures (USD) |
+
+### Reproducibility
+Run the following notebook to reproduce extraction:
+```bash
+notebooks/parse_district_revenues.ipynb
+```
+Steps performed:
+1. Mount Google Drive (if running in Colab).
+2. Load the raw PDF from /content/drive/MyDrive/District Revenues FY20–FY24.pdf.
+3. Apply PyMuPDF-based text-block filtering.
+4. Save the structured CSV to /content/drive/MyDrive/District_Revenue_filtered_FY20-FY24_final.csv.
 
 ## 1.6. Revenue Comparison File
  
