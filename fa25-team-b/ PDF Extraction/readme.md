@@ -12,7 +12,7 @@
 # 1. Detailed Data Extraction Procedure
 ## 1.1. Asset Report
 
-**FY2021 Asset Report**
+### FY2021 Asset Report
 The FY2021 Asset Report data has been fully extracted and cleaned for analysis. Unlike FY2020, FY2022, and FY2023, the FY2021 report contains several COVID-specific cells and temporary reporting categories, which required custom parsing and structural normalization during extraction.
 
 The extraction notebook generates the following tables:
@@ -26,19 +26,19 @@ The extraction notebook generates the following tables:
 
 Data was parsed from the PDF using Camelot and Tabula, then cleaned with Pandas. Irregular headers, merged cells, and COVID-specific fields were standardized to match extract formats from other fiscal years.
 
-### Setup Instructions
+**Setup Instructions** 
 
 Before starting the notebook, ensure you have the correct Python environment configured.
 
-**1. Open FY2021_Asset_Report_Extraction.ipynb**
+*1. Open FY2021_Asset_Report_Extraction.ipynb*
 
-**2. Install Required Dependencies**
+*2. Install Required Dependencies*
 ```bash
 pip install -r requirements.txt
 ```
-**3. Run the notebook cells sequentially to extract and standardize tables.**
+*3. Run the notebook cells sequentially to extract and standardize tables.*
 
-**4. Exported CSVs will appear in the output folder and are aligned for merging with other fiscal years.**
+*4. Exported CSVs will appear in the output folder and are aligned for merging with other fiscal years.*
 
 ## 1.2. Marine Revenue
 `Marine_Revenue_FY20_FY24.ipynb` uses **`pdfplumber`** to extract structured tables from the **Marine_Revenue_FY20–FY24.pdf** report into clean CSV files for downstream analysis or upload to Datasette. The notebook automates the end-to-end process of parsing,  Its main workflow includes:
