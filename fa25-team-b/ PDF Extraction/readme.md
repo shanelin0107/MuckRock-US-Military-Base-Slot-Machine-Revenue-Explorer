@@ -10,7 +10,7 @@
 <h4 align="center">A template for the project readme file. </h4> <change to repo short description>
 
 # 1. Detailed Data Extraction Procedure
-### 1.1. Asset Report
+## 1.1. Asset Report
 
 **FY2021 Asset Report**
 The FY2021 Asset Report data has been fully extracted and cleaned for analysis. Unlike FY2020, FY2022, and FY2023, the FY2021 report contains several COVID-specific cells and temporary reporting categories, which required custom parsing and structural normalization during extraction.
@@ -31,6 +31,7 @@ Data was parsed from the PDF using Camelot and Tabula, then cleaned with Pandas.
 Before starting the notebook, ensure you have the correct Python environment configured.
 
 **1. Open FY2021_Asset_Report_Extraction.ipynb**
+
 **2. Install Required Dependencies**
 ```bash
 pip install -r requirements.txt
@@ -39,15 +40,15 @@ pip install -r requirements.txt
 
 **4. Exported CSVs will appear in the output folder and are aligned for merging with other fiscal years.**
 
-### 1.2. Marine Revenue
+## 1.2. Marine Revenue
 
-### 1.3. Navy Revenue Report
+## 1.3. Navy Revenue Report
 
-### 1.4. Financial Statements
+## 1.4. Financial Statements
 The Financial Statements pdf required a bit of expirimentation for both OCR tools as well as formatted text extraction. Due to the size of the document, some extraction libraries and most online tools for OCR would not process the file. For text extraction, we ended up using poppler-utils, which had the best balance between quality of the table formatting during extraction alongside time to extract. For OCR, we initially tried using python libraries, but none worked particularly well or quickly. To solve this, we ended up splitting the document into chunks, running them through Adobe Express's OCR tool, then recombining them into one pdf. This was a successful approach, and the rest of the work done was in cleaning minor issues in extraction/formatting before loading data into our CSV files.
-### 1.5. District Revenue
+## 1.5. District Revenue
 
-### 1.6. Revenue Comparison File
+## 1.6. Revenue Comparison File
  
 The Revenue Comparison file required a highly manual extraction process due to the complexity and inconsistency of the original document. Many pages contained multiple tables with varying formats, visual layouts, and informational elements that were not needed for the final dataset, making automated extraction unreliable.
 
