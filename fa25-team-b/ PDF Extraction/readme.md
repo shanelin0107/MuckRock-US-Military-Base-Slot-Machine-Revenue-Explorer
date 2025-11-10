@@ -10,7 +10,62 @@
 <h4 align="center">A template for the project readme file. </h4> <change to repo short description>
 
 # 1. Detailed Data Extraction Procedure
+
+
 ## 1.1. Asset Report
+
+### FY2020, FY2023, FY2024 Asset Report
+The Asset Reports are distributed as complex, multi-layout PDF files containing both summary and detailed operational tables. Each report includes sections such as **Region Summaries**, **Field Office Statistics**, **Installed Asset Details**, and **Operational Status Reports**. Because each section follows a distinct text layout, this pipeline implements **dedicated parsing functions** for each format and automates their extraction into **eight standardized, analysis-ready CSV outputs per fiscal year** for downstream analytics and visualization.
+
+| Output CSV                         | Description                                                                 |
+|------------------------------------|------------------------------------------------------------------------------|
+| `assets_by_region_service.csv`     | Summary of assets by region and service (Army, Navy, Air Force, etc.)        |
+| `assets_by_field_office.csv`       | Asset and EGM counts by field office                                         |
+| `installed_assets_location_manufacture.csv` | Installed assets by manufacturer and service type                  |
+| `asset_details.csv`                | Detailed list of individual assets, including serial numbers, acquisition dates, and types |
+| `floor_asset_details.csv`          | Floor-level installation details for each site                               |
+| `floor_summary_details.csv`        | Floor summary metadata and occupancy information                             |
+| `site_operational_status.csv`      | Site operational status and service affiliation                              |
+| `years_in_storage.csv`             | Pivot summary showing asset age versus years in storage                      |
+
+#### Workflow Overview
+
+1. **PDF Parsing and Month Detection**  
+   The pipeline first uses `pdftotext -layout` to convert each page into structured text while preserving column alignment.  
+   The `detect_month_map()` function then scans pages and assigns each one to its reporting month (e.g., *March 2024*).
+
+2. **Section Identification and Parsing**  
+   Each page is scanned for key headers such as `"Assets by Region, Service"`, `"Assets by Field Office"`, and `"Installed Assets by Location"`.  
+   Based on these headers, specialized parsing functions are applied to extract the corresponding tables.  
+   Extracted rows are validated, cleaned, and merged using `_safe_concat()`.
+
+3. **Data Assembly and Export**  
+   All parsed DataFrames are combined and exported into **eight standardized CSV files per fiscal year**, each stored in an automatically created output folder (e.g., `/content/FY2023_Asset_Report_output/`).
+
+
+#### Key Features
+
+- *Robust Layout Parsing* — Preserves table structure using `pdftotext -layout`.  
+- *Automatic Month Mapping* — Identifies and links each page to its reporting month.  
+- *Multi-Section Extraction* — Supports region, field office, installed asset, and detailed record tables.  
+- *Error-Tolerant Processing* — Safely merges partial data and skips malformed rows.
+
+#### Function Summary
+
+Because the report contains **eight distinct table layouts**, we implement separate functions to handle each layout. Details:
+
+| Function | Purpose |
+|-----------|----------|
+| `read_pdf_text_layout()` | Converts a PDF page layout into raw text. |
+| `parse_region_and_field_office_v1()` | Extracts Region and Field Office summaries. |
+| `parse_installed_assets_v2()` | Extracts Installed Assets by Location. |
+| `extract_region_field_installed_v2()` | Orchestrates summary-level extraction for regions, field offices, and installed assets. |
+| `parse_asset_details_page()` | Extracts detailed asset listings. |
+| `parse_floor_details_page()` | Extracts floor-level installation data. |
+| `parse_site_status_page()` | Extracts site operational status. |
+| `extract_detailed_tables()` | Combines all detailed tables and applies month mapping. |
+| `save_outputs()` | Writes all resulting DataFrames to CSV files. |
+| `run_extraction()` | High-level orchestration for processing a single PDF file. |
 
 ### FY2021 Asset Report
 The FY2021 Asset Report data has been fully extracted and cleaned for analysis. Unlike FY2020, FY2022, and FY2023, the FY2021 report contains several COVID-specific cells and temporary reporting categories, which required custom parsing and structural normalization during extraction.
