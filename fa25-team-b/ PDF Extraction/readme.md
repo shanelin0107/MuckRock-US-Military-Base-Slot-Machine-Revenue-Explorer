@@ -46,3 +46,11 @@ pip install -r requirements.txt
 ### 1.4. Financial Statements
 The Financial Statements pdf required a bit of expirimentation for both OCR tools as well as formatted text extraction. Due to the size of the document, some extraction libraries and most online tools for OCR would not process the file. For text extraction, we ended up using poppler-utils, which had the best balance between quality of the table formatting during extraction alongside time to extract. For OCR, we initially tried using python libraries, but none worked particularly well or quickly. To solve this, we ended up splitting the document into chunks, running them through Adobe Express's OCR tool, then recombining them into one pdf. This was a successful approach, and the rest of the work done was in cleaning minor issues in extraction/formatting before loading data into our CSV files.
 ### 1.5. District Revenue
+
+### 1.6. Revenue Comparison File
+ 
+The Revenue Comparison file required a highly manual extraction process due to the complexity and inconsistency of the original document. Many pages contained multiple tables with varying formats, visual layouts, and informational elements that were not needed for the final dataset, making automated extraction unreliable.
+
+To complete this extraction, **Adobe Express** was used extensively. **Pages 5–26, 30, 31, 46, and 58–79** of the original PDF were removed to isolate only the relevant content. Each remaining table was then extracted individually—often requiring multiple separate passes through **Adobe Express** due to differences in formatting and structure.
+
+Once all related tables were successfully extracted, they were manually merged and organized into the Excel workbook, resulting in the final Revenue Comparison file. This workflow ensured that only the required tables were included while avoiding the noise introduced by unstructured visuals and non-uniform table layouts present throughout the document.
