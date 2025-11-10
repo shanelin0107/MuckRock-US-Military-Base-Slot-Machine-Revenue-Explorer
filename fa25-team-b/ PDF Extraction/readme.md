@@ -36,6 +36,7 @@ Before starting the notebook, ensure you have the correct Python environment con
 pip install -r requirements.txt
 ```
 **3. Run the notebook cells sequentially to extract and standardize tables.**
+
 **4. Exported CSVs will appear in the output folder and are aligned for merging with other fiscal years.**
 
 ### 1.2. Marine Revenue
