@@ -1,0 +1,8 @@
+pandas
+numpy
+camelot-py
+tabula-py
+PyPDF2
+openpyxl
+ghostscript
+java  
