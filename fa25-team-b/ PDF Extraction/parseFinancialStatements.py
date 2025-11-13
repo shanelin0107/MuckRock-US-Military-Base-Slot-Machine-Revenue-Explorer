@@ -20,6 +20,10 @@ import csv
 path = r"C:\Users\Cameron\Documents\muckrock" 
 pdf = r"\Financial Statements.pdf"
 csvs = [r'\FinancialStatement.csv', r'\ActualVsBudget.csv', r'\BranchBudget.csv', r'\GamingRevenue.csv']
+badDates = [datetime.datetime(2021, 1, 31), datetime.datetime(2020, 5, 31)]
+with open(path + r'\categoryMap.csv', 'r') as f:
+    reader = csv.reader(f)
+    categoryMap = dict(reader)
 
 #Getting page type from title
 def determinePageType(page: str) -> str:
@@ -44,41 +48,14 @@ def parseDate(line: list[str]) -> datetime:
     line[-1] = re.sub(r'[il]', "1", line[-1])
 
     return parser.parse(" ".join(line[-3:]).strip())
-    
-#Fixing single lines that get split into multiple lines upon extraction
-def fixJan2020BudgetPages(lines: list[str], location: str) -> list[str]:
-    if location == 'Consolidated':
-        lines[11] = lines[11] + "   " + lines[13].strip() + "   " + lines[15].strip()
-        lines[18] = lines[16] + lines[18]
-        lines = lines[:12] + lines[18:]
-        lines[35] = lines[35][:44] + ' ' + lines[35][46:]
-    elif location == 'Korea':
-        lines[11] = lines[11] + lines[13]
-        lines[16] = lines[14] + lines[16]
-        lines[33] = lines[33] + lines[34][60:]
-        lines[37] = lines[35] + lines[37]
-        lines = lines[:12] + lines[16:34] + lines[37:]
-    elif location == 'Japan':
-        lines[30] = lines[28] + lines[30]
-        lines[33] = lines[31] + lines[33]
-        lines[39] = lines[35] + lines[37] + lines[39]
-        lines = lines[:28] + [lines[30]] + lines[33:35] + lines[39:]
-    
-    return lines
-
-#Minor fixes required for parsing new OCR pages, not ready yet.
-def fixJanBranchPages(lines: list[str], location: str, months: str) -> list[str]:
-    lines[12] = "Operating Expenses"
-    return lines
 
 #Clean number strings that have been improperly parsed
 def numCleanup(numStr: str) -> str:
+    #print(numStr)
     trailingMinus = ''
-    if numStr == '.83-': #specific one off
-        return '-.83'
 
     removeSpace = re.sub(r'[\s+]', '', numStr.strip()) #remove spaces
-    badChars = re.sub(r'[;,._·\"\']', '', removeSpace) #remove characters that we don't want (add back in decimal later)
+    badChars = re.sub(r'[:;,._·\"\']', '', removeSpace) #remove characters that we don't want (add back in decimal later)
     if badChars[-1] == '-': #we need to remove erroneous characters so we can check if minus is in expected place
         trailingMinus = '-' #save trailing minus before we erase all instances of character
 
@@ -97,7 +74,7 @@ def exportCSV(data: list[list[str]], file: str, headers: list[str]):
 
 #Build row for the FinancialStatements.csv file
 def buildFinancialRow(date: datetime, category: str, cols: list[str]) -> list[str]:
-    assetType = ' '.join(cols[0:-1])
+    assetType = re.sub(r'[.]', '', ' '.join(cols[0:-1]))
     cols[-1] = numCleanup(cols[-1])
     return [date, assetType, cols[-1], category]
 
@@ -115,12 +92,16 @@ def buildBudgetRow(date: datetime, location: str, assetType: str, cols: list[str
 
     for i in range(len(cols)):
         if i == 0:
-            budgetRow.append(cols[i]) #append row category
+            if cols[i] in categoryMap.keys():
+                budgetRow.append(categoryMap[cols[i]])
+            else:
+                budgetRow.append(cols[i]) #append row category
         else:
             #print(str(date) + " | " + location + " | " + assetType + " | " + cols[i])
             cols[i] = numCleanup(cols[i])
             if cols[i] == '-242631.91': #bad solution but it works and others haven't for some indiscernable reason
                 cols[i] = '-24263.91'
+                
             budgetRow.append(cols[i]) #TODO: Get regex parser to ensure number, otherwise append np.nan!
 
     return budgetRow
@@ -128,6 +109,7 @@ def buildBudgetRow(date: datetime, location: str, assetType: str, cols: list[str
 #Build row for the GamingRevenue.csv file
 def buildRevenueRow(date: datetime, cols: list[str]) -> list[str]:
     revenueRow = [date]
+
 
     if len(cols) > 7: #Sometimes category will get split up into multiple columns
         cols = [" ".join(cols[:-(7-1)])] + cols[(len(cols) - (7-1)):]
@@ -139,7 +121,10 @@ def buildRevenueRow(date: datetime, cols: list[str]) -> list[str]:
 
     for i in range(len(cols)):
         if i == 0:
-            revenueRow.append(cols[i]) #append row category
+            if cols[i] in categoryMap.keys(): #fix broken category names
+                revenueRow.append(categoryMap[cols[i]])
+            else:
+                revenueRow.append(re.sub("S ", "S", cols[i])) #append row category
         else:
             cols[i] = numCleanup(cols[i])
             revenueRow.append(cols[i]) #TODO: Get regex parser to ensure number, otherwise append np.nan!
@@ -158,6 +143,9 @@ def parseFinancials(pages: list[str]) -> None:
         category = ""
 
         start = [idx for idx, val in enumerate(lines) if "Balance" in val][0] + 1 #find starting index for asset data
+
+        if date.year == 2020 and date.month == 5:
+            lines[11] = lines[11].strip()[:-1] + '-'
 
         for line in lines[start:-1]:
             line = line.strip()
@@ -183,6 +171,9 @@ def parseTotalBudget(pages: list[str]) -> None:
     assets = {"Revenue": "Revenue", 
               "Operating Expenses": "Expenses", 
               "Interest Revenue": "Net"}
+    
+    tbBadDates = badDates
+    tbBadDates.append(datetime.datetime(2020, 1, 31))
 
     for page in pages:
         page = os.linesep.join([s for s in page.splitlines() if s]) #remove blank lines
@@ -190,21 +181,22 @@ def parseTotalBudget(pages: list[str]) -> None:
         date = parseDate(lines[3].strip().split()) #parse date from header
         location = lines[1].split()[0] #get location (Korea, Europe, Japan or Consolidated)
         assetType = ""
-        
-        #this page has parsing issues with broken lines so we need to manually fix the alignment
-        if date.year == 2020 and date.month == 1:
-            lines = fixJan2020BudgetPages(lines, location)
 
-        for line in lines[4:-1]: #for lines with data
-            line = line.strip()
-            cols = re.split(r'[\s]{2,}', line) #split into columns by multiple whitespace delimiter
+        if date.year == 2019 and location == "Korea":
+            lines[34] = lines[34][:70] + lines[32].strip() + lines[34][70:]
+            lines = lines[:32] + lines[34:]
 
-            if not re.match(r'[-=_]{3,}', cols[0]): #if the current line isn't a section delimiter (denoted by --- or ===)
-                if cols[0] in assets: #if beginning maps to assettype we will update the assetType column
-                    assetType = assets[cols[0]]
+        if date not in badDates:
+            for line in lines[4:-1]: #for lines with data
+                line = line.strip()
+                cols = re.split(r'[\s]{2,}', line) #split into columns by multiple whitespace delimiter
 
-                if len(cols) > 1 and assetType != "": #if we have an assettype and a line with budget data build row
-                    data.append(buildBudgetRow(date, location, assetType, cols, 7))
+                if not re.match(r'[-=_]{3,}', cols[0]): #if the current line isn't a section delimiter (denoted by --- or ===)
+                    if cols[0] in assets: #if beginning maps to assettype we will update the assetType column
+                        assetType = assets[cols[0]]
+
+                    if len(cols) > 1 and assetType != "": #if we have an assettype and a line with budget data build row
+                        data.append(buildBudgetRow(date, location, assetType, cols, 7))
 
     exportCSV(data, csvs[1], header) #csv export
 
@@ -229,12 +221,16 @@ def parseBranchBudget(pages: list[str]) -> None:
         location = lines[1].split()[0] #get location (Korea, Europe, Japan or Consolidated)
         assetType = ""
 
-        if date.year == 2020 and date.month == 1 and location == "Europe":
-            fixJanBranchPages(lines, location, months)
+        if date.month == 1 and date.year == 2020 and location == 'Europe':
+            lines[12] = "Operating Expenses"
 
-        if date.year == 2020 and date.month == 5 and location == "Consolidated" and months == "1":
-            print("Bad Page!") #this page is very broken
-        else:
+        if date.year == 2019 and months == "3":
+            if location == "Consolidated":
+                lines[16] = lines[16][:35] + '4' + lines[16][36:]
+            elif location == "Japan":
+                lines[24] = lines[24][:79] + lines[24][80:]
+
+        if date not in badDates:
             for line in lines[4:-1]: #for lines with data
                 line = line.strip()
                 cols = re.split(r'[\s]{2,}', line)
@@ -259,15 +255,21 @@ def parseRevenue(pages: list[str]) -> None:
         lines = page.splitlines() #split page into lines
         date = parseDate(lines[2].strip().split())
 
-        if date.year == 2022 and date.month == 5:
-            print(page) #testing
+        if date.year == 2020 and date.month == 1:
+            lines[40] = lines[40] + lines[42]
+            lines = lines[:42]
 
-        for line in lines[6:-1]: #for lines with data
-            line = line.strip()
-            cols = re.split(r'[\s]{2,}', line)
+        if date.year == 2019 and date.month == 12:
+            lines[7] = lines[5] + lines[7]
+            lines = lines[0:5] + lines[6:]
 
-            if not re.match(r'[-=_]{3,}', cols[0]) and len(cols) > 1: #if the current line isn't a section delimiter (denoted by --- or ===)
-                data.append(buildRevenueRow(date, cols))
+        if date not in badDates:
+            for line in lines[5:-1]: #for lines with data
+                line = line.strip()
+                cols = re.split(r'[\s]{2,}', line)
+
+                if not re.match(r'[-=_]{3,}', cols[0]) and len(cols) > 1: #if the current line isn't a section delimiter (denoted by --- or ===)
+                    data.append(buildRevenueRow(date, cols))
 
     exportCSV(data, csvs[3], header) #csv export
 
@@ -287,8 +289,10 @@ def runProcess(pdf: str) -> None:
     pages = text.split('\f') #split into pages
 
     for i in range(len(pages)):
-        if len(pages[i]) != 0: #if the page does not have text to parse, we must use OCR to get data
+        if len(pages[i]) != 0: 
             pageType[determinePageType(pages[i])].append(pages[i]) #otherwise append page to its list in dict
+
+    print(len(pageType["None"]))
 
     #call to parse each type of page
     parseFinancials(pageType["FinancialStatement"])
