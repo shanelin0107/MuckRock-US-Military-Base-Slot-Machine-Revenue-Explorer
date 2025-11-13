@@ -163,4 +163,29 @@ The findings imply a centralized concentration of gambling operations within Eur
 and a consistently strong presence in Japan.  
 These insights help illuminate operational priorities and regional engagement trends across military branches.
 
+## FY2021 Asset Report — Exploratory Data Analysis (EDA)
+
+### Overview:
+The EDA for the FY2021 Asset Report focuses on understanding asset distribution, identifying structural inconsistencies caused by COVID-era reporting, and validating the integrity of the extracted tables. Due to unique formatting in the FY2021 report, the dataset required additional cleaning and normalization before analysis.
+
+### Key Analyses Conducted:
+
+- **Asset Distribution by Region & Service**: Examined geographic patterns and service-level variations to validate that regional summary data aligned with extracted field-office tables.
+- **Asset Characteristics & Metadata**: Profiled asset types, manufacturers, installation locations, and usage classifications to identify anomalies introduced by irregular table formatting.
+- **COVID-Specific Fields**: Assessed the presence and impact of temporary COVID-related categories to ensure they did not distort cross-year comparisons.
+- **Years in Storage Patterns**: Analyzed storage duration and asset aging trends using the pivot output derived from the extraction process.
+- **Field Office vs. Operational Status Consistency**: Compared extracted “Site Operational Status” tables with field-office asset counts to verify internal consistency across tables.
+
+### Data Validation & Cleaning Steps:
+- Addressed inconsistent headers and merged cell artifacts remaining after extraction.
+- Standardized column names and data types to match schemas used across other fiscal years.
+- Checked for duplicated rows and missing values resulting from PDF formatting issues.
+- Ensured alignment between summary tables and detailed asset-level tables.
+
+### Notebook Usage:
+The full analysis is documented in `FY2021_Asset_Report_EDA.ipynb`.
+To replicate the EDA:
+1. Ensure the cleaned CSV outputs from the FY2021 extraction workflow are available.
+2. Open the notebook and run cells sequentially.
+3. Visualizations and summary tables included in the notebook provide insight into data quality, distribution patterns, and irregularities unique to FY2021.
 
