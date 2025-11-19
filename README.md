@@ -9,7 +9,7 @@ An interactive Datasette deployment that surfaces FY2020–FY2024 slot machine r
 - **Coverage:** FY2020 – FY2024 (fiscal calendar, Oct–Sep)
 
 ## 🌐 Live Demo
-- Live Render URL: _TBD — deploy via Render and paste the link here (ex: https://military-slots-explorer.onrender.com)._
+- Live Render URL: https://ds-701-muckrock-data-liberation-project.onrender.com
 
 ## Repository Structure
 ```

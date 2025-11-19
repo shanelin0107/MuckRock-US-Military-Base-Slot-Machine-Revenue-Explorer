@@ -37,7 +37,7 @@ databases:
           base_clean: "Cleaned installation label used for fuzzy matching."
           base_core: "Core installation label extracted from the PDF."
           base_core_matched: "Matched canonical installation label."
-        sort: ["revenue", "desc"]
+        sort_desc: revenue
         facets:
           - district
           - country
