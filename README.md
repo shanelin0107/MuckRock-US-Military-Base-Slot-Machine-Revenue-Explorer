@@ -64,7 +64,7 @@ military-slots-explorer/
 4. Once the dashboard shows **Service is live**, copy the public URL and update the **Live Demo** section in this README as well as the GitHub repo description/website fields.
 
 ## Core Features
-- Rich metadata with default filters (branch, country, fiscal year, installation)
+- Rich metadata with default filters (branch, district, fiscal year, installation)
 - Pre-built SQL queries highlighting branch totals, top installations, yearly trends, and geography splits
 - Datasette Cluster Map plugin for instant geospatial exploration
 - Datasette Vega plugin for on-the-fly charts

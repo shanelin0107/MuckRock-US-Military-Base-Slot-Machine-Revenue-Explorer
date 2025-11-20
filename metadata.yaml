@@ -24,8 +24,8 @@ databases:
         columns:
           installation_name: "Official installation name reported in the FOIA response."
           facility_name: "Name of the club, community center, or other venue housing the slot machines."
-          district: "Military branch or district (Army, Navy, or USMC)."
-          country: "Country or theater where the installation operates."
+          branch: "Military branch responsible for the facility (Army, Navy, USMC)."
+          district: "Geographic district or theater (e.g., Japan, Europe, Korea)."
           category: "Reported ledger category (Revenue or Expense)."
           calendar_year: "Calendar year for the entry as provided in the PDF."
           fiscal_year: "U.S. federal fiscal year that the month rolls up to (Oct-Sep)."
@@ -36,8 +36,8 @@ databases:
           longitude: "Installation longitude for mapping."
         sort_desc: revenue
         facets:
+          - branch
           - district
-          - country
           - fiscal_year
           - installation_name
         plugins:
@@ -50,12 +50,12 @@ databases:
         description: "Counts installations and aggregates revenue per branch."
         sql: |
           select
-            district as branch,
+            branch,
             count(distinct installation_name) as installations,
             round(sum(revenue), 2) as total_revenue,
             round(avg(revenue), 2) as avg_monthly_revenue
           from slot_machine_revenue
-          group by district
+          group by branch
           order by total_revenue desc;
       top_installations:
         title: "Top 20 Installations by Revenue"
@@ -63,12 +63,12 @@ databases:
         sql: |
           select
             installation_name,
+            branch,
             district,
-            country,
             fiscal_year,
             round(sum(revenue), 2) as total_revenue
           from slot_machine_revenue
-          group by installation_name, district, country, fiscal_year
+          group by installation_name, branch, district, fiscal_year
           order by total_revenue desc
           limit 20;
       fiscal_trends:
@@ -77,29 +77,29 @@ databases:
         sql: |
           select
             fiscal_year,
-            district,
+            branch,
             round(sum(revenue), 2) as total_revenue
           from slot_machine_revenue
-          group by fiscal_year, district
+          group by fiscal_year, branch
           order by fiscal_year desc, total_revenue desc;
-      revenue_by_country:
-        title: "Revenue by Country"
-        description: "Aggregates total revenue and installation counts per country."
+      revenue_by_district:
+        title: "Revenue by District"
+        description: "Aggregates total revenue and installation counts per geographic district."
         sql: |
           select
-            country,
+            district,
             count(distinct installation_name) as installations,
             round(sum(revenue), 2) as total_revenue
           from slot_machine_revenue
-          group by country
+          group by district
           order by total_revenue desc;
       branch_region_revenue:
         title: "Branch vs Region Revenue and Per-Base Average"
         description: "Total revenue, base counts, and per-base averages grouped by branch and region."
         sql: |
           select
-            district as branch,
-            country as region,
+            branch,
+            district as region,
             count(distinct installation_name) as installations,
             round(sum(revenue), 2) as total_revenue,
             round(sum(revenue) / count(distinct installation_name), 2) as revenue_per_base
@@ -113,7 +113,7 @@ databases:
           with totals as (
             select
               installation_name,
-              district as branch,
+              branch,
               fiscal_year,
               round(sum(revenue), 2) as total_revenue
             from slot_machine_revenue

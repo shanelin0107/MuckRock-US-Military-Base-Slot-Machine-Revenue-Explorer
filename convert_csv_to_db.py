@@ -60,16 +60,16 @@ def main() -> None:
 
     df["installation_name"] = df["Base"].astype(str).str.strip()
     df["facility_name"] = df["Location"].astype(str).str.strip()
-    df["district"] = df["Service"].astype(str).str.strip()
-    df["country"] = df["Region"].astype(str).str.strip()
+    df["branch"] = df["Service"].astype(str).str.strip()
+    df["district"] = df["Region"].astype(str).str.strip()
     df["category"] = df["Category"].astype(str).str.strip()
     df["latitude"] = pd.to_numeric(df["Base_lat"], errors="coerce")
     df["longitude"] = pd.to_numeric(df["Base_lon"], errors="coerce")
     column_order = [
         "installation_name",
         "facility_name",
+        "branch",
         "district",
-        "country",
         "category",
         "calendar_year",
         "fiscal_year",
@@ -96,8 +96,8 @@ def main() -> None:
     CREATE TABLE [{TABLE_NAME}] (
         installation_name TEXT,
         facility_name TEXT,
+        branch TEXT,
         district TEXT,
-        country TEXT,
         category TEXT,
         calendar_year INTEGER,
         fiscal_year INTEGER,
@@ -117,7 +117,7 @@ def main() -> None:
     )
 
     table = db[TABLE_NAME]
-    for col in ("district", "country", "fiscal_year", "installation_name"):
+    for col in ("branch", "district", "fiscal_year", "installation_name"):
         table.create_index([col], if_not_exists=True)
 
     print(f"Wrote {len(records)} records to {DB_PATH}")
