@@ -55,6 +55,10 @@ databases:
             round(sum(revenue), 2) as total_revenue,
             round(avg(revenue), 2) as avg_monthly_revenue
           from slot_machine_revenue
+          where 1=1
+            [[and fiscal_year = :fiscal_year]]
+            [[and branch = :branch]]
+            [[and district = :district]]
           group by branch
           order by total_revenue desc;
       top_installations:
@@ -67,6 +71,10 @@ databases:
             district,
             round(sum(revenue), 2) as total_revenue
           from slot_machine_revenue
+          where 1=1
+            [[and fiscal_year = :fiscal_year]]
+            [[and branch = :branch]]
+            [[and district = :district]]
           group by installation_name, branch, district
           order by total_revenue desc
           limit 10;
@@ -79,6 +87,10 @@ databases:
             branch,
             round(sum(revenue), 2) as total_revenue
           from slot_machine_revenue
+          where 1=1
+            [[and fiscal_year = :fiscal_year]]
+            [[and branch = :branch]]
+            [[and district = :district]]
           group by fiscal_year, branch
           order by fiscal_year desc, total_revenue desc;
       revenue_by_district:
@@ -90,6 +102,10 @@ databases:
             count(distinct installation_name) as installations,
             round(sum(revenue), 2) as total_revenue
           from slot_machine_revenue
+          where 1=1
+            [[and fiscal_year = :fiscal_year]]
+            [[and branch = :branch]]
+            [[and district = :district]]
           group by district
           order by total_revenue desc;
       branch_district_revenue:
@@ -103,6 +119,10 @@ databases:
             round(sum(revenue), 2) as total_revenue,
             round(sum(revenue) / count(distinct installation_name), 2) as revenue_per_base
           from slot_machine_revenue
+          where 1=1
+            [[and fiscal_year = :fiscal_year]]
+            [[and branch = :branch]]
+            [[and district = :district]]
           group by branch, district
           order by branch, total_revenue desc;
       top_bases_by_year_branch:
@@ -117,6 +137,9 @@ databases:
               round(sum(revenue), 2) as total_revenue
             from slot_machine_revenue
             where fiscal_year is not null
+              [[and fiscal_year = :fiscal_year]]
+              [[and branch = :branch]]
+              [[and district = :district]]
             group by installation_name, branch, fiscal_year
           )
           select
@@ -128,12 +151,45 @@ databases:
           from totals
           order by fiscal_year desc, branch, rank_in_branch_year
           limit 200;
+      revenue_over_time:
+        title: "Revenue by Month"
+        description: "Monthly revenue trend (filtered by FY/branch/district)."
+        sql: &revenue_over_time_sql |
+          select
+            fiscal_year,
+            month_number,
+            month_name,
+            branch,
+            round(sum(revenue), 2) as total_revenue
+          from slot_machine_revenue
+          where 1=1
+            [[and fiscal_year = :fiscal_year]]
+            [[and branch = :branch]]
+            [[and district = :district]]
+          group by fiscal_year, month_number, month_name, branch
+          order by fiscal_year, month_number;
 plugins:
   datasette-vega: {}
   datasette-dashboards:
     slot_machine_overview:
       title: "Slot Machine Revenue Overview"
       description: "Key metrics, geographies, trends, and top installations from FY2020-FY2024."
+      filters:
+        fiscal_year:
+          type: select
+          name: Fiscal Year
+          db: military_slots
+          query: "select distinct fiscal_year from slot_machine_revenue where fiscal_year is not null order by fiscal_year desc"
+        branch:
+          type: select
+          name: Branch
+          db: military_slots
+          query: "select distinct branch from slot_machine_revenue where branch is not null order by branch"
+        district:
+          type: select
+          name: District
+          db: military_slots
+          query: "select distinct district from slot_machine_revenue where district is not null order by district"
       charts:
         snapshot:
           title: "Project Snapshot"
@@ -148,6 +204,44 @@ plugins:
           library: table
           db: military_slots
           query: *branch_revenue_summary_sql
+        total_revenue_metric:
+          title: "Total Revenue"
+          library: metric
+          db: military_slots
+          query: |
+            select round(sum(revenue), 0) as total_revenue
+            from slot_machine_revenue
+            where 1=1
+              [[and fiscal_year = :fiscal_year]]
+              [[and branch = :branch]]
+              [[and district = :district]]
+          display:
+            field: total_revenue
+            prefix: "$"
+        revenue_over_time_chart:
+          title: "Revenue by Month"
+          library: vega-lite
+          db: military_slots
+          query: *revenue_over_time_sql
+          display:
+            mark: line
+            encoding:
+              x:
+                field: month_number
+                type: ordinal
+                axis: { title: "Month" }
+              y:
+                field: total_revenue
+                type: quantitative
+                axis: { title: "Revenue" }
+              color:
+                field: branch
+                type: nominal
+              tooltip:
+                - field: fiscal_year
+                - field: month_name
+                - field: branch
+                - field: total_revenue
         branch_district_heatmap:
           title: "Branch vs District Heatmap"
           library: vega-lite
@@ -194,3 +288,30 @@ plugins:
           library: table
           db: military_slots
           query: *top_bases_by_year_branch_sql
+        map_overview:
+          title: "Installations Map"
+          library: map
+          db: military_slots
+          query: |
+            select
+              installation_name,
+              branch,
+              district,
+              round(sum(revenue), 2) as total_revenue,
+              latitude,
+              longitude
+            from slot_machine_revenue
+            where latitude is not null and longitude is not null
+              [[and fiscal_year = :fiscal_year]]
+              [[and branch = :branch]]
+              [[and district = :district]]
+            group by installation_name, branch, district, latitude, longitude
+          display:
+            latitude_column: latitude
+            longitude_column: longitude
+            show_latlng_popup: false
+      layout:
+        - [snapshot, revenue_over_time_chart, total_revenue_metric]
+        - [branch_totals, branch_district_heatmap, map_overview]
+        - [branch_totals, fiscal_year_trends, top_installations_table]
+        - [branch_totals, rankings_table, rankings_table]
