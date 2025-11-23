@@ -179,7 +179,6 @@ plugins:
           db: military_slots
           query: |
             select
-              fiscal_year,
               month_number,
               month_name,
               branch,
@@ -189,8 +188,8 @@ plugins:
               [[and fiscal_year = :fiscal_year]]
               [[and branch = :branch]]
               [[and district = :district]]
-            group by fiscal_year, month_number, month_name, branch
-            order by fiscal_year, month_number;
+            group by month_number, month_name, branch
+            order by month_number;
           display:
             mark: line
             encoding:
@@ -345,8 +344,7 @@ plugins:
               [[and fiscal_year = :fiscal_year]]
               [[and branch = :branch]]
               [[and district = :district]]
-            order by fiscal_year desc, revenue desc
-            limit 200;
+            order by fiscal_year desc, revenue desc;
       layout:
         - [snapshot, map_overview, map_overview, total_revenue_metric]
         - [snapshot, revenue_over_time_chart, revenue_over_time_chart, branch_district_heatmap]
