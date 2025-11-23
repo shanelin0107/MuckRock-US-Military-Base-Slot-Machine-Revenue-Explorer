@@ -310,8 +310,31 @@ plugins:
             latitude_column: latitude
             longitude_column: longitude
             show_latlng_popup: false
+        all_data_table:
+          title: "All Records (filtered)"
+          library: table
+          db: military_slots
+          query: |
+            select
+              installation_name,
+              facility_name,
+              branch,
+              district,
+              category,
+              fiscal_year,
+              calendar_year,
+              month_name,
+              revenue,
+              latitude,
+              longitude
+            from slot_machine_revenue
+            where 1=1
+              [[and fiscal_year = :fiscal_year]]
+              [[and branch = :branch]]
+              [[and district = :district]]
+            order by fiscal_year desc, revenue desc
+            limit 200;
       layout:
-        - [snapshot, revenue_over_time_chart, total_revenue_metric]
-        - [branch_totals, branch_district_heatmap, map_overview]
-        - [branch_totals, fiscal_year_trends, top_installations_table]
-        - [branch_totals, rankings_table, rankings_table]
+        - [snapshot, map_overview, map_overview, total_revenue_metric]
+        - [snapshot, revenue_over_time_chart, branch_district_heatmap, branch_totals]
+        - [fiscal_year_trends, top_installations_table, all_data_table, all_data_table]
