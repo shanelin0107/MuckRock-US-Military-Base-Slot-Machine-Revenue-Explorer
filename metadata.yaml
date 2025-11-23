@@ -159,23 +159,6 @@ plugins:
             - Data source: MuckRock FOIA responses (Army, Navy, USMC)
             - Coverage: Fiscal Years 2020-2024
             - Plugins: datasette-cluster-map, datasette-vega, datasette-dashboards
-        branch_totals:
-          title: "Revenue by Branch"
-          library: table
-          db: military_slots
-          query: |
-            select
-              branch,
-              count(distinct installation_name) as installations,
-              round(sum(revenue), 2) as total_revenue,
-              round(avg(revenue), 2) as avg_monthly_revenue
-            from slot_machine_revenue
-            where 1=1
-              [[and fiscal_year = :fiscal_year]]
-              [[and branch = :branch]]
-              [[and district = :district]]
-            group by branch
-            order by total_revenue desc;
         total_revenue_metric:
           title: "Total Revenue"
           library: metric
@@ -289,7 +272,7 @@ plugins:
                 type: nominal
         top_installations_table:
           title: "Top 10 Installations"
-          library: table
+          library: vega-lite
           db: military_slots
           query: |
             select
@@ -305,6 +288,19 @@ plugins:
             group by installation_name, branch, district
             order by total_revenue desc
             limit 10;
+          display:
+            mark: bar
+            encoding:
+              x:
+                field: total_revenue
+                type: quantitative
+              y:
+                field: installation_name
+                type: nominal
+                sort: "-x"
+              color:
+                field: branch
+                type: nominal
         map_overview:
           title: "Installations Map"
           library: map
@@ -353,5 +349,5 @@ plugins:
             limit 200;
       layout:
         - [snapshot, map_overview, map_overview, total_revenue_metric]
-        - [snapshot, revenue_over_time_chart, branch_district_heatmap, branch_totals]
+        - [snapshot, revenue_over_time_chart, revenue_over_time_chart, branch_district_heatmap]
         - [fiscal_year_trends, top_installations_table, all_data_table, all_data_table]
