@@ -322,6 +322,69 @@ plugins:
             latitude_column: latitude
             longitude_column: longitude
             show_latlng_popup: false
+        branch_totals_pie:
+          title: "Branch Revenue Share"
+          library: vega-lite
+          db: military_slots
+          query: |
+            select
+              branch,
+              round(sum(revenue), 2) as total_revenue
+            from slot_machine_revenue
+            where 1=1
+              [[and fiscal_year = :fiscal_year]]
+              [[and branch = :branch]]
+              [[and district = :district]]
+            group by branch
+            order by total_revenue desc;
+          display:
+            mark:
+              type: arc
+              innerRadius: 50
+              outerRadius: 110
+            encoding:
+              theta:
+                field: total_revenue
+                type: quantitative
+              color:
+                field: branch
+                type: nominal
+              tooltip:
+                - field: branch
+                - field: total_revenue
+        district_heatmap:
+          title: "District Revenue Heatmap"
+          library: vega-lite
+          db: military_slots
+          query: |
+            select
+              district,
+              round(sum(revenue), 2) as total_revenue
+            from slot_machine_revenue
+            where 1=1
+              [[and fiscal_year = :fiscal_year]]
+              [[and branch = :branch]]
+              [[and district = :district]]
+            group by district
+            order by total_revenue desc;
+          display:
+            mark: rect
+            encoding:
+              x:
+                field: district
+                type: nominal
+                sort: "-color"
+              y:
+                field: " "
+                type: nominal
+                axis: { title: "" }
+              color:
+                field: total_revenue
+                type: quantitative
+                scale: { scheme: blues }
+              tooltip:
+                - field: district
+                - field: total_revenue
         all_data_table:
           title: "All Records (filtered)"
           library: table
@@ -348,4 +411,4 @@ plugins:
       layout:
         - [snapshot, map_overview, map_overview, total_revenue_metric]
         - [snapshot, revenue_over_time_chart, revenue_over_time_chart, branch_district_heatmap]
-        - [fiscal_year_trends, top_installations_table, all_data_table, all_data_table]
+        - [fiscal_year_trends, top_installations_table, branch_totals_pie, district_heatmap]
