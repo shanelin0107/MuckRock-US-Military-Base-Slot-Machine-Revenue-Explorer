@@ -247,6 +247,8 @@ plugins:
                 - field: installations
                 - field: total_revenue
                 - field: revenue_per_base
+            width: 320
+            height: 240
         fiscal_year_trends:
           title: "Fiscal-Year Trends"
           library: vega-lite
@@ -371,39 +373,7 @@ plugins:
                 - field: total_revenue
             width: 240
             height: 220
-        district_heatmap:
-          title: "District Revenue Heatmap"
-          library: vega-lite
-          db: military_slots
-          query: |
-            select
-              district,
-              round(sum(revenue), 2) as total_revenue
-            from slot_machine_revenue
-            where 1=1
-              [[and fiscal_year = :fiscal_year]]
-              [[and branch = :branch]]
-              [[and district = :district]]
-            group by district
-            order by total_revenue desc;
-          display:
-            mark: rect
-            encoding:
-              x:
-                field: district
-                type: nominal
-                sort: "-color"
-              y:
-                field: " "
-                type: nominal
-                axis: { title: "" }
-              color:
-                field: total_revenue
-                type: quantitative
-                scale: { scheme: blues }
-              tooltip:
-                - field: district
-                - field: total_revenue
+        
       layout:
         - [snapshot, map_overview, map_overview, total_revenue_metric]
         - [snapshot, revenue_over_time_chart, revenue_over_time_chart, branch_district_heatmap]
