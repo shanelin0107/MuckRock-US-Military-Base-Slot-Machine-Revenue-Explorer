@@ -315,6 +315,8 @@ plugins:
                 - field: branch
                 - field: district
                 - field: total_revenue
+            width: 240
+            height: 220
         map_overview:
           title: "Installations Map"
           library: map
@@ -356,7 +358,7 @@ plugins:
             mark:
               type: arc
               innerRadius: 50
-              outerRadius: 110
+              outerRadius: 100
             encoding:
               theta:
                 field: total_revenue
@@ -367,6 +369,8 @@ plugins:
               tooltip:
                 - field: branch
                 - field: total_revenue
+            width: 240
+            height: 220
         district_heatmap:
           title: "District Revenue Heatmap"
           library: vega-lite
@@ -403,4 +407,4 @@ plugins:
       layout:
         - [snapshot, map_overview, map_overview, total_revenue_metric]
         - [snapshot, revenue_over_time_chart, revenue_over_time_chart, branch_district_heatmap]
-        - [fiscal_year_trends, top_installations_table, branch_totals_pie, district_heatmap]
+        - [fiscal_year_trends, top_installations_table, top_installations_table, branch_totals_pie]
