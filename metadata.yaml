@@ -249,7 +249,7 @@ plugins:
                 - field: installations
                 - field: total_revenue
                 - field: revenue_per_base
-            width: 240
+            width: 180
             height: 240
         fiscal_year_trends:
           title: "Fiscal-Year Trends"
@@ -319,8 +319,8 @@ plugins:
                 - field: branch
                 - field: district
                 - field: total_revenue
-            width: 320
-            height: 240
+            width: 360
+            height: 280
         map_overview:
           title: "Installations Map"
           library: map
