@@ -160,7 +160,8 @@ If you want to understand **how raw PDFs are turned into structured CSVs**：
 
 #### 3. Detailed dataset documentation
 
-For **details, extraction logic, and data dictionaries**, please refer to:
+For **details, extraction logic, and data dictionaries**, please refer to 
+[PDF Extraction README](fa25-team-b/PDF-Extraction/readme.md):
 
 - `fa25-team-b-dev/fa25-team-b/PDF Extraction/README.md`  
   – Describes what each PDF source contains, how we parsed it (e.g. `pdftotext`, `pdfplumber`, `PyMuPDF`), what CSVs are produced, and what each column means.
