@@ -234,27 +234,3 @@ pip install pandas numpy matplotlib seaborn openpyxl
 This EDA was conducted by Team B for DS701 course, with each member contributing specialized analyses across Financial Statements, Revenue Comparisons, District Revenue, Asset Reports, Marine Corps Revenue, and Navy Revenue analyses.
 
 ---
-
-## External References
-
-- **FY2024 Revenue Report**: ARMP raised $70.9M in FY2024, up from $64.8M in FY2023
-- **Camp Humphreys**: Generated >$6M between October 2024 and May 2025 (news article reference)
-- **NAFI Definition**: Non-Appropriated Fund Instrumentality - funds derived from slot machine revenues
-
----
-
-## Future Work
-
-Potential extensions of this analysis:
-1. **Predictive Modeling**: Forecast future revenues based on historical trends
-2. **Causal Analysis**: Investigate drivers of seasonal patterns (March/May peaks)
-3. **Comparative Analysis**: Compare ARMP performance against commercial casino benchmarks
-4. **Policy Evaluation**: Assess impact of regulatory changes on revenue trends
-5. **Integration**: Combine all fiscal years into unified longitudinal dataset
-6. **Financial Health**: Investigate static equity value and cash depletion patterns
-
----
-
-## Contact
-
-For questions about this EDA, please contact the DS701 Team B members or refer to individual notebook documentation.
