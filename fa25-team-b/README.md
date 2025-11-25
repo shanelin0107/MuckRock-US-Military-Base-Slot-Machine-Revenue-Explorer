@@ -3,7 +3,7 @@
   <br>
   <a href="https://www.bu.edu/spark/" target="_blank"><img src="https://www.bu.edu/spark/files/2023/08/logo.png" alt="BUSpark" width="200"></a>
   <br>
-  ARMP Slot Machine Revenue Analysis
+  MuckRock: US Military Base Slot Machine Revenue Explorer
   <br>
 </h1>
 
