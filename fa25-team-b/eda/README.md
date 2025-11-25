@@ -1,4 +1,4 @@
-# Exploratory Data Analysis (EDA) — Army Recreation Machine Program (ARMP)
+# Exploratory Data Analysis — Army Recreation Machine Program 
 
 ## Overview
 
