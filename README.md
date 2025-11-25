@@ -58,7 +58,7 @@ Below is the total slot machine revenue by military branch and by region
 
 
 
-<img width="3553" height="1753" alt="total_revenue_by_region_and_service" src="https://github.com/user-attachments/assets/badd35ab-372e-4b42-9fad-39961f100f66" />
+![Description](fa25-team-b/total_revenue_by_region_and_service.png)
 
 This compares the total slot‑machine revenue for the Army (blue), Marine Corps (orange) and Navy (green) across three regions: Korea, Japan and Europe. The y‑axis measures total revenue in millions of U.S. dollars. Key observations include:
 
@@ -67,7 +67,7 @@ Japan: Marine Corps and Navy activities in Japan bring in around $58 million and
 Europe: the Army’s 12 bases collect about $57 million, and Navy bases about $15 million; the Marine Corps does not operate slot machines in Europe.
 The call‑outs on the right summarise these points: the Army in Korea is the biggest contributor, and Marine Corps slot‑machine revenue is confined to Japan.
 
-<img width="3553" height="1753" alt="top10_bases_total_revenue" src="https://github.com/user-attachments/assets/5b23a6fe-aeab-4104-9b60-3f9b3f2372af" />
+![Description](fa25-team-b/top10_bases_total_revenue.png)
 
 The second slide ranks the top 10 individual bases by total slot‑machine revenue. The bases are colour‑coded by service branch (blue = Army, orange = Marine Corps, green = Navy). Notable findings:
 
