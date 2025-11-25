@@ -43,6 +43,8 @@ The Team B mission in FA25 is to:
 
 7. Answer base questions.
 
+### Base Questions
+
 - 1. What is the total and per‑base slot machine revenue by military branch and by region?
 Below is the total slot machine revenue by military branch and by region
 
@@ -111,6 +113,9 @@ The repository is organized to make it easy for others to pick up where this tea
 | `fa25-team-b-dev/fa25-team-b/`                          | All work for the FA25 Team B development effort. Inside this folder you should find notebooks, scripts, and data used for our analyses.                       |
 | `fa25-team-b-dev/fa25-team-b/eda/`                      | Early explorations and exploratory data analysis (EDA). Each notebook should have a descriptive filename and include clear markdown explaining its purpose.   |
 | `fa25-team-b-dev/fa25-team-b/PDF Extraction/`           | Python scripts and notebooks for cleaning and processing data from PDF files into CSV files (e.g., Asset, Marine, Navy, District, Revenue Comparison, etc.). |
+
+## Explotary Data Analysis
+
 
 ## Where to start / Key notebooks
 
