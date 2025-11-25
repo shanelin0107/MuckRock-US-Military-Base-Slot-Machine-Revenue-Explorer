@@ -20,7 +20,6 @@
   <a href="#environment-setup">Environment Setup</a>
 </p>
 
-# MuckRock: US Military Base Slot Machine Revenue Explorer
 
 ## Overview
 
