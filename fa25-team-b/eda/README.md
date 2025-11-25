@@ -143,11 +143,11 @@ The EDA is organized into eight Jupyter notebooks, each focusing on specific asp
 | Financial Statements | 2020-2024 | CSV | Cash flow, equity, asset depreciation |
 | Revenue Comparison | 2023-2024 | Excel | Regional/branch revenue totals |
 | District Revenue | 2020-2024 | CSV | Base-level revenue rankings |
-| FY2021 Asset Report | 2021 | Excel | Machine inventory, manufacturers |
-| FY2024 Asset Report | 2024 | PDF → CSV | Current EGM distribution |
+| EGM_Analysis_by_Region_Manufacturer | 2021 | Excel | Machine inventory, manufacturers |
+| EGM_Distribution | 2024 | CSV | Current EGM distribution |
 | Marine Revenue | 2020-2024 | CSV | Marine Corps installation revenues |
-| Navy Slot/NAFI | 2016-2022 | CSV | Navy revenue and reimbursements |
-| Navy Installation Revenue | 2018-2024 | CSV | Navy base-level performance |
+| Navy_Slot_NAFI_Revenue_Comparison | 2016-2022 | CSV | Navy revenue and reimbursements |
+| Navy_Slot_Revenue_by_Installation | 2018-2024 | CSV | Navy base-level performance |
 
 ---
 
