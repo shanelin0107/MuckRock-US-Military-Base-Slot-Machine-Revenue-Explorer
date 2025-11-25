@@ -354,17 +354,17 @@ plugins:
               branch,
               district,
               round(sum(revenue), 2) as total_revenue,
-              latitude,
-              longitude
+              base_latitude,
+              base_longitude
             from slot_machine_revenue
-            where latitude is not null and longitude is not null
+            where base_latitude is not null and base_longitude is not null
               [[and fiscal_year = :fiscal_year]]
               [[and branch = :branch]]
               [[and district = :district]]
-            group by installation_name, branch, district, latitude, longitude
+            group by installation_name, branch, district, base_latitude, base_longitude
           display:
-            latitude_column: latitude
-            longitude_column: longitude
+            latitude_column: base_latitude
+            longitude_column: base_longitude
             show_latlng_popup: false
         branch_totals_pie:
           title: "Branch Revenue Share"
