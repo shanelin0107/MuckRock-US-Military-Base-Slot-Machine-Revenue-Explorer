@@ -137,6 +137,28 @@ This section presents the Exploratory Data Analysis (EDA) of our dataset. The an
 | Japan's Central Role   | Highest revenues across all service branches; top performer for Navy & USMC  |
 | Europe’s Significance  | Holds the largest EGM share (39.4%); strongest Army operational presence     |
 
+### 2. Service Branch Patterns
+| Category               | Key Insights                                                                 |
+|------------------------|-------------------------------------------------------------------------------|
+| Army Dominance         | Operates 55.7% of all EGMs; generates ~60% of global revenue                 |
+| Marine Corps Focus     | Highest per-base revenue; heavily concentrated in Japan                      |
+| Navy Distribution      | Strong presence in Japan (Yokosuka, Sasebo); moderate operations in Europe   |
+
+### 3. Temporal Trends
+| Category          | Key Insights                                                                     |
+|-------------------|-----------------------------------------------------------------------------------|
+| COVID-19 Impact   | Sharp revenue decline in FY2020 across all service branches                      |
+| Recovery Pattern  | Gradual revenue recovery from FY2021 to FY2023                                   |
+| FY2024 Decline    | Decline due to incomplete fiscal year data, not true operational downturn        |
+| Seasonal Patterns | March and May consistently show revenue peaks                                    |
+
+### 4. Financial Health Concerns
+| Category               | Key Insights                                                                 |
+|------------------------|-------------------------------------------------------------------------------|
+| Restricted Cash        | Restricted cash reserves fully depleted by 2023                              |
+| Static Equity          | Total equity unchanged since Oct 2021 (possible reporting issue)             |
+| Asset Aging            | Machine inventory aging; depreciation trends require further attention       |
+
 For more details about the EDA, please refer to the following link:
 [Go to EDA README](fa25-team-b/eda/README.md)
 
