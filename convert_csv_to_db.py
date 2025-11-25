@@ -13,7 +13,7 @@ import sqlite_utils
 
 BASE_DIR = Path(__file__).parent
 CSV_PATH = BASE_DIR / "data" / "District_Revenue_FY20-FY24_with_lat_lon_clean.csv"
-MARINE_CSV_PATH = BASE_DIR / "data" / "Marine_Revenue_FY20-FY24_detail_with_coords.csv"
+MARINE_CSV_PATH = BASE_DIR / "data" / "Marine_Revenue_FY20-FY24_detail_with_gps.csv"
 DB_PATH = BASE_DIR / "military_slots.db"
 TABLE_NAME = "slot_machine_revenue"
 MARINE_TABLE = "marine_revenue_detail"
@@ -67,8 +67,8 @@ def main() -> None:
     df["branch"] = df["Service"].astype(str).str.strip()
     df["district"] = df["Region"].astype(str).str.strip()
     df["category"] = df["Category"].astype(str).str.strip()
-    df["latitude"] = pd.to_numeric(df["Base_lat"], errors="coerce")
-    df["longitude"] = pd.to_numeric(df["Base_lon"], errors="coerce")
+    df["base_latitude"] = pd.to_numeric(df["Base_lat"], errors="coerce")
+    df["base_longitude"] = pd.to_numeric(df["Base_lon"], errors="coerce")
     column_order = [
         "installation_name",
         "facility_name",
@@ -80,8 +80,8 @@ def main() -> None:
         "month_name",
         "month_number",
         "revenue",
-        "latitude",
-        "longitude",
+        "base_latitude",
+        "base_longitude",
     ]
 
     missing = [col for col in column_order if col not in df.columns]
@@ -110,8 +110,8 @@ def main() -> None:
         month_name TEXT,
         month_number INTEGER,
         revenue REAL,
-        latitude REAL,
-        longitude REAL
+        base_latitude REAL,
+        base_longitude REAL
     )
     """
     db.execute(schema_sql)
@@ -133,23 +133,24 @@ def main() -> None:
         columns={
             "Page": "page",
             "Loc #": "loc_id",
+            "Base": "base_name",
             "Location": "location_name",
             "Month": "month_label",
             "Revenue": "revenue",
-            "NAFI Amt": "nafi_amount",
+            "NAFI Amount": "nafi_amount",
             "Annual Revenue": "annual_revenue",
             "Annual NAFI": "annual_nafi",
-            "Latitude": "latitude",
-            "Longitude": "longitude",
-            "\tLatitude": "latitude",
+            "Latitude": "base_latitude",
+            "Longitude": "base_longitude",
+            "\tLatitude": "base_latitude",
         }
     )
     marine_df["revenue"] = pd.to_numeric(marine_df["revenue"], errors="coerce")
     marine_df["nafi_amount"] = pd.to_numeric(marine_df["nafi_amount"], errors="coerce")
     marine_df["annual_revenue"] = pd.to_numeric(marine_df["annual_revenue"], errors="coerce")
     marine_df["annual_nafi"] = pd.to_numeric(marine_df["annual_nafi"], errors="coerce")
-    marine_df["latitude"] = pd.to_numeric(marine_df["latitude"], errors="coerce")
-    marine_df["longitude"] = pd.to_numeric(marine_df["longitude"], errors="coerce")
+    marine_df["base_latitude"] = pd.to_numeric(marine_df["base_latitude"], errors="coerce")
+    marine_df["base_longitude"] = pd.to_numeric(marine_df["base_longitude"], errors="coerce")
     marine_df["loc_id"] = pd.to_numeric(marine_df["loc_id"], errors="coerce").astype("Int64")
     marine_df["page"] = pd.to_numeric(marine_df["page"], errors="coerce").astype("Int64")
 
@@ -158,14 +159,15 @@ def main() -> None:
     marine_columns = [
         "page",
         "loc_id",
+        "base_name",
         "location_name",
         "month_label",
         "revenue",
         "nafi_amount",
         "annual_revenue",
         "annual_nafi",
-        "latitude",
-        "longitude",
+        "base_latitude",
+        "base_longitude",
     ]
     marine_records = marine_df[marine_columns].to_dict(orient="records")
     db[MARINE_TABLE].insert_all(
@@ -175,7 +177,7 @@ def main() -> None:
         replace=True,
     )
     marine_table = db[MARINE_TABLE]
-    for col in ("location_name", "month_label"):
+    for col in ("BASE_NAME", "LOCATION_NAME", "MONTH_LABEL"):
         marine_table.create_index([col], if_not_exists=True)
 
     print(f"Wrote {len(records)} records to {DB_PATH}")

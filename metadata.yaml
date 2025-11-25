@@ -32,8 +32,8 @@ databases:
           month_name: "Name of the month for the record."
           month_number: "Integer month number (1-12) used for ordering."
           revenue: "Total slot machine revenue in U.S. dollars."
-          latitude: "Installation latitude for mapping."
-          longitude: "Installation longitude for mapping."
+          base_latitude: "Installation latitude for mapping."
+          base_longitude: "Installation longitude for mapping."
         sort_desc: revenue
         facets:
           - branch
@@ -42,30 +42,31 @@ databases:
           - installation_name
         plugins:
           datasette-cluster-map:
-            latitude_column: latitude
-            longitude_column: longitude
+            latitude_column: base_latitude
+            longitude_column: base_longitude
       marine_revenue_detail:
         title: "Marine Corps Revenue Detail (FY20-FY24)"
         description: "Line-level Marine Corps slot revenue with coordinates."
         columns:
           page: "Page number from the source PDF."
           loc_id: "Marine facility location identifier."
+          base_name: "Name of the Marine base."
           location_name: "Name of the Marine location."
           month_label: "Month label from the source (e.g., 17-Oct)."
           revenue: "Reported revenue amount."
           nafi_amount: "NAFI amount."
           annual_revenue: "Annual revenue total if provided."
           annual_nafi: "Annual NAFI total if provided."
-          latitude: "Latitude coordinate for the location."
-          longitude: "Longitude coordinate for the location."
+          base_latitude: "Latitude coordinate for the location."
+          base_longitude: "Longitude coordinate for the location."
         sort_desc: revenue
         facets:
           - location_name
           - month_label
         plugins:
           datasette-cluster-map:
-            latitude_column: latitude
-            longitude_column: longitude
+            latitude_column: base_latitude
+            longitude_column: base_longitude
     queries:
       branch_revenue_summary:
         title: "Branch Revenue Overview"
