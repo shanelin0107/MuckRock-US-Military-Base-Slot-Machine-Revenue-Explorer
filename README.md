@@ -116,6 +116,8 @@ The repository is organized to make it easy for others to pick up where this tea
 
 ## Explotary Data Analysis
 
+This section present the initial findings of our data. For further detail about EDA, please refer to following link:
+[Go to EDA README](fa25-team-b/eda/README.md)
 
 ## Where to start / Key notebooks
 
