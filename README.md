@@ -191,12 +191,11 @@ Some notebooks may reference data stored on Google Drive. Before running those n
 
 You may provide a .env.example file to illustrate how to supply secrets (such as API keys) without committing them to Git. Users can then copy it to .env and fill in their own values.
 
-TODO (team):
 
 Drive link: https://drive.google.com/drive/folders/1CZ0JF2y9IhaPy-KH4tkH2YbJyr750urc?usp=drive_link
 
 
-###5. Run notebooks and scripts
+### 5. Run notebooks and scripts
 
 Use JupyterLab, VS Code, or your preferred IDE to explore the notebooks in the notebooks/ folder.
 
