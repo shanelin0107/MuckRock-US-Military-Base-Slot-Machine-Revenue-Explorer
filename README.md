@@ -129,7 +129,15 @@ The repository is organized to make it easy for others to pick up where this tea
 
 ## Explotary Data Analysis
 
-This section present the initial findings of our data. For further detail about EDA, please refer to following link:
+This section presents the Exploratory Data Analysis (EDA) of our dataset. The analysis covers financial statements, asset distributions, revenue patterns, and operational trends across multiple fiscal years (FY2016–FY2024). 
+### 1. Geographic Patterns
+| Category               | Key Insights                                                                 |
+|------------------------|-------------------------------------------------------------------------------|
+| Asia-Pacific Dominance | Japan and Korea installations generate over 70% of total ARMP revenue         |
+| Japan's Central Role   | Highest revenues across all service branches; top performer for Navy & USMC  |
+| Europe’s Significance  | Holds the largest EGM share (39.4%); strongest Army operational presence     |
+
+For more details about the EDA, please refer to the following link:
 [Go to EDA README](fa25-team-b/eda/README.md)
 
 ## Where to start
