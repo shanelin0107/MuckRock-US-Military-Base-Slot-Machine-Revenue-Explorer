@@ -44,6 +44,54 @@ databases:
           datasette-cluster-map:
             latitude_column: base_latitude
             longitude_column: base_longitude
+      navy_revenue_summary:
+        title: "Navy Revenue Summary (FY16-FY24)"
+        description: "Summarized Navy slot revenue with annualized FY23/FY24 projections and coordinates."
+        columns:
+          country: "Country where the installation operates."
+          installation: "Navy installation name."
+          category: "Revenue category."
+          fy16: "FY16 total."
+          fy17: "FY17 total."
+          fy18: "FY18 total."
+          fy19: "FY19 total."
+          fy20: "FY20 total."
+          fy21: "FY21 total."
+          fy22: "FY22 total."
+          fy23: "FY23 total."
+          fy23_thru_sep: "FY23 total through September."
+          annualized_fy23: "Annualized FY23 estimate."
+          fy24_thru_apr: "FY24 total through April."
+          annualized_fy24: "Annualized FY24 estimate."
+          base_latitude: "Latitude for mapping."
+          base_longitude: "Longitude for mapping."
+        sort_desc: fy24_thru_apr
+        facets:
+          - country
+          - installation
+          - category
+        plugins:
+          datasette-cluster-map:
+            latitude_column: base_latitude
+            longitude_column: base_longitude
+      navy_monthly_summary:
+        title: "Navy Monthly Summary (FY20-FY24)"
+        description: "Monthly Navy slot revenue and NAFI amounts by installation and location."
+        columns:
+          installation: "Navy installation name."
+          loc_id: "Location identifier."
+          location_name: "Facility/location name."
+          month_label: "Month label (e.g., 12-Oct)."
+          revenue: "Revenue for the month."
+          nafi_amount: "NAFI amount for the month."
+          annual_revenue: "Annual revenue if provided."
+          annual_nafi: "Annual NAFI if provided."
+          status: "Status flag from source."
+        sort_desc: revenue
+        facets:
+          - installation
+          - location_name
+          - month_label
       marine_revenue_detail:
         title: "Marine Corps Revenue Detail (FY20-FY24)"
         description: "Line-level Marine Corps slot revenue with coordinates."
