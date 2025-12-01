@@ -232,10 +232,21 @@ plugins:
           title: "Project Snapshot"
           library: markdown
           display: |
-            ### Project Snapshot
-            - Data source: MuckRock FOIA responses (Army, Navy, USMC)
-            - Coverage: Fiscal Years 2020-2024
-            - Plugins: datasette-cluster-map, datasette-vega, datasette-dashboards
+            #### Project Snapshot
+
+            This dashboard analyzes U.S. military slot-machine revenue across Army, Navy, and Marine Corps installations worldwide from FY2020–FY2024. 
+            The goal is to visualize geographic patterns, fiscal-year trends, and top-earning locations.
+
+            ## Process
+
+            1. Extraction: Parsing raw PDF revenue reports across multiple fiscal years
+            2. Transformation: Cleaning and standardizing branch, district, installation names, and monthly totals
+            3. Enrichment – Adding latitude and longitude through base-based geocoding
+            4. Loading: Publishing processed tables to Datasette with interactive dashboards and maps
+           
+            ## Plugins 
+            
+            datasette-cluster-map, datasette-vega, datasette-dashboards
         total_revenue_metric:
           title: "Total Revenue"
           library: metric
