@@ -232,10 +232,10 @@ plugins:
           title: "Project Details"
           library: markdown
           display: |
-            # Project Snapshot
+            # Project Details
 
             This dashboard analyzes U.S. military slot-machine revenue across Army, Navy, and Marine Corps installations worldwide from FY2020–FY2024. 
-            The goal is to visualize geographic patterns, fiscal-year trends, and top-earning locations.
+            The goal is to visualize geographic patterns, fiscal-year trends, and top-earning bases.
 
             ## Process
 
