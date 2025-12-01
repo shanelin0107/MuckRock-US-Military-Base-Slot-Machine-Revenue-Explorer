@@ -99,7 +99,7 @@ Annotations emphasize that seven out of the ten top‑earning bases belong to th
 
 Click the following thumbnail image to see the initial demo video:
 
-[![Demo Video](fa25-team-b/docs/images/Datasette%20Demo%20shortcut.jpg)](https://drive.google.com/file/d/1pSkng9Hb7rhxbLF-UwirTGY_oIMbWxiH/view?usp=sharing)
+[![Demo Video](fa25-team-b/docs/images/Datasette%20Demo%20shortcut.jpg)](fa25-team-b/docs/videos/Datasette%20UI%20Demo.mp4)
 
 
 ---
