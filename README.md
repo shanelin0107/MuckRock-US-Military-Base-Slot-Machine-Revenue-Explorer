@@ -69,7 +69,7 @@ This table is the summary of total slot machine revenue by military branch and b
 
 
 
-![Description](fa25-team-b/total_revenue_by_region_and_service.png)
+![Description](fa25-team-b/docs/images/total_revenue_by_region_and_service.png)
 
 This compares the total slot‑machine revenue for the Army (blue), Marine Corps (orange) and Navy (green) across three regions: Korea, Japan and Europe. The y‑axis measures total revenue in millions of U.S. dollars. Key observations include:
 
@@ -80,7 +80,7 @@ The call‑outs on the right summarise these points: the Army in Korea is the bi
 
 
 
-![Description](fa25-team-b/top10_bases_total_revenue.png)
+![Description](fa25-team-b/docs/images/top10_bases_total_revenue.png)
 
 The second slide ranks the top 10 individual bases by total slot‑machine revenue. The bases are colour‑coded by service branch (blue = Army, orange = Marine Corps, green = Navy). Notable findings:
 
@@ -92,14 +92,15 @@ Annotations emphasize that seven out of the ten top‑earning bases belong to th
 
 - 2. Which bases generate the highest total revenue, and how does that rank change by year and by branch?
 - 3. Which types of games or machines generate the most revenue? (CANT ANSWER RIGHT NOW)
-- 4. How have the types of games or machines installed at bases changed over time? (CANT ANSWER RIGHT NOW)
+- 4. How have the types of games or machines installed at bases changed over time? 
 
 ---
  ## Datasette UI Showcase
 
- Click the following thumbnail image to see the initial demo video:
+Click the following thumbnail image to see the initial demo video:
 
- [![Demo Video](Datasette%20Demo%20shortcut.jpg)](https://drive.google.com/file/d/1pSkng9Hb7rHxbLF-UwirTGY_oIMbWXiH/view?usp=sharing)
+[![Demo Video](fa25-team-b/docs/images/Datasette%20Demo%20shortcut.jpg)](https://drive.google.com/file/d/1pSkng9Hb7rhxbLF-UwirTGY_oIMbWxiH/view?usp=sharing)
+
 
 ---
 
