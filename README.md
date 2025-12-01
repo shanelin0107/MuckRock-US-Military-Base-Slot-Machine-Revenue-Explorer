@@ -90,7 +90,25 @@ Other high‑earning Army bases include AFRC Dragon Hill Lodge, Kaiserslautern, 
 The Navy’s major contributor in this list is Yokosuka (around $21 million), and the Marine Corps’ Iwakuni base rounds out the top ten at about $10 million.
 Annotations emphasize that seven out of the ten top‑earning bases belong to the Army and that revenue is heavily concentrated among a few installations.
 
+#### Answer for Base Question 1:
+
+For Base Question 1, the charts show that the Army in Korea is the dominant source of slot-machine revenue, with about $100M generated across five bases (roughly $20M per base on average), making it both the largest branch–region total and the highest per-base earner. In Japan, Marine Corps bases collectively bring in around $58M (7 bases, ~$8M per base) and Navy bases about $41M (6 bases, ~$7M per base), while the Army’s two Japanese bases contribute a much smaller $7M total. In Europe, the Army’s 12 bases generate roughly $57M (about $5M per base) and the Navy’s European sites about $15M; the Marine Corps has no European slot-machine revenue. The per-base ranking mirrors this pattern: Camp Humphreys (Army, Korea) is the top individual base at over $50M, followed by Camp Butler / Foster USMC (Japan) at about $41M, and then a mix of high-earning Army and Navy bases such as AFRC Dragon Hill Lodge, Yokosuka Navy, Kaiserslautern, Wiesbaden, Daegu, Casey/Hovey, Stuttgart and Iwakuni. Overall, Army installations—especially in Korea—dominate both total and per-base revenue, and seven of the top ten bases by revenue belong to the Army, indicating that slot-machine income is highly concentrated in a small set of large overseas hubs.
+
 - 2. Which bases generate the highest total revenue, and how does that rank change by year and by branch?
+
+![Description](fa25-team-b/docs/images/Top%205%20Bases%20by%20Annual%20Revenue.png)
+
+This figure compares the top five overseas bases by annual slot-machine revenue for the Army, Navy, and Marine Corps from FY2020 to FY2024. For the Army, Camp Humphreys (Korea) is consistently the top-earning installation, rising from about $12–15M between FY2020 and FY2023 before a sharp drop in FY2024. The Navy’s clear leader is Yokosuka Navy Base (Japan), which grows from roughly $5–10M through FY2023 and then also declines in FY2024, while Sasebo and the other Japan/Europe bases stay in the mid-single-million range. For the Marine Corps, Camp Butler / Foster (Japan) dominates its branch and is the single largest revenue-generating base in the dataset, increasing from about $14M to nearly $18M by FY2023 before falling back in FY2024. Overall, the chart shows that a small number of large Japanese and Korean hubs account for the majority of revenue in each branch, with strong growth up to FY2023 followed by a broad pullback in FY2024.
+
+
+![Description](fa25-team-b/docs/images/Annual%20Revenue%20Trend%20of%20Bases%20Ever%20Ranked%20in%20Top%2010.png)
+
+This chart tracks the annual slot-machine revenue from FY2020 to FY2024 for every base that ever ranked in the overall top 10. It highlights how a small set of large overseas hubs account for most of the revenue across all branches. Camp Butler / Foster USMC (Japan) is the clear top performer, rising from about $13.8M in FY2020 to roughly $18M in FY2023 before dropping sharply in FY2024. Camp Humphreys (Army – Korea) is consistently the second-highest base, with steady growth from around $12.6M to $15M over FY2020–FY2023 and a similar pullback in FY2024. A second tier of bases—including Yokosuka Navy (Japan) and Wiesbaden (Army – Europe)—shows moderate growth into the $8–10M range by FY2023, while mid-tier sites such as AFRC Dragon Hill Lodge, Iwakuni, Sasebo, Kaiserslautern, and others peak around $3–5M. All bases experience a noticeable revenue decline in FY2024, but the relative ordering between bases and branches remains largely unchanged.
+
+#### Answer to Base Question 2
+
+Across FY2020–FY2024, the highest-revenue base in the entire dataset is Camp Butler / Foster USMC (Japan), which consistently ranks #1 overall and within the Marine Corps, followed by Camp Humphreys (Army – Korea) as the steady #2 base and top Army site, and Yokosuka Navy (Japan) as the leading Navy base that generally sits in the #3 overall position. A second tier of Army and Navy installations—such as Wiesbaden (Europe), AFRC Dragon Hill Lodge and Casey/Hovey/Daegu (Korea), Iwakuni USMC, Sasebo and Atsugi Navy, Kaiserslautern and Stuttgart—contributes substantially but never surpasses these three leaders. While revenues for most top bases rise from FY2020 to FY2023 and then drop sharply in FY2024, this volatility mainly affects the magnitude of revenue rather than the ordering, so the cross-branch ranking of the top-earning bases remains remarkably stable over time.
+
 - 3. Which types of games or machines generate the most revenue? (CANT ANSWER RIGHT NOW)
 - 4. How have the types of games or machines installed at bases changed over time? 
 
@@ -100,7 +118,6 @@ Annotations emphasize that seven out of the ten top‑earning bases belong to th
 Click the following thumbnail image to see the initial demo video:
 
 [![Demo Video](fa25-team-b/docs/images/Datasette%20Demo%20shortcut.jpg)](fa25-team-b/docs/videos/Datasette%20UI%20Demo.mp4)
-
 
 ---
 
