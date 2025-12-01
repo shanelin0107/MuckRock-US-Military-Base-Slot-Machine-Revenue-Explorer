@@ -113,7 +113,7 @@ For Base Question 1, the charts show that the Army in Korea is the dominant sour
 Across FY2020–FY2024, the highest-revenue base in the entire dataset is Camp Butler / Foster USMC (Japan), which consistently ranks #1 overall and within the Marine Corps, followed by Camp Humphreys (Army – Korea) as the steady #2 base and top Army site, and Yokosuka Navy (Japan) as the leading Navy base that generally sits in the #3 overall position. A second tier of Army and Navy installations—such as Wiesbaden (Europe), AFRC Dragon Hill Lodge and Casey/Hovey/Daegu (Korea), Iwakuni USMC, Sasebo and Atsugi Navy, Kaiserslautern and Stuttgart—contributes substantially but never surpasses these three leaders. While revenues for most top bases rise from FY2020 to FY2023 and then drop sharply in FY2024, this volatility mainly affects the magnitude of revenue rather than the ordering, so the cross-branch ranking of the top-earning bases remains remarkably stable over time.
 
 
-#### 3. How have the total number of slot machines and the vendor mix at major bases changed over time?
+#### 3. How have the total number of slot machines and the vendors at major bases changed over time?
 
 ![Description](fa25-team-b/docs/images/total_unique_machine.png)
 
