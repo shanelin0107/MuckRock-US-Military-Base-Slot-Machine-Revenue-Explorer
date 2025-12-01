@@ -232,7 +232,7 @@ plugins:
           title: "Project Snapshot"
           library: markdown
           display: |
-            ### Project Snapshot
+            # Project Snapshot
 
             This dashboard analyzes U.S. military slot-machine revenue across Army, Navy, and Marine Corps installations worldwide from FY2020–FY2024. 
             The goal is to visualize geographic patterns, fiscal-year trends, and top-earning locations.
@@ -370,7 +370,7 @@ plugins:
                 - field: branch
                 - field: total_revenue
         top_installations_table:
-          title: "Top 10 Installations"
+          title: "Top 10 Installations by Revenue"
           library: vega-lite
           db: military_slots
           query: |
@@ -405,6 +405,7 @@ plugins:
                 - field: branch
                 - field: district
                 - field: total_revenue
+              height: 240
         map_overview:
           title: "Installations Map"
           library: map
