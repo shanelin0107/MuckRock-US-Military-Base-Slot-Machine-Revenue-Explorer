@@ -23,6 +23,6 @@
 This folder contain the python code we use to answer all the base questions.
 We use District Revenue file to answer base question 1 and 2 and we use asset report to answer base question 3.
 
-For more detail of explanation of each question, please refer to [Here](fa25-team-b/README.md)
+For more detail of explanation of each question, please refer to [Here](fa25-team-b/readme.md)
 
 
