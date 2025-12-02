@@ -68,7 +68,7 @@ Below is the total slot machine revenue by military branch and by region
 This table is the summary of total slot machine revenue by military branch and by region.
 
 
-![Description](fa25-team-b/docs/images/total_revenue_by_region_and_service.png)
+![Description](docs/images/total_revenue_by_region_and_service.png)
 
 - This compares the total slot‑machine revenue for the Army (blue), Marine Corps (orange) and Navy (green) across three regions: Korea, Japan and Europe. The y‑axis measures total revenue in millions of U.S. dollars. Key observations include:  
 
@@ -79,7 +79,7 @@ This table is the summary of total slot machine revenue by military branch and b
 
 
 
-![Description](fa25-team-b/docs/images/top10_bases_total_revenue.png)
+![Description](docs/images/top10_bases_total_revenue.png)
 
 - The second slide ranks the top 10 individual bases by total slot‑machine revenue. The bases are colour‑coded by service branch (blue = Army, orange = Marine Corps, green = Navy). Notable findings:
 
@@ -97,13 +97,13 @@ For Base Question 1, the charts show that the Army in Korea is the dominant sour
 
 #### 2. Which bases generate the highest total revenue, and how does that rank change by year and by branch?
 
-![Description](fa25-team-b/docs/images/Top%205%20Bases%20by%20Annual%20Revenue.png)
+![Description](docs/images/Top%205%20Bases%20by%20Annual%20Revenue.png)
 
 
 - This figure compares the top five overseas bases by annual slot-machine revenue for the Army, Navy, and Marine Corps from FY2020 to FY2024. For the Army, Camp Humphreys (Korea) is consistently the top-earning installation, rising from about $12–15M between FY2020 and FY2023 before a sharp drop in FY2024. The Navy’s clear leader is Yokosuka Navy Base (Japan), which grows from roughly $5–10M through FY2023 and then also declines in FY2024, while Sasebo and the other Japan/Europe bases stay in the mid-single-million range. For the Marine Corps, Camp Butler / Foster (Japan) dominates its branch and is the single largest revenue-generating base in the dataset, increasing from about $14M to nearly $18M by FY2023 before falling back in FY2024. Overall, the chart shows that a small number of large Japanese and Korean hubs account for the majority of revenue in each branch, with strong growth up to FY2023 followed by a broad pullback in FY2024.
 
 
-![Description](fa25-team-b/docs/images/Annual%20Revenue%20Trend%20of%20Bases%20Ever%20Ranked%20in%20Top%2010.png)
+![Description](docs/images/Annual%20Revenue%20Trend%20of%20Bases%20Ever%20Ranked%20in%20Top%2010.png)
 
 - This chart tracks the annual slot-machine revenue from FY2020 to FY2024 for every base that ever ranked in the overall top 10. It highlights how a small set of large overseas hubs account for most of the revenue across all branches. Camp Butler / Foster USMC (Japan) is the clear top performer, rising from about $13.8M in FY2020 to roughly $18M in FY2023 before dropping sharply in FY2024. Camp Humphreys (Army – Korea) is consistently the second-highest base, with steady growth from around $12.6M to $15M over FY2020–FY2023 and a similar pullback in FY2024. A second tier of bases—including Yokosuka Navy (Japan) and Wiesbaden (Army – Europe)—shows moderate growth into the $8–10M range by FY2023, while mid-tier sites such as AFRC Dragon Hill Lodge, Iwakuni, Sasebo, Kaiserslautern, and others peak around $3–5M. All bases experience a noticeable revenue decline in FY2024, but the relative ordering between bases and branches remains largely unchanged.
 
@@ -115,7 +115,7 @@ Across FY2020–FY2024, the highest-revenue base in the entire dataset is Camp B
 
 #### 3. How have the total number of slot machines and the vendors at major bases changed over time?
 
-![Description](fa25-team-b/docs/images/total_unique_machine.png)
+![Description](docs/images/total_unique_machine.png)
 
 
 - Total unique machines by year
@@ -125,7 +125,7 @@ There is then a sharp expansion in FY2023, when the inventory jumps to about 1,6
 In FY2024, the fleet contracts again to a little over 1,000 machines, but remains well above the pre-2023 levels, suggesting a partial pullback rather than a full reversal of the 2023 build-up.
 
 
-![Description](fa25-team-b/docs/images/vender_machine_type.png)
+![Description](docs/images/vender_machine_type.png)
 
 
 - Vendor / machine-type mix by year (top 10 vendors)
@@ -135,7 +135,7 @@ In 2023, the total number of machines increases dramatically, and the growth is 
 By 2024, the total number of machines declines from the 2023 peak, and several vendors scale back, but NOV and IGT remain core contributors, indicating a more concentrated vendor landscape after the post-2023 adjustment.
 
 
-![Description](fa25-team-b/docs/images/mahcine_number_overtime.png)
+![Description](docs/images/mahcine_number_overtime.png)
 
 
 - Machine counts over time for major bases (FOSHORT)
@@ -156,7 +156,7 @@ Across FY2020–FY2024, the slot-machine footprint at the bases follows a “dip
 
 Click the following thumbnail image to see the initial demo video:
 
-[![Demo Video](fa25-team-b/docs/images/Datasette%20Demo%20shortcut.jpg)](fa25-team-b/docs/videos/Datasette%20UI%20Demo.mp4)
+[![Demo Video](docs/images/Datasette%20Demo%20shortcut.jpg)](fa25-team-b/docs/videos/Datasette%20UI%20Demo.mp4)
 
 ---
 
@@ -217,7 +217,7 @@ This section presents the Exploratory Data Analysis (EDA) of our dataset. The an
 | Asset Aging            | Machine inventory aging; depreciation trends require further attention       |
 
 For more details about the EDA, please refer to the following link:
-[Go to EDA README](fa25-team-b/eda/README.md)
+[Go to EDA README](eda/README.md)
 
 ## Where to start
 
@@ -247,7 +247,7 @@ If you want to understand **how raw PDFs are turned into structured CSVs**：
 #### 3. Detailed dataset documentation
 
 For **details, extraction logic, and data dictionaries**, please refer to 
-[PDF Extraction README](fa25-team-b/PDF-Extraction/readme.md):
+[PDF Extraction README](PDF-Extraction/readme.md):
 
 - `fa25-team-b-dev/fa25-team-b/PDF Extraction/README.md`  
   – Describes what each PDF source contains, how we parsed it (e.g. `pdftotext`, `pdfplumber`, `PyMuPDF`), what CSVs are produced, and what each column means.
