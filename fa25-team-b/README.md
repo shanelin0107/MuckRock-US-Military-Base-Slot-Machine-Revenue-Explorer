@@ -244,7 +244,6 @@ If you want to understand **how raw PDFs are turned into structured CSVs**：
 - `fa25-team-b-dev/fa25-team-b/PDF Extraction/District_Revenues_FY20_FY24.ipynb`  
   – PyMuPDF-based extraction for the District Revenues FY20–FY24 PDF, including logic to handle multi-line rows and header parsing.
 
-
 #### 3. Detailed dataset documentation
 
 For **details, extraction logic, and data dictionaries**, please refer to 
