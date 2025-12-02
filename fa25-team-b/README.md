@@ -156,7 +156,7 @@ Across FY2020–FY2024, the slot-machine footprint at the bases follows a “dip
 
 Click the following thumbnail image to see the initial demo video:
 
-[![Demo Video](docs/images/Datasette%20Demo%20shortcut.jpg)](fa25-team-b/docs/videos/Datasette%20UI%20Demo.mp4)
+[![Demo Video](docs/images/Datasette%20Demo%20shortcut.jpg)](https://youtu.be/jmPjwh6bLL4)
 
 ---
 
