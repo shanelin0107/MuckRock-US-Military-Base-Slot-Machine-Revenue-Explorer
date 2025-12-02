@@ -3,7 +3,7 @@
   <br>
   <a href="https://www.bu.edu/spark/" target="_blank"><img src="https://www.bu.edu/spark/files/2023/08/logo.png" alt="BUSpark" width="200"></a>
   <br>
-  Project README Template <change to project name>
+  PDF Extraction <change to project name>
   <br>
 </h1>
 
