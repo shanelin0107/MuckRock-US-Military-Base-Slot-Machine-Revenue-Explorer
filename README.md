@@ -139,10 +139,11 @@ By 2024, the total number of machines declines from the 2023 peak, and several v
 
 
 - Machine counts over time for major bases (FOSHORT)
-The third chart tracks machine counts over time for eight major bases: DAEGU, KAISERSLAUTERN, OKINAWA, PYONGTAEK, SEOUL, VILSECK, YOKOSUKA, and ZAMA.
-Many bases experience declining or flat machine counts between 2020 and 2022—for example, OKINAWA and PYONGTAEK both trend downward over this period, and SEOUL drops sharply between 2020 and 2021.
-In 2023, there is a pronounced expansion across almost all major bases: OKINAWA, KAISERSLAUTERN, DAEGU, and ZAMA all show large spikes in machine counts, and smaller bases such as YOKOSUKA, VILSECK, and SEOUL also rebound.
-By 2024, machine counts fall back from the 2023 highs at most bases, but in many cases (e.g., DAEGU, KAISERSLAUTERN, OKINAWA) they remain above their 2022 levels, suggesting a net increase in machine presence compared with the earlier years.
+    For this analysis, “major bases” are defined as the eight installations with the highest total number of unique machines across FY2020–FY2024.
+  The third chart tracks machine counts over time for eight major bases: DAEGU, KAISERSLAUTERN, OKINAWA, PYONGTAEK, SEOUL, VILSECK, YOKOSUKA, and ZAMA.
+  Many bases experience declining or flat machine counts between 2020 and 2022—for example, OKINAWA and PYONGTAEK both trend downward over this period, and SEOUL drops sharply between 2020 and 2021.
+  In 2023, there is a pronounced expansion across almost all major bases: OKINAWA, KAISERSLAUTERN, DAEGU, and ZAMA all show large spikes in machine counts, and smaller bases such as YOKOSUKA, VILSECK, and SEOUL also rebound.
+  By 2024, machine counts fall back from the 2023 highs at most bases, but in many cases (e.g., DAEGU, KAISERSLAUTERN, OKINAWA) they remain above their 2022 levels, suggesting a net increase in machine presence compared with the earlier years.
 
 
 ##### Answer for Base Question 3
