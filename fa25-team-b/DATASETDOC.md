@@ -1,83 +1,215 @@
-***Project Information*** 
+# Project Datasheet: MuckRock US Military Base Slot Machine Revenue Explorer
 
-* What is the project name?  
-* What is the link to your project’s GitHub repository?   
-* What is the link to your project’s Google Drive folder? \*\**This should be a Spark\! Owned Google Drive folder \- please contact your PM if you do not have access\*\**  
-* In your own words, what is this project about? What is the goal of this project?   
-* Who is the client for the project?  
-* Who are the client contacts for the project?  
-* What class was this project part of?
+## 1. Project Information
 
-***Dataset Information***
+**What is the project name?**
+> **MuckRock: US Military Base Slot Machine Revenue Explorer**
 
-* What data sets did you use in your project? Please provide a link to the data sets, this could be a link to a folder in your GitHub Repo, Spark\! owned Google Drive Folder for this project, or a path on the SCC, etc.  
-* Please provide a link to any data dictionaries for the datasets in this project. If one does not exist, please create a data dictionary for the datasets used in this project. **(Example of data dictionary)**   
-* What keywords or tags would you attach to the data set?  
-  * Domain(s) of Application: Computer Vision, Object Detection, OCR, Image Classification, Image Segmentation, Facial Recognition, NLP, Topic Modeling, Sentiment Analysis, Named Entity Recognition, Text Classification, Summarization, Anomaly Detection, Other   
-  * Sustainability, Health, Civic Tech, Voting, Housing, Policing, Budget, Education, Transportation, etc. 
+**What is the link to your project's GitHub repository?**
+> *[https://github.com/BU-Spark/ds-muckrock-liberation/tree/fa25-team-b-dev/fa25-team-b]*
 
-*The following questions pertain to the datasets you used in your project.*   
-*Motivation* 
+**What is the link to your project's Google Drive folder?**
+> [Spark! Owned Google Drive Folder](https://drive.google.com/drive/folders/1CZ0JF2y9IhaPy-KH4tkH2YbJyr750urc?usp=drive_link)
 
-* For what purpose was the dataset created? Was there a specific task in mind? Was there a specific gap that needed to be filled? Please provide a description. 
+**In your own words, what is this project about? What is the goal of this project?**
+> This project focuses on liberating and analyzing data from the **Army Recreation Machine Program (ARMP)**, which operates slot machines on overseas U.S. military bases.
+>
+> **Goal:** To extract, clean, and structure financial and operational data from unstructured PDF documents to enable transparency into slot machine revenue distribution across bases, branches, and regions.
+>
+> **Impact:** The project aims to support public understanding of gambling risks faced by service members, identify patterns in revenue trends, and provide accessible tools (such as a Datasette interface) for policymakers and researchers.
 
-*Composition*
+**Who is the client for the project?**
+> **MuckRock Foundation**
 
-* What do the instances that comprise the dataset represent (e.g., documents, photos, people, countries)? Are there multiple types of instances (e.g., movies, users, and ratings; people and interactions between them; nodes and edges)? What is the format of the instances (e.g., image data, text data, tabular data, audio data, video data, time series, graph data, geospatial data, multimodal (please specify), etc.)? Please provide a description.   
-* How many instances are there in total (of each type, if appropriate)?  
-* Does the dataset contain all possible instances or is it a sample (not necessarily random) of instances from a larger set? If the dataset is a sample, then what is the larger set? Is the sample representative of the larger set? If so, please describe how this representativeness was validated/verified. If it is not representative of the larger set, please describe why not (e.g., to cover a more diverse range of instances, because instances were withheld or unavailable).  
-* What data does each instance consist of? “Raw” data (e.g., unprocessed text or images) or features? In either case, please provide a description.   
-* Is there any information missing from individual instances? If so, please provide a description, explaining why this information is missing (e.g., because it was unavailable). This does not include intentionally removed information, but might include redacted text.   
-* Are there recommended data splits (e.g., training, development/validation, testing)? If so, please provide a description of these splits, explaining the rationale behind them  
-* Are there any errors, sources of noise, or redundancies in the dataset? If so, please provide a description.   
-* Is the dataset self-contained, or does it link to or otherwise rely on external resources (e.g., websites, tweets, other datasets)? If it links to or relies on external resources,   
-  * Are there guarantees that they will exist, and remain constant, over time;  
-  * Are there official archival versions of the complete dataset (i.e., including the external resources as they existed at the time the dataset was created)?  
-  * Are there any restrictions (e.g., licenses, fees) associated with any of the external resources that might apply to a dataset consumer? Please provide descriptions of all external resources and any restrictions associated with them, as well as links or other access points as appropriate.   
-* Does the dataset contain data that might be considered confidential (e.g., data that is protected by legal privilege or by doctor-patient confidentiality, data that includes the content of individuals’ non-public communications)? If so, please provide a description.   
-* Does the dataset contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety? If so, please describe why.   
-* Is it possible to identify individuals (i.e., one or more natural persons), either directly or indirectly (i.e., in combination with other data) from the dataset? If so, please describe how.   
-* Dataset Snapshot, if there are multiple datasets please include multiple tables for each dataset. 
+**Who are the client contacts for the project?**
+> *[To be filled by project team - client contact information]*
 
+**What class was this project part of?**
+> **DS 701: Tools for Data Science (Spark!) - Fall 2025 (FA25), Boston University**
 
-| Size of dataset |  |
-| :---- | :---- |
-| Number of instances |  |
-| Number of fields  |  |
-| Labeled classes |  |
-| Number of labels  |  |
+---
 
+## 2. Dataset Information
 
-  
-*Collection Process*
+**What data sets did you use in your project?**
+The project uses multiple datasets extracted from PDF documents provided by MuckRock. All datasets are stored in the [Project Google Drive](https://drive.google.com/drive/folders/1CZ0JF2y9IhaPy-KH4tkH2YbJyr750urc?usp=drive_link).
 
-* What mechanisms or procedures were used to collect the data (e.g., API, artificially generated, crowdsourced \- paid, crowdsourced \- volunteer, scraped or crawled, survey, forms, or polls, taken from other existing datasets, provided by the client, etc)? How were these mechanisms or procedures validated?  
-* If the dataset is a sample from a larger set, what was the sampling strategy (e.g., deterministic, probabilistic with specific sampling probabilities)?  
-* Over what timeframe was the data collected? Does this timeframe match the creation timeframe of the data associated with the instances (e.g., recent crawl of old news articles)? If not, please describe the timeframe in which the data associated with the instances was created. 
+1.  **Asset Reports** (FY2020–FY2024): Slot machine inventory, manufacturers, locations, and status.
+2.  **Marine Revenue Reports** (FY2020–FY2024): Monthly and annual revenue for Marine Corps installations.
+3.  **Navy Revenue Reports** (FY2016–FY2024): Revenue and reimbursement data by country/installation.
+4.  **District Revenues** (FY2020–FY2024): Aggregated revenue by district, base, and location (all branches).
+5.  **Financial Statements**: Overall financial health (cash holdings, equity, depreciation).
+6.  **Revenue Comparison Reports** (FY2023–FY2024): Comparative data across regions and branches.
 
-*Preprocessing/cleaning/labeling* 
+**Data Dictionaries**
+Detailed dictionaries are in: `fa25-team-b/PDF Extraction/readme.md`.
 
-* Was any preprocessing/cleaning/labeling of the data done (e.g., discretization or bucketing, tokenization, part-of-speech tagging, SIFT feature extraction, removal of instances, processing of missing values)? If so, please provide a description. If not, you may skip the remaining questions in this section.   
-* Were any transformations applied to the data (e.g., cleaning mismatched values, cleaning missing values, converting data types, data aggregation, dimensionality reduction, joining input sources, redaction or anonymization, etc.)? If so, please provide a description.   
-* Was the “raw” data saved in addition to the preprocessed/cleaned/labeled data (e.g., to support unanticipated future uses)? If so, please provide a link or other access point to the “raw” data, this could be a link to a folder in your GitHub Repo, Spark\! owned Google Drive Folder for this project, or a path on the SCC, etc.  
-* Is the code that was used to preprocess/clean the data available? If so, please provide a link to it (e.g., EDA notebook/EDA script in the GitHub repository). 
+*   **Asset Reports:**
+    *   `assets_by_region_service.csv`: Region, Service, Asset counts, EGM counts.
+    *   `assets_by_field_office.csv`: Field Office stats.
+    *   `installed_assets_location_manufacture.csv`: Manufacturer & Service Type details.
+    *   `asset_details.csv`: Serial numbers, Acquisition dates, Asset types.
+    *   `floor_asset_details.csv` & `floor_summary_details.csv`: Site/Floor metadata.
+    *   `site_operational_status.csv`: Operational status.
+    *   `years_in_storage.csv`: Asset age info.
 
-*Uses* 
+*   **Marine Revenue:**
+    *   `Marine_Revenue_FY20-FY24_summary table.csv`: Country/Installation summaries.
+    *   `Marine_Revenue_FY20-FY24_detail.csv`: Detailed monthly revenue.
 
-* What tasks has the dataset been used for so far? Please provide a description.   
-* What (other) tasks could the dataset be used for?  
-* Is there anything about the composition of the dataset or the way it was collected and preprocessed/cleaned/labeled that might impact future uses?   
-* Are there tasks for which the dataset should not be used? If so, please provide a description.
+*   **Navy Revenue:**
+    *   `Navy_Revenue_Report_monthly_summary.csv`: Installation, Country, Month, Year, Revenue.
 
-*Distribution*
+*   **District Revenue:**
+    *   `District_Revenue_filtered_FY20-FY24_final.csv`: Service, Category, Region, Base, Month, Year, Amount.
 
-* Based on discussions with the client, what access type should this dataset be given (eg., Internal (Restricted), External Open Access, Other)?
+**What keywords or tags would you attach to the data set?**
+*   **Domain:** Other (Financial Data Analysis, Government Transparency, Public Policy Analysis)
+*   **Tags:** Civic Tech, Budget, Health (gambling addiction), Policing (military oversight)
 
-*Maintenance* 
+---
 
-* If others want to extend/augment/build on/contribute to the dataset, is there a mechanism for them to do so? If so, please provide a description. 
+## 3. Motivation & Composition
 
-*Other*
+### Motivation
+**For what purpose was the dataset created?**
+> The original PDFs were for internal ARMP financial reporting. MuckRock obtained them via FOIA to address a transparency gap.
+>
+> **Gap Filled:** While military slots generate millions, public data was non-existent. This dataset converts unstructured PDFs into structured formats to enable public oversight, policy analysis, and research into gambling-related harms.
 
-* Is there any other additional information that you would like to provide that has not already been covered in other sections?
+### Composition
+**What do the instances represent?**
+The format is primarily **tabular data (CSV)** extracted from multimodal PDF sources.
+1.  **Financial Records:** Transactions, monthly revenue, financial statement entries (Time series: FY2016–2024).
+2.  **Asset Records:** Individual slot machines, manufacturers, locations, status (Geospatial attributes).
+3.  **Aggregate Summaries:** Statistics by base, region, or branch.
 
+**How many instances are there?**
+*   **Asset Records:** ~1,889 operational machines (FY2024).
+*   **Revenue Records:** Thousands of monthly records across District, Marine, and Navy reports.
+*   **Locations:** 79 overseas military bases (Europe: 39.4%, Japan: 37.8%, Korea: 22.8% of machines).
+
+**Is the dataset a sample or complete?**
+> It represents the **complete set of available records obtained through FOIA**.
+> *Limitations:* FY2024 may be incomplete; some data lost due to OCR errors or PDF damage (e.g., Yokosuka base); domestic bases are excluded.
+
+**What data does each instance consist of?**
+> **Cleaned and structured features.**
+> *   *Example Revenue:* Service, Region, Base, Month, Year, Cleaned Amount.
+> *   *Example Asset:* Manufacturer, Serial #, Installation Date, Location, Status.
+
+**Is there missing information?**
+> Yes, due to:
+> 1.  **Extraction Errors:** OCR failures, complex layouts, damaged PDFs (notably Japan bases).
+> 2.  **Source Issues:** Blank cells in original PDFs.
+> 3.  **Scope:** Incomplete fiscal years.
+
+**Are there recommended data splits?**
+> **No.** This is not a machine learning dataset.
+> *Natural Organization:* By Fiscal Year, Service Branch, or Region.
+
+**Are there errors or noise?**
+> Yes. Sources include OCR misreads ("0" vs "O"), table parsing errors, inconsistent base naming ("Camp Butler" vs "Camp Butler/Foster"), and currency formatting issues.
+
+**Privacy & Ethics**
+*   **Confidentiality:** No PII. Only aggregate financial/operational data.
+*   **Sensitive Content:** Financial data is neutral, but the context (gambling) relates to addiction/health.
+*   **Identification:** No individuals can be identified.
+
+---
+
+## 4. Dataset Snapshot
+
+**Asset Reports Dataset**
+| Metric | Description |
+| :--- | :--- |
+| **Number of instances** | ~1,889 machines (FY2024), plus historical (FY20-24) |
+| **Number of fields** | 8-15 fields (Region, Service, Manufacturer, Serial #, etc.) |
+| **Labels** | Branch (Army, Navy...), Region (Europe, Japan...), Vendor (IGT, BAL...) |
+
+**Revenue Datasets (District, Marine, Navy)**
+| Metric | Description |
+| :--- | :--- |
+| **Number of instances** | Thousands of monthly records |
+| **Number of fields** | 6-8 fields (Service, Region, Base, Month, Year, Amount) |
+| **Labels** | Service Branch, Region, Revenue Category |
+
+**Financial Statements Dataset**
+| Metric | Description |
+| :--- | :--- |
+| **Number of instances** | Monthly/quarterly snapshots (FY20-24) |
+| **Number of fields** | 10+ (Cash, Equity, Asset Values, Liabilities) |
+
+---
+
+## 5. Collection Process
+
+**How was the data collected?**
+> **Source:** Provided by MuckRock via **FOIA requests** to the DOD/ARMP.
+> **Process:**
+> 1. MuckRock received PDFs from the government.
+> 2. Project team extracted data using Python (`pdfplumber`, `PyMuPDF`, `Camelot`, etc.).
+> 3. Validation via cross-referencing totals (e.g., FY24 total $70.9M).
+
+**Timeframe**
+*   **Collection:** Fall 2025.
+*   **Data Coverage:** FY2016 – FY2024.
+
+---
+
+## 6. Preprocessing & Cleaning
+
+**What cleaning was done?**
+1.  **Currency:** Removed symbols ($, commas), fixed negative values `()`.
+2.  **Dates:** Standardized to `YYYY-MM`.
+3.  **Text:** Cleaned base names, handled merged cells.
+4.  **Handling Missing/Bad Data:** Filled NaNs with 0.0 (financial), removed corrupt rows (e.g., problematic Japan bases), removed outliers (IQR method).
+5.  **Structure:** Rebuilt multi-page tables and fixed column alignment.
+
+**Is the raw data saved?**
+> Yes. Raw PDFs are in the Google Drive. Extraction code can reproduce CSVs.
+
+**Is the code available?**
+> Yes. See `fa25-team-b/PDF Extraction/` for extraction scripts and `fa25-team-b/eda/` for cleaning/analysis notebooks.
+
+---
+
+## 7. Uses
+
+**What has the dataset been used for?**
+*   **EDA:** Analysis of revenue patterns, geographic distribution, and financial health.
+*   **Answering Questions:** Identifying highest-revenue bases (Army/Korea dominance) and vendor changes.
+*   **Visualization:** Charts of revenue trends and inventory.
+*   **Tools:** Development of a **Datasette** interface for public querying.
+
+**Potential Future Uses**
+*   Longitudinal trend analysis & Risk assessment research.
+*   Comparisons across branches/regions.
+*   Policy impact studies (e.g., effect of COVID-19).
+*   Vendor market share analysis.
+
+**Tasks NOT recommended**
+*   Individual identification (impossible).
+*   Real-time monitoring (data is historical).
+*   Definitive causal inference (lacks experimental controls).
+
+---
+
+## 8. Distribution & Maintenance
+
+**Access Type**
+> **External Open Access** (Public transparency).
+
+**Maintenance / Contribution**
+> *   **Mechanism:** GitHub Repository (Pull Requests).
+> *   **Reproducibility:** Extraction pipeline allows re-processing or adding new fiscal years.
+> *   **Documentation:** Refer to `PDF Extraction/readme.md`.
+
+---
+
+## 9. Additional Notes
+
+1.  **Scale:** As of FY2024, ARMP operates **1,889 machines** across **79 bases**, generating **$70.9M**.
+2.  **Key Insight:** Asia-Pacific (Japan + Korea) accounts for >70% of total revenue.
+3.  **Tech Stack:** `pdfplumber`, `PyMuPDF`, `pdftotext`, `Camelot`, `Tabula`.
+4.  **Known Issues:** Yokosuka, Sasebo, Souda Bay, and Atsugi bases have data quality issues requiring manual attention.
