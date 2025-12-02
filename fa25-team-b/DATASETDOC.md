@@ -6,7 +6,7 @@
 > **MuckRock: US Military Base Slot Machine Revenue Explorer**
 
 **What is the link to your project's GitHub repository?**
-> *[https://github.com/BU-Spark/ds-muckrock-liberation/tree/fa25-team-b-dev/fa25-team-b]*
+> *https://github.com/BU-Spark/ds-muckrock-liberation/tree/fa25-team-b-dev/fa25-team-b*
 
 **What is the link to your project's Google Drive folder?**
 > [Spark! Owned Google Drive Folder](https://drive.google.com/drive/folders/1CZ0JF2y9IhaPy-KH4tkH2YbJyr750urc?usp=drive_link)
