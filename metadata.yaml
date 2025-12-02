@@ -11,14 +11,14 @@ license: |
 about: |
   Public-interest access to U.S. military slot-machine revenue data
 databases:
-  military_slot_machine_revenue:
+  military_slots:
     title: "Military Slot Machine Revenue (FY20-FY24)"
     description: >
       Monthly slot machine revenue for Army, Navy, and Marine Corps morale,
       welfare, and recreation (MWR) facilities aligned to fiscal years 2020
       through 2024 with coordinates for each installation.
     tables:
-      district_revenue:
+      slot_machine_revenue:
         title: "Slot Machine Revenue by Installation"
         description: >
           Each row represents the revenue reported by a specific facility on a
@@ -78,14 +78,14 @@ databases:
           datasette-cluster-map:
             latitude_column: base_latitude
             longitude_column: base_longitude
-      navy_monthly_revenue_summary:
+      navy_monthly_summary:
         title: "Navy Monthly Summary (FY20-FY24)"
         description: "Monthly Navy slot revenue and NAFI amounts by installation and location."
         columns:
           installation: "Navy installation name."
           loc_id: "Location identifier."
           location_name: "Facility/location name."
-          year_month_label: "Year–month label as written in the source reports (e.g., 17-Oct meaning 2017 October)."
+          month_label: "Year–month label as written in the source reports (e.g., 17-Oct meaning 2017 October)."
           revenue: "Revenue for the month."
           nafi_amount: "NAFI amount for the month."
           annual_revenue: "Annual revenue if provided."
@@ -104,7 +104,7 @@ databases:
           loc_id: "Marine facility location identifier."
           base_name: "Name of the Marine base."
           location_name: "Name of the Marine location."
-          year_month_label: "Year–month label as written in the source reports (e.g., 17-Oct meaning 2017 October)."
+          month_label: "Year–month label as written in the source reports (e.g., 17-Oct meaning 2017 October)."
           revenue: "Reported revenue amount."
           nafi_amount: "NAFI amount."
           annual_revenue: "Annual revenue total if provided."
