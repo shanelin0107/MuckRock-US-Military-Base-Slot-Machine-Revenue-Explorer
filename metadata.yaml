@@ -1,11 +1,15 @@
 title: "U.S. Military Base Slot Machine Revenue Explorer"
 description: >
-  Interactive Datasette deployment that surfaces FY2020-FY2024 slot machine
-  revenue reported by U.S. military installations worldwide. Built from
-  MuckRock FOIA responses and enriched with geocoded coordinates for mapping.
-source: "MuckRock FOIA Request"
-license: "Creative Commons Attribution 4.0"
-about: "Datasette instance prepared for the DS 701 project team."
+  Interactive Datasette deployment presenting FY2020–FY2024 slot-machine
+  revenue reported by U.S. military installations worldwide. Based on
+  internal financial reports provided via MuckRock and enhanced with
+  geocoded coordinates for global mapping.
+source: | 
+  Client-provided materials from MuckRock (ARMP/Navy/USMC internal slot machine revenue reports)
+license: |
+  U.S. Government Public Domain
+about: |
+  Public-interest access to U.S. military slot-machine revenue data
 databases:
   military_slots:
     title: "Military Slot Machine Revenue (FY20-FY24)"
@@ -22,7 +26,7 @@ databases:
           the U.S. federal calendar (Oct-Sep).
         source: "U.S. military MWR slot machine financial disclosures"
         columns:
-          installation_name: "Official installation name reported in the FOIA response."
+          installation_name: "Official installation name from the slot-machine revenue reports."
           facility_name: "Name of the club, community center, or other venue housing the slot machines."
           branch: "Military branch responsible for the facility (Army, Navy, USMC)."
           district: "Geographic district or theater (e.g., Japan, Europe, Korea)."
@@ -32,8 +36,8 @@ databases:
           month_name: "Name of the month for the record."
           month_number: "Integer month number (1-12) used for ordering."
           revenue: "Total slot machine revenue in U.S. dollars."
-          latitude: "Installation latitude for mapping."
-          longitude: "Installation longitude for mapping."
+          base_latitude: "Installation latitude for mapping."
+          base_longitude: "Installation longitude for mapping."
         sort_desc: revenue
         facets:
           - branch
@@ -42,13 +46,84 @@ databases:
           - installation_name
         plugins:
           datasette-cluster-map:
-            latitude_column: latitude
-            longitude_column: longitude
+            latitude_column: base_latitude
+            longitude_column: base_longitude
+      navy_revenue_summary:
+        title: "Navy Revenue Summary (FY16-FY24)"
+        description: "Summarized Navy slot revenue with annualized FY23/FY24 projections and coordinates."
+        columns:
+          country: "Country where the installation operates."
+          installation: "Navy installation name."
+          category: "Revenue category."
+          fy16: "FY16 total."
+          fy17: "FY17 total."
+          fy18: "FY18 total."
+          fy19: "FY19 total."
+          fy20: "FY20 total."
+          fy21: "FY21 total."
+          fy22: "FY22 total."
+          fy23: "FY23 total."
+          fy23_thru_sep: "FY23 total through September."
+          annualized_fy23: "Annualized FY23 estimate."
+          fy24_thru_apr: "FY24 total through April."
+          annualized_fy24: "Annualized FY24 estimate."
+          base_latitude: "Latitude for mapping."
+          base_longitude: "Longitude for mapping."
+        sort_desc: fy24_thru_apr
+        facets:
+          - country
+          - installation
+          - category
+        plugins:
+          datasette-cluster-map:
+            latitude_column: base_latitude
+            longitude_column: base_longitude
+      navy_monthly_summary:
+        title: "Navy Monthly Summary (FY20-FY24)"
+        description: "Monthly Navy slot revenue and NAFI amounts by installation and location."
+        columns:
+          installation: "Navy installation name."
+          loc_id: "Location identifier."
+          location_name: "Facility/location name."
+          month_label: "Year–month label as written in the source reports (e.g., 17-Oct meaning 2017 October)."
+          revenue: "Revenue for the month."
+          nafi_amount: "NAFI amount for the month."
+          annual_revenue: "Annual revenue if provided."
+          annual_nafi: "Annual NAFI if provided."
+          status: "Status flag from source."
+        sort_desc: revenue
+        facets:
+          - installation
+          - location_name
+          - month_label
+      marine_revenue_detail:
+        title: "Marine Corps Revenue Detail (FY20-FY24)"
+        description: "Line-level Marine Corps slot revenue with coordinates."
+        columns:
+          page: "Page number from the source PDF."
+          loc_id: "Marine facility location identifier."
+          base_name: "Name of the Marine base."
+          location_name: "Name of the Marine location."
+          month_label: "Year–month label as written in the source reports (e.g., 17-Oct meaning 2017 October)."
+          revenue: "Reported revenue amount."
+          nafi_amount: "NAFI amount."
+          annual_revenue: "Annual revenue total if provided."
+          annual_nafi: "Annual NAFI total if provided."
+          base_latitude: "Latitude coordinate for the base."
+          base_longitude: "Longitude coordinate for the base."
+        sort_desc: revenue
+        facets:
+          - location_name
+          - month_label
+        plugins:
+          datasette-cluster-map:
+            latitude_column: base_latitude
+            longitude_column: base_longitude
     queries:
       branch_revenue_summary:
         title: "Branch Revenue Overview"
         description: "Counts installations and aggregates revenue per branch."
-        sql: |
+        sql: &branch_revenue_summary_sql |
           select
             branch,
             count(distinct installation_name) as installations,
@@ -60,7 +135,7 @@ databases:
       top_installations:
         title: "Top 10 Installations by Revenue"
         description: "Shows the highest grossing installations across the full timeframe."
-        sql: |
+        sql: &top_installations_sql |
           select
             installation_name,
             branch,
@@ -73,7 +148,7 @@ databases:
       fiscal_trends:
         title: "Revenue Trends by Fiscal Year and Branch"
         description: "Breaks out aggregate revenue per fiscal year and branch."
-        sql: |
+        sql: &fiscal_trends_sql |
           select
             fiscal_year,
             branch,
@@ -95,7 +170,7 @@ databases:
       branch_district_revenue:
         title: "Branch vs District Revenue and Per-Base Average"
         description: "Total revenue, base counts, and per-base averages grouped by branch and district."
-        sql: |
+        sql: &branch_district_revenue_sql |
           select
             branch,
             district,
@@ -108,7 +183,7 @@ databases:
       top_bases_by_year_branch:
         title: "Top Bases by Fiscal Year and Branch"
         description: "Ranks installations within each fiscal year and branch by total revenue."
-        sql: |
+        sql: &top_bases_by_year_branch_sql |
           with totals as (
             select
               installation_name,
@@ -130,3 +205,263 @@ databases:
           limit 200;
 plugins:
   datasette-vega: {}
+  datasette-dashboards:
+    slot_machine_overview:
+      title: "Slot Machine Revenue Overview"
+      description: "Key metrics, geographies, trends, and top installations from FY2020-FY2024."
+      settings:
+        allow_fullscreen: true
+      filters:
+        fiscal_year:
+          type: select
+          name: Fiscal Year
+          db: military_slots
+          query: "select distinct fiscal_year from slot_machine_revenue where fiscal_year is not null order by fiscal_year desc"
+        branch:
+          type: select
+          name: Branch
+          db: military_slots
+          query: "select distinct branch from slot_machine_revenue where branch is not null order by branch"
+        district:
+          type: select
+          name: District
+          db: military_slots
+          query: "select distinct district from slot_machine_revenue where district is not null order by district"
+      charts:
+        snapshot:
+          title: "Project Details"
+          library: markdown
+          display: |
+            # Project Details
+
+            This dashboard analyzes U.S. military slot-machine revenue across Army, Navy, and Marine Corps installations worldwide from FY2020–FY2024. 
+            The goal is to visualize geographic patterns, fiscal-year trends, and top-earning bases.
+
+            ## Process
+
+            1. Extraction: Parsing raw PDF revenue reports across multiple fiscal years
+            2. Transformation: Cleaning and standardizing branch, district, installation names, and monthly totals
+            3. Enrichment: Adding latitude and longitude through base-based geocoding
+            4. Loading: Publishing processed tables to Datasette with interactive dashboards and maps
+           
+            ## Plugins 
+            
+            datasette-cluster-map, datasette-vega, datasette-dashboards
+        total_revenue_metric:
+          title: "Total Revenue"
+          library: metric
+          db: military_slots
+          query: |
+            select round(sum(revenue), 0) as total_revenue
+            from slot_machine_revenue
+            where 1=1
+              [[and fiscal_year = :fiscal_year]]
+              [[and branch = :branch]]
+              [[and district = :district]]
+          display:
+            field: total_revenue
+            prefix: "$"
+        revenue_over_time_chart:
+          title: "Revenue by Month"
+          library: vega-lite
+          db: military_slots
+          query: |
+            select
+              month_number,
+              month_name,
+              branch,
+              round(sum(revenue), 2) as total_revenue
+            from slot_machine_revenue
+            where 1=1
+              [[and fiscal_year = :fiscal_year]]
+              [[and branch = :branch]]
+              [[and district = :district]]
+            group by month_number, month_name, branch
+            order by month_number;
+          display:
+            mark: line
+            encoding:
+              x:
+                field: month_number
+                type: ordinal
+                axis: { title: "Month" }
+              y:
+                field: total_revenue
+                type: quantitative
+                axis: { title: "Revenue" }
+              color:
+                field: branch
+                type: nominal
+              tooltip:
+                - field: fiscal_year
+                - field: month_name
+                - field: branch
+                - field: total_revenue
+        branch_district_heatmap:
+          title: "Branch vs District Heatmap"
+          library: vega-lite
+          db: military_slots
+          query: |
+            select
+              branch,
+              district,
+              count(distinct installation_name) as installations,
+              round(sum(revenue), 2) as total_revenue,
+              round(sum(revenue) / count(distinct installation_name), 2) as revenue_per_base
+            from slot_machine_revenue
+            where 1=1
+              [[and fiscal_year = :fiscal_year]]
+              [[and branch = :branch]]
+              [[and district = :district]]
+            group by branch, district
+            order by branch, total_revenue desc;
+          display:
+            mark: rect
+            encoding:
+              x:
+                field: district
+                type: nominal
+              y:
+                field: branch
+                type: nominal
+              color:
+                field: total_revenue
+                type: quantitative
+                scale:
+                  scheme: blues
+              tooltip:
+                - field: branch
+                - field: district
+                - field: installations
+                - field: total_revenue
+                - field: revenue_per_base
+            width: 180
+            height: 240
+        fiscal_year_trends:
+          title: "Fiscal-Year Trends"
+          library: vega-lite
+          db: military_slots
+          query: |
+            select
+              fiscal_year,
+              branch,
+              round(sum(revenue), 2) as total_revenue
+            from slot_machine_revenue
+            where 1=1
+              [[and fiscal_year = :fiscal_year]]
+              [[and branch = :branch]]
+              [[and district = :district]]
+            group by fiscal_year, branch
+            order by fiscal_year desc, total_revenue desc;
+          display:
+            mark: line
+            encoding:
+              x:
+                field: fiscal_year
+                type: ordinal
+              y:
+                field: total_revenue
+                type: quantitative
+              color:
+                field: branch
+                type: nominal
+              tooltip:
+                - field: fiscal_year
+                - field: branch
+                - field: total_revenue
+        top_installations_table:
+          title: "Top 10 Installations by Revenue"
+          library: vega-lite
+          db: military_slots
+          query: |
+            select
+              installation_name,
+              branch,
+              district,
+              round(sum(revenue), 2) as total_revenue
+            from slot_machine_revenue
+            where 1=1
+              [[and fiscal_year = :fiscal_year]]
+              [[and branch = :branch]]
+              [[and district = :district]]
+            group by installation_name, branch, district
+            order by total_revenue desc
+            limit 10;
+          display:
+            mark: bar
+            encoding:
+              x:
+                field: total_revenue
+                type: quantitative
+              y:
+                field: installation_name
+                type: nominal
+                sort: "-x"
+              color:
+                field: branch
+                type: nominal
+              tooltip:
+                - field: installation_name
+                - field: branch
+                - field: district
+                - field: total_revenue
+              height: 320
+        map_overview:
+          title: "Installations Map"
+          library: map
+          db: military_slots
+          query: |
+            select
+              installation_name,
+              branch,
+              district,
+              round(sum(revenue), 2) as total_revenue,
+              base_latitude,
+              base_longitude
+            from slot_machine_revenue
+            where base_latitude is not null and base_longitude is not null
+              [[and fiscal_year = :fiscal_year]]
+              [[and branch = :branch]]
+              [[and district = :district]]
+            group by installation_name, branch, district, base_latitude, base_longitude
+          display:
+            latitude_column: base_latitude
+            longitude_column: base_longitude
+            show_latlng_popup: false
+        branch_totals_pie:
+          title: "Branch Revenue Share"
+          library: vega-lite
+          db: military_slots
+          query: |
+            select
+              branch,
+              round(sum(revenue), 2) as total_revenue
+            from slot_machine_revenue
+            where 1=1
+              [[and fiscal_year = :fiscal_year]]
+              [[and branch = :branch]]
+              [[and district = :district]]
+            group by branch
+            order by total_revenue desc;
+          display:
+            mark:
+              type: arc
+              innerRadius: 50
+              outerRadius: 100
+            encoding:
+              theta:
+                field: total_revenue
+                type: quantitative
+              color:
+                field: branch
+                type: nominal
+              tooltip:
+                - field: branch
+                - field: total_revenue
+            width: 240
+            height: 220
+        
+      layout:
+        - [snapshot, map_overview, map_overview, total_revenue_metric]
+        - [snapshot, revenue_over_time_chart, revenue_over_time_chart, branch_district_heatmap]
+        - [fiscal_year_trends, top_installations_table, top_installations_table, branch_totals_pie]

@@ -3,3 +3,4 @@ sqlite-utils>=3.34
 pandas>=2.0
 datasette-cluster-map>=0.17
 datasette-vega>=0.6
+datasette-dashboards>=0.8
