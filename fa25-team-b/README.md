@@ -169,6 +169,8 @@ Users can filter by fiscal year, branch, and district to explore different persp
 
 ### Live Dashboard
 
+Click the following thumbnail image to see the live dashboard:
+
 [![https://ds-701-muckrock-data-liberation-project.onrender.com/dashboards](docs/images/Slot%20Machine%20Revenue%20Overview%20Dashboard.png)](https://ds-701-muckrock-data-liberation-project.onrender.com/-/dashboards)
 
 ### About the Data
