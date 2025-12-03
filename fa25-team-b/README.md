@@ -160,6 +160,32 @@ Click the following thumbnail image to see the initial demo video:
 
 ---
 
+## Slot Machine Revenue Dashboard (FY2020–FY2024)
+
+This dashboard provides an interactive overview of U.S. military slot-machine revenue across Army, Navy, and Marine Corps installations worldwide from FY2020 to FY2024.
+It visualizes key metrics such as total revenue, monthly trends, fiscal-year patterns, branch–district comparisons, top-earning installations, and geospatial distributions.
+
+Users can filter by fiscal year, branch, and district to explore different perspectives of the data.
+
+### Live Dashboard
+
+[https://ds-701-muckrock-data-liberation-project.onrender.com/dashboards](https://ds-701-muckrock-data-liberation-project.onrender.com/-/dashboards)
+
+### About the Data
+
+All tables were reconstructed from multi-year PDF revenue reports using custom parsers, then cleaned, standardized, and enriched with geospatial coordinates. The processed datasets are published to Datasette and rendered through the datasette-dashboards and datasette-cluster-map plugins.
+
+### Features
+
+- Interactive global installations map  
+- Total revenue summary  
+- Revenue by month and fiscal year  
+- Branch vs. district heatmap  
+- Top 10 installations by revenue  
+- Branch revenue share visualization 
+
+---
+
 ## Data
 
 This project focuses on liberating and structuring several key ARMP datasets, including slot machine 
