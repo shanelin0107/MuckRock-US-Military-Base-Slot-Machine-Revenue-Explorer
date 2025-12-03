@@ -169,7 +169,7 @@ Users can filter by fiscal year, branch, and district to explore different persp
 
 ### Live Dashboard
 
-[https://ds-701-muckrock-data-liberation-project.onrender.com/dashboards](https://ds-701-muckrock-data-liberation-project.onrender.com/-/dashboards)
+[![https://ds-701-muckrock-data-liberation-project.onrender.com/dashboards](docs/images/Slot%20Machine%20Revenue%20Overview%20Dashboard.png)](https://ds-701-muckrock-data-liberation-project.onrender.com/-/dashboards)
 
 ### About the Data
 
