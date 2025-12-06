@@ -38,3 +38,4 @@
 # 如果需要跟踪特定的大文件，可以添加具体文件名
 # large_file.bin filter=lfs diff=lfs merge=lfs -text
 *.ipynb filter=lfs diff=lfs merge=lfs -text
+*.pdf filter=lfs diff=lfs merge=lfs -text
