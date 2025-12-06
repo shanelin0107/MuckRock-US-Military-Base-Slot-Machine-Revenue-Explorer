@@ -38,4 +38,12 @@
 # 如果需要跟踪特定的大文件，可以添加具体文件名
 # large_file.bin filter=lfs diff=lfs merge=lfs -text
 *.ipynb filter=lfs diff=lfs merge=lfs -text
-*.pdf filter=lfs diff=lfs merge=lfs -text
+
+# PDF 文件：只对特定大文件使用 LFS
+# 已存在的大文件（超过 25MB，无法网页上传）
+fa25-team-b/pdf/Financial Statements.pdf filter=lfs diff=lfs merge=lfs -text
+fa25-team-b/pdf/Navy Revenue Report FY20-FY24-1.pdf filter=lfs diff=lfs merge=lfs -text
+fa25-team-b/pdf/Navy Revenue Report FY20-FY24-2.pdf filter=lfs diff=lfs merge=lfs -text
+
+# 注意：小于 25MB 的 PDF 文件可以通过 GitHub 网页版上传
+# 大于 25MB 的文件仍然需要通过命令行使用 Git LFS 上传
