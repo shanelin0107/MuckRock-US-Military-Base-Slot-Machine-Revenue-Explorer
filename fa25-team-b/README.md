@@ -10,266 +10,355 @@
 <h4 align="center">Analyzing U.S. Military Slot Machine Revenues and Gambling Risks Across Overseas Bases</h4>
 
 <p align="center">
-  <a href="#key-features">Key Features</a> •
-  <a href="#how-to-use">How To Use</a> •
-  <a href="#project-description">Project Description</a> •
-  <a href="#preliminary-analysis-and-results">Preliminary Analysis & Results</a> •
-  <a href="#data-locations">Data Locations</a>
+  <a href="#overview">Overview</a> •
+  <a href="#project-description-and-objectives">Project Description and Objectives</a> •
+  <a href="#datasette-ui-showcase">Datasette UI Showcase</a> •
+  <a href="#data">Data</a> •
+  <a href="#repository-structure">Repository Structure</a> •
+  <a href="#explotary-data-analysis">Explotary Data Analysis</a> •
+  <a href="#where-to-start">Where to start</a> •
+  <a href="#environment-setup">Environment Setup</a>
 </p>
 
-## Key Features
 
-This repository contains a complete pipeline for extracting, cleaning, analyzing, and visualizing slot machine revenue data from the Army Recreation Machine Program (ARMP). Below is an overview of the key components:
+## Overview
 
-### **PDF Extraction Pipeline**
-* **` PDF Extraction/`** - Automated extraction scripts for converting unstructured PDF reports into structured CSV datasets
-  - Handles multiple report types: Asset Reports (FY2020–FY2024), Marine Revenue, Navy Revenue, Financial Statements, District Revenues, and Revenue Comparison
-  - Uses multiple parsing tools (pdfplumber, PyMuPDF, Camelot, Tabula, poppler-utils) depending on document complexity
-  - [See detailed extraction documentation](./PDF%20Extraction/readme.md)
-  - Key extraction notebooks:
-    - `FY2020+2023+2024_Asset_Report.ipynb` - Extracts 8 standardized tables from Asset Reports
-    - `FY2021_Asset_Report_Extraction.ipynb` - Handles COVID-specific formatting in FY2021 data
-    - `FY2022_Asset_Report_Extraction.py` - Python script for FY2022 extraction
-    - `Marine_Revenue_FY20_FY24.ipynb` - Marine Corps revenue extraction with adjustable parameters
-    - `navy_revenue_report-1.py` & `navy_revenue_report-2.py` - Navy revenue parsing scripts
-    - `District_Revenues_FY20_FY24.ipynb` - Multi-region district revenue extraction
-    - `parseFinancialStatements.py` - Financial statement OCR and extraction
+The Data Liberation Project, run by MuckRock, is an initiative to **identify, obtain, reformat, clean, document, publish, and disseminate government datasets of public interest**.
 
-### **Exploratory Data Analysis (EDA)**
-* **`eda/`** - Comprehensive analysis notebooks examining revenue patterns, trends, and distributions
-  - `Financial_Statements_EDA.ipynb` - Cash flow and asset depreciation analysis
-  - `Revenue_Comparison_EDA.ipynb` - Cross-region and cross-branch revenue comparisons
-  - `Project_Base_Question_2.ipynb` - Top revenue-generating bases by year and service branch
-  - `Marine_Revenue_FY20_FY24.ipynb` - Marine Corps revenue trends and seasonal patterns
-  - `Asset_Report_2024_Region_Service_EDA.ipynb` - EGM distribution by region and service
-  - `FY2021_Asset_Report_EDA.ipynb` - Asset distribution and COVID-era reporting validation
-  - `navy_report-1.ipynb` - Navy revenue trends by country and installation (FY16–FY22)
-  - `navy_revenue_report-2.ipynb` - Detailed Navy monthly revenue analysis (FY18–FY24)
-  - [See EDA findings summary](./eda/README.md)
+This repository contains the code, analyses, and documentation produced by **Team B** for the **Fall 2025 (FA25)** offering of Boston University's **DS 701: Tools for Data Science (Spark!)**. The goal of the course project is to assist the MuckRock team by investigating publicly available datasets, building tools to clean and analyze the data, and preparing documentation so that future volunteers can easily reproduce and extend the work.
 
-### **Project Documentation**
-* **`project_definition.md`** - Official project scope, objectives, and deliverables
-* **`research.md`** - Research sources on military gambling addiction and policy impacts
-* **`README.md`** - This file; comprehensive project overview and documentation
+---
+
+## Project Description and Objectives
+
+This project was assigned by the MuckRock Foundation in collaboration with BU Spark! to provide students with hands-on experience in data acquisition, cleaning, and analysis for public good.
+
+The Team B mission in FA25 is to:
+
+1. Extracted all the data from PDF files provided by MuckRock to csv files.
+
+2. Perform exploratory analysis to understand the structure, completeness, and potential insights in the data.
+
+3. Build repeatable python scripts to clean and harmonize the data for downstream use.
+
+4. Document the dataset thoroughly using GitHub.
+
+5. Create a Datasette user interface for the future users to work on it. With the features such as: SQL query, chart, dashboard, map...etc. 
+
+6. Summarize findings and deliver an organized codebase that future teams can build upon.
+
+7. Answer base questions.
+
+### Base Questions
+
+#### 1. What is the total and per‑base slot machine revenue by military branch and by region?
+Below is the total slot machine revenue by military branch and by region
+
+| Military Branch | Region | # Bases | Total Slot Revenue | Per‑Base Slot Revenue |
+| --------------- | ------ | ------- | ------------------ | --------------------- |
+| Army            | Europe | 12      | $56,722,390        | $4,726,866            |
+| Army            | Japan  | 2       | $6,701,208         | $3,350,604            |
+| Army            | Korea  | 5       | $100,568,956       | $20,113,791           |
+| Navy            | Europe | 4       | $11,521,089        | $2,880,272            |
+| Navy            | Japan  | 6       | $41,435,211        | $6,905,868            |
+| Navy            | Korea  | 1       | $1,599,465         | $1,599,465            |
+| USMC            | Japan  | 7       | $58,054,966        | $8,293,567            |
+                            
+
+This table is the summary of total slot machine revenue by military branch and by region.
 
 
-## How To Use
+![Description](docs/images/total_revenue_by_region_and_service.png)
 
-### Prerequisites
-You'll need the following installed:
-- <a href="https://git-scm.com" target="_blank">Git</a>
-- Python 3.8 or higher
-- Jupyter Notebook or JupyterLab
+- This compares the total slot‑machine revenue for the Army (blue), Marine Corps (orange) and Navy (green) across three regions: Korea, Japan and Europe. The y‑axis measures total revenue in millions of U.S. dollars. Key observations include:  
 
-### Clone and Setup
+  Army in Korea: five Army bases in Korea generate roughly $100 million, dwarfing all other branch/region combinations and making the Army in Korea the largest revenue driver.
+  Japan: Marine Corps and Navy activities in Japan bring in around $58 million and $41 million respectively, while the Army’s two bases there contribute a modest $7 million.
+  Europe: the Army’s 12 bases collect about $57 million, and Navy bases about $15 million; the Marine Corps does not operate slot machines in Europe.
+  The call‑outs on the right summarise these points: the Army in Korea is the biggest contributor, and Marine Corps slot‑machine revenue is confined to Japan.
+
+
+
+![Description](docs/images/top10_bases_total_revenue.png)
+
+- The second slide ranks the top 10 individual bases by total slot‑machine revenue. The bases are colour‑coded by service branch (blue = Army, orange = Marine Corps, green = Navy). Notable findings:
+
+  Camp Humphreys (Army) is the single highest‑earning base at over $50 million.
+  Camp Butler / Foster (Marine Corps) follows at about $41 million.
+  Other high‑earning Army bases include AFRC Dragon Hill Lodge, Kaiserslautern, Wiesbaden, Daegu, Casey/Hovey and Stuttgart, each ranging from roughly $10 million to $22 million.
+  The Navy’s major contributor in this list is Yokosuka (around $21 million), and the Marine Corps’ Iwakuni base rounds out the top ten at about $10 million.
+  Annotations emphasize that seven out of the ten top‑earning bases belong to the Army and that revenue is heavily concentrated among a few installations.
+
+
+##### Answer for Base Question 1:
+
+For Base Question 1, the charts show that the Army in Korea is the dominant source of slot-machine revenue, with about $100M generated across five bases (roughly $20M per base on average), making it both the largest branch–region total and the highest per-base earner. In Japan, Marine Corps bases collectively bring in around $58M (7 bases, ~$8M per base) and Navy bases about $41M (6 bases, ~$7M per base), while the Army’s two Japanese bases contribute a much smaller $7M total. In Europe, the Army’s 12 bases generate roughly $57M (about $5M per base) and the Navy’s European sites about $15M; the Marine Corps has no European slot-machine revenue. The per-base ranking mirrors this pattern: Camp Humphreys (Army, Korea) is the top individual base at over $50M, followed by Camp Butler / Foster USMC (Japan) at about $41M, and then a mix of high-earning Army and Navy bases such as AFRC Dragon Hill Lodge, Yokosuka Navy, Kaiserslautern, Wiesbaden, Daegu, Casey/Hovey, Stuttgart and Iwakuni. Overall, Army installations—especially in Korea—dominate both total and per-base revenue, and seven of the top ten bases by revenue belong to the Army, indicating that slot-machine income is highly concentrated in a small set of large overseas hubs.
+
+
+#### 2. Which bases generate the highest total revenue, and how does that rank change by year and by branch?
+
+![Description](docs/images/Top%205%20Bases%20by%20Annual%20Revenue.png)
+
+
+- This figure compares the top five overseas bases by annual slot-machine revenue for the Army, Navy, and Marine Corps from FY2020 to FY2024. For the Army, Camp Humphreys (Korea) is consistently the top-earning installation, rising from about $12–15M between FY2020 and FY2023 before a sharp drop in FY2024. The Navy’s clear leader is Yokosuka Navy Base (Japan), which grows from roughly $5–10M through FY2023 and then also declines in FY2024, while Sasebo and the other Japan/Europe bases stay in the mid-single-million range. For the Marine Corps, Camp Butler / Foster (Japan) dominates its branch and is the single largest revenue-generating base in the dataset, increasing from about $14M to nearly $18M by FY2023 before falling back in FY2024. Overall, the chart shows that a small number of large Japanese and Korean hubs account for the majority of revenue in each branch, with strong growth up to FY2023 followed by a broad pullback in FY2024.
+
+
+![Description](docs/images/Annual%20Revenue%20Trend%20of%20Bases%20Ever%20Ranked%20in%20Top%2010.png)
+
+- This chart tracks the annual slot-machine revenue from FY2020 to FY2024 for every base that ever ranked in the overall top 10. It highlights how a small set of large overseas hubs account for most of the revenue across all branches. Camp Butler / Foster USMC (Japan) is the clear top performer, rising from about $13.8M in FY2020 to roughly $18M in FY2023 before dropping sharply in FY2024. Camp Humphreys (Army – Korea) is consistently the second-highest base, with steady growth from around $12.6M to $15M over FY2020–FY2023 and a similar pullback in FY2024. A second tier of bases—including Yokosuka Navy (Japan) and Wiesbaden (Army – Europe)—shows moderate growth into the $8–10M range by FY2023, while mid-tier sites such as AFRC Dragon Hill Lodge, Iwakuni, Sasebo, Kaiserslautern, and others peak around $3–5M. All bases experience a noticeable revenue decline in FY2024, but the relative ordering between bases and branches remains largely unchanged.
+
+
+##### Answer to Base Question 2
+
+Across FY2020–FY2024, the highest-revenue base in the entire dataset is Camp Butler / Foster USMC (Japan), which consistently ranks #1 overall and within the Marine Corps, followed by Camp Humphreys (Army – Korea) as the steady #2 base and top Army site, and Yokosuka Navy (Japan) as the leading Navy base that generally sits in the #3 overall position. A second tier of Army and Navy installations—such as Wiesbaden (Europe), AFRC Dragon Hill Lodge and Casey/Hovey/Daegu (Korea), Iwakuni USMC, Sasebo and Atsugi Navy, Kaiserslautern and Stuttgart—contributes substantially but never surpasses these three leaders. While revenues for most top bases rise from FY2020 to FY2023 and then drop sharply in FY2024, this volatility mainly affects the magnitude of revenue rather than the ordering, so the cross-branch ranking of the top-earning bases remains remarkably stable over time.
+
+
+#### 3. How have the total number of slot machines and the vendors at major bases changed over time?
+
+![Description](docs/images/total_unique_machine.png)
+
+
+- Total unique machines by year
+The first chart shows the total number of unique slot machines across all bases for each fiscal year from 2020 to 2024.
+Overall machine counts decline steadily from around 800 machines in 2020 to roughly 600 in 2021 and 400 in 2022.
+There is then a sharp expansion in FY2023, when the inventory jumps to about 1,600 machines—roughly double the 2020 level.
+In FY2024, the fleet contracts again to a little over 1,000 machines, but remains well above the pre-2023 levels, suggesting a partial pullback rather than a full reversal of the 2023 build-up.
+
+
+![Description](docs/images/vender_machine_type.png)
+
+
+- Vendor / machine-type mix by year (top 10 vendors)
+The second stacked bar chart breaks down the annual machine counts by vendor (top 10 vendors only).
+From 2020–2022, total machine counts are relatively modest, and the mix is dominated by a few key vendors such as NOV and IGT, with smaller contributions from others like IBM, WMS, and a handful of additional suppliers.
+In 2023, the total number of machines increases dramatically, and the growth is broad-based: nearly all vendors add machines, with particularly large expansions from NOV, IGT, and newer or previously smaller vendors such as ARI and LNW.
+By 2024, the total number of machines declines from the 2023 peak, and several vendors scale back, but NOV and IGT remain core contributors, indicating a more concentrated vendor landscape after the post-2023 adjustment.
+
+
+![Description](docs/images/mahcine_number_overtime.png)
+
+
+- Machine counts over time for major bases (FOSHORT)
+    For this analysis, “major bases” are defined as the eight installations with the highest total number of unique machines across FY2020–FY2024.
+  The third chart tracks machine counts over time for eight major bases: DAEGU, KAISERSLAUTERN, OKINAWA, PYONGTAEK, SEOUL, VILSECK, YOKOSUKA, and ZAMA.
+  Many bases experience declining or flat machine counts between 2020 and 2022—for example, OKINAWA and PYONGTAEK both trend downward over this period, and SEOUL drops sharply between 2020 and 2021.
+  In 2023, there is a pronounced expansion across almost all major bases: OKINAWA, KAISERSLAUTERN, DAEGU, and ZAMA all show large spikes in machine counts, and smaller bases such as YOKOSUKA, VILSECK, and SEOUL also rebound.
+  By 2024, machine counts fall back from the 2023 highs at most bases, but in many cases (e.g., DAEGU, KAISERSLAUTERN, OKINAWA) they remain above their 2022 levels, suggesting a net increase in machine presence compared with the earlier years.
+
+
+##### Answer for Base Question 3
+
+Across FY2020–FY2024, the slot-machine footprint at the bases follows a “dip, surge, then partial normalization” pattern. Total machine counts decrease from 2020 through 2022, then surge in 2023 and remain elevated in 2024 relative to pre-2023 levels (Figure 1). The vendor mix evolves alongside this expansion: early years are dominated by a few suppliers (especially NOV and IGT), but the 2023 build-out is broad-based, with many vendors adding machines, and then consolidates again in 2024 with NOV and IGT still playing leading roles (Figure 2). At the base level, most major installations reduce or hold machine counts flat through 2022, then significantly increase their inventories in 2023 before trimming back in 2024, typically to levels still higher than in 2022 (Figure 3). Taken together, the data suggest that bases went through a period of contraction, followed by an aggressive expansion in both machine numbers and vendor diversity in 2023, and then a selective pullback that preserves a higher baseline of machines and a somewhat more concentrated set of core vendors.
+
+
+---
+## Datasette UI Showcase
+
+Click the following thumbnail image to see the initial demo video:
+
+[![Demo Video](docs/images/Datasette%20Demo%20shortcut.jpg)](https://youtu.be/jmPjwh6bLL4)
+
+---
+
+## Slot Machine Revenue Dashboard (FY2020–FY2024)
+
+This dashboard provides an interactive overview of U.S. military slot-machine revenue across Army, Navy, and Marine Corps installations worldwide from FY2020 to FY2024.
+It visualizes key metrics such as total revenue, monthly trends, fiscal-year patterns, branch–district comparisons, top-earning installations, and geospatial distributions.
+
+Users can filter by fiscal year, branch, and district to explore different perspectives of the data.
+
+### Live Dashboard
+
+Click the following thumbnail image to see the live dashboard:
+
+[![https://ds-701-muckrock-data-liberation-project.onrender.com/dashboards](docs/images/Slot%20Machine%20Revenue%20Overview%20Dashboard.png)](https://ds-701-muckrock-data-liberation-project.onrender.com/-/dashboards)
+
+### About the Data
+
+All tables were reconstructed from multi-year PDF revenue reports using custom parsers, then cleaned, standardized, and enriched with geospatial coordinates. The processed datasets are published to Datasette and rendered through the datasette-dashboards and datasette-cluster-map plugins.
+
+### Features
+
+- Interactive global installations map  
+- Total revenue summary  
+- Revenue by month and fiscal year  
+- Branch vs. district heatmap  
+- Top 10 installations by revenue  
+- Branch revenue share visualization 
+
+---
+
+## Data
+
+This project focuses on liberating and structuring several key ARMP datasets, including slot machine 
+- Asset Reports (FY2020, FY2021, FY2022, FY2023, FY2024)
+- Marine revenue
+- Navy revenue
+- District revenues
+- Financial Statement
+- Revenue Comparison
+
+These cleaned tables power downstream analysis and public-facing tools like Datasette.
+For a detailed, table-by-table description of our extraction pipelines and outputs, see fa25-team-b-dev/PDF Extraction/readme.md,
+which documents the asset, marine, navy, district revenue, and revenue comparison workflows.
+
+## Repository Structure
+
+The repository is organized to make it easy for others to pick up where this team leaves off. Below is a high–level description of the actual structure. If any folders or files mentioned below are missing or renamed in your local copy, please update this README accordingly.
+
+| Path (relative to repo root)                            | Purpose                                                                                                                                                        |
+| -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `fa25-team-b-dev/fa25-team-b/`                          | All work for the FA25 Team B development effort. Inside this folder you should find notebooks, scripts, and data used for our analyses.                       |
+| `fa25-team-b-dev/fa25-team-b/eda/`                      | Early explorations and exploratory data analysis (EDA). Each notebook should have a descriptive filename and include clear markdown explaining its purpose.   |
+| `fa25-team-b-dev/fa25-team-b/PDF Extraction/`           | Python scripts and notebooks for cleaning and processing data from PDF files into CSV files (e.g., Asset, Marine, Navy, District, Revenue Comparison, etc.). |
+
+## Explotary Data Analysis
+
+This section presents the Exploratory Data Analysis (EDA) of our dataset. The analysis covers financial statements, asset distributions, revenue patterns, and operational trends across multiple fiscal years (FY2016–FY2024). 
+### 1. Geographic Patterns
+| Category               | Key Insights                                                                 |
+|------------------------|-------------------------------------------------------------------------------|
+| Asia-Pacific Dominance | Japan and Korea installations generate over 70% of total ARMP revenue         |
+| Japan's Central Role   | Highest revenues across all service branches; top performer for Navy & USMC  |
+| Europe’s Significance  | Holds the largest EGM share (39.4%); strongest Army operational presence     |
+
+### 2. Service Branch Patterns
+| Category               | Key Insights                                                                 |
+|------------------------|-------------------------------------------------------------------------------|
+| Army Dominance         | Operates 55.7% of all EGMs; generates ~60% of global revenue                 |
+| Marine Corps Focus     | Highest per-base revenue; heavily concentrated in Japan                      |
+| Navy Distribution      | Strong presence in Japan (Yokosuka, Sasebo); moderate operations in Europe   |
+
+### 3. Temporal Trends
+| Category          | Key Insights                                                                     |
+|-------------------|-----------------------------------------------------------------------------------|
+| COVID-19 Impact   | Sharp revenue decline in FY2020 across all service branches                      |
+| Recovery Pattern  | Gradual revenue recovery from FY2021 to FY2023                                   |
+| FY2024 Decline    | Decline due to incomplete fiscal year data, not true operational downturn        |
+| Seasonal Patterns | March and May consistently show revenue peaks                                    |
+
+### 4. Financial Health Concerns
+| Category               | Key Insights                                                                 |
+|------------------------|-------------------------------------------------------------------------------|
+| Restricted Cash        | Restricted cash reserves fully depleted by 2023                              |
+| Static Equity          | Total equity unchanged since Oct 2021 (possible reporting issue)             |
+| Asset Aging            | Machine inventory aging; depreciation trends require further attention       |
+
+For more details about the EDA, please refer to the following link:
+[Go to EDA README](eda/README.md)
+
+## Where to start
+
+If you’re new to this repo and just want to understand what we did, start here:
+
+#### 1. Early insights & EDA
+
+If you want to see **early insights and sanity checks on the extracted data** (distributions, basic trends, data quality):
+
+- `fa25-team-b-dev/fa25-team-b/eda/<THE_EDA_YOUWANT>.ipynb`  
+  – High-level exploratory analysis on the cleaned revenue tables (e.g. summary stats by base, fiscal year, branch).
+
+
+#### 2. PDF → CSV extraction pipelines
+
+If you want to understand **how raw PDFs are turned into structured CSVs**：
+
+- `fa25-team-b-dev/fa25-team-b/PDF Extraction/FY2021_Asset_Report_Extraction.ipynb`  
+  – End-to-end extraction of the FY2021 Asset Report into standardized tables (summary + detail CSVs, with cleaning and column standardization).
+
+- `fa25-team-b-dev/fa25-team-b/PDF Extraction/Marine_Revenue_FY20_FY24.ipynb`  
+  – Extracts and cleans the Marine revenue report (FY20–FY24) into CSVs capturing game counts, handle, revenue, and per-base metrics.
+
+- `fa25-team-b-dev/fa25-team-b/PDF Extraction/District_Revenues_FY20_FY24.ipynb`  
+  – PyMuPDF-based extraction for the District Revenues FY20–FY24 PDF, including logic to handle multi-line rows and header parsing.
+
+#### 3. Detailed dataset documentation
+
+For **details, extraction logic, and data dictionaries**, please refer to 
+[PDF Extraction README](PDF-Extraction/readme.md):
+
+- `fa25-team-b-dev/fa25-team-b/PDF Extraction/README.md`  
+  – Describes what each PDF source contains, how we parsed it (e.g. `pdftotext`, `pdfplumber`, `PyMuPDF`), what CSVs are produced, and what each column means.
+
+---
+
+## Environment Setup
+
+To reproduce the analyses or run the code yourself, follow these steps. Replace any placeholders with the actual commands or file names once they are finalized.
+
+### 1. Clone the repository
 
 ```bash
-# Clone this repository
-$ git clone [repo link]
-
-# Navigate to the project directory
-$ cd fa25-team-b
-
-# Install required Python packages
-$ pip install -r " PDF Extraction/requirements.txt"
+git clone <repository_url>
+cd MuckRock_project
 ```
 
-### Running PDF Extraction
+### 2. Create a virtual environment
 
-Each PDF extraction script is designed for a specific report type. Navigate to the ` PDF Extraction/` directory and run the appropriate notebook or script:
+We recommend using either conda or Python’s built-in venv to manage dependencies.
+
+Using conda:
 
 ```bash
-# For Jupyter notebooks (recommended)
-$ jupyter notebook " PDF Extraction/Marine_Revenue_FY20_FY24.ipynb"
-
-# For Python scripts
-$ python " PDF Extraction/navy_revenue_report-1.py"
+conda create -n muckrock-fa2025 python=3.10
+conda activate muckrock-fa2025
 ```
 
-**Note:** Some extraction scripts require manual file path configuration. Update the file paths in the notebooks to point to your local PDF files.
-
-For detailed extraction procedures and parameters, see the [PDF Extraction README](./PDF%20Extraction/readme.md).
-
-### Running Exploratory Data Analysis
-
-EDA notebooks are located in the `eda/` directory. Each notebook is self-contained and includes visualizations:
+Using venv (alternative):
 
 ```bash
-# Open the EDA directory in Jupyter
-$ jupyter notebook eda/
-
-# Or run a specific notebook
-$ jupyter notebook eda/Project_Base_Question_2.ipynb
+python -m venv .venv
+source .venv/bin/activate   # on macOS/Linux
+# .venv\Scripts\activate    # on Windows
 ```
 
-### Git Workflow
 
-Create a new branch from main for any changes:
+### 3. Install dependencies
+
+A requirements.txt or environment.yml file should list all Python packages needed to run the scripts and notebooks. If this file does not yet exist, please generate one by exporting your environment or writing down the packages you installed.
 
 ```bash
-# Create and checkout a new branch
-$ git checkout -b your-branch-name main
-
-# Make your changes, then commit
-$ git add .
-$ git commit -m "Description of changes"
-
-# Push your branch
-$ git push origin your-branch-name
+# via requirements.txt (update the filename/path if different)
+pip install -r ds-muckrock-liberation/fa25-team-b-dev/PDF Extraction/requirements.txt
 ```
 
-Open a Pull Request and add your PM and TPM as reviewers. At the end of the semester, open a final Pull Request to main from the dev branch.
+### 4. Configure data paths
+
+Some notebooks may reference data stored on Google Drive. Before running those notebooks, make sure you have access to the data and update any hard-coded file paths.
+
+You may provide a .env.example file to illustrate how to supply secrets (such as API keys) without committing them to Git. Users can then copy it to .env and fill in their own values.
 
 
-## Project Description
+Drive link: https://drive.google.com/drive/folders/1CZ0JF2y9IhaPy-KH4tkH2YbJyr750urc?usp=drive_link
 
-### Problem Statement
-Slot machines on overseas U.S. military bases generate tens of millions of dollars in annual revenue, yet there is little transparency into how this money is distributed across bases, branches, and regions, or what it implies for the gambling risks faced by service members. Without clear, accessible analysis, policymakers and the public cannot fully understand which bases present the highest risks, which games are most associated with addiction, or how revenue trends have evolved over time. This lack of insight hinders informed oversight and limits the ability to address potential gambling-related harms within the military.
 
-### Data
-The data for this project comes from the **Army Recreation Machine Program (ARMP)**, which currently operates **1,889 slot machines across 79 overseas military bases** and generated **$70.9 million in revenue during FY2024**.
+### 5. Run notebooks and scripts
 
-MuckRock has obtained a cache of official records delivered as unstructured PDFs containing tabular financial and asset information. The available documents include:
+Use JupyterLab, VS Code, or your preferred IDE to explore the notebooks in the notebooks/ folder.
 
-- District Revenues (FY2020–FY2024)
-- Financial Statements
-- Annual Asset Reports (FY2020–FY2024)
-- Marine Revenue Reports (FY2020–FY2024)
-- Navy Revenue Reports (FY2020–FY2024)
-- Revenue Comparison Reports
-- Presentations and supporting files
+Best practices:
 
-### Project Objectives / Goals
-- Extract, clean, and standardize ARMP slot machine records into a structured dataset
-- Deploy a SQLite/Datasette interface that enables interactive browsing and visualization of revenues
-- Explore patterns of revenue distribution, trends over time, and game types linked to gambling risks
-- Provide recommendations to support transparency and responsible gaming practices
+Clear all outputs before committing changes.
 
-### Scope
-The scope of this project includes:
-- Data extraction from PDFs
-- Cleaning and normalization of records
-- Exploratory analysis of slot machine revenues
-- Data visualization
-- Database deployment for public access
-- Report preparation summarizing findings and recommendations
+Ensure each notebook runs top-to-bottom without errors.
 
-### Deliverables
-- A cleaned and documented dataset of ARMP slot machine revenues
-- A reproducible extraction and cleaning pipeline in Python
-- A deployed SQLite/Datasette instance for browsing and visualization
-- A written report summarizing findings, limitations, and recommendations
+If a notebook is meant to be run as a script, indicate that clearly at the top in markdown.
 
-## Preliminary Analysis and Results
+### 6. Contributing workflow
 
-Our exploratory data analysis has revealed significant patterns in slot machine revenue distribution, regional concentration, and temporal trends across overseas U.S. military installations. Key findings are summarized below:
+All development should occur on branches off of dev (or the main development branch specified by your PM/TPM). After making changes:
 
-### Geographic and Branch Distribution
+Commit and push your branch:
+```bash
+git add .
+git commit -m "Describe your change"
+git push origin <your-branch-name>
+```
 
-**Regional Concentration:**
-- **Europe** dominates total slot machine operations with 39.4% of all Electronic Gaming Machines (EGMs), followed closely by **Japan** (37.8%) and **Korea** (22.8%)
-- However, revenue patterns differ from machine distribution: **Europe generates ~$41M annually** (highest total), while the **Far East (Japan + Korea) contributes ~$30M**
-- Analysis location: `eda/Asset_Report_2024_Region_Service_EDA.ipynb`
+Then:
 
-**Service Branch Leadership:**
-- The **Army operates 55.7% of all EGMs**, making it the primary service managing gambling operations
-- **Navy** accounts for 25.4% and **Marine Corps** 19.0% of total machines
-- **Air Force** has no recorded EGMs in the dataset
-- Analysis location: `eda/Asset_Report_2024_Region_Service_EDA.ipynb`
+Open a Pull Request targeting the dev branch.
 
-### Top Revenue-Generating Bases
+Request reviews from your PM/TPM.
 
-**Overall Leaders (FY2020–FY2024 cumulative):**
-1. **Camp Butler / Foster (USMC, Japan)** - $70.6M
-2. **Camp Humphreys (Army, Korea)** - $60.9M
-3. **Yokosuka Navy (Japan)** - $36.5M
-4. **AFRC Dragon Hill Lodge (Army, Korea)** - $24.3M
-5. **Sasebo Navy (Japan)** - $16.2M
-
-**Key Observations:**
-- Asia-Pacific installations (Japan and Korea) account for over **70% of total ARMP revenue**
-- Each service branch is anchored by one dominant installation: Camp Humphreys (Army), Yokosuka (Navy), and Camp Butler/Foster (Marine Corps)
-- Analysis location: `eda/Project_Base_Question_2.ipynb`
-
-### Temporal Trends
-
-**COVID-19 Impact:**
-- All branches experienced a **sharp revenue decline in FY2020** due to pandemic-related restrictions
-- Recovery began in FY2021 and peaked in **FY2023** across most installations
-- Analysis locations: `eda/Marine_Revenue_FY20_FY24.ipynb`, `eda/navy_report-1.ipynb`
-
-**Seasonal Patterns:**
-- Marine Corps bases show **higher gambling activity in March and May**, a trend requiring further investigation
-- Navy installations in Japan (particularly Yokosuka and Sasebo) demonstrate **consistent growth from FY2016–FY2023**, with Yokosuka nearly doubling its revenue during this period
-- Analysis locations: `eda/Marine_Revenue_FY20_FY24.ipynb`, `eda/navy_revenue_report-2.ipynb`
-
-**Recent Trends:**
-- FY2024 data shows a synchronized downturn across all branches, attributed to **incomplete fiscal data** rather than operational decline
-- Analysis location: `eda/Project_Base_Question_2.ipynb`
-
-### Financial Health
-
-**Cash Flow Analysis:**
-- Total operational cash grew steadily from 2020 until early 2023, then declined sharply due to **complete depletion of restricted cash reserves**
-- **Total equity has remained unchanged** (to the cent) since October 31, 2021, raising questions about financial reporting practices
-- Analysis location: `eda/Financial_Statements_EDA.ipynb`
-
-**Asset Trends:**
-- Combined asset values (accounting for depreciation) declined from **~$16M in 2020 to under $7M by end of 2022**, before recovering to **$20M by April 2024**
-- Recovery driven by both decreased depreciation and increased asset acquisitions
-- Analysis location: `eda/Financial_Statements_EDA.ipynb`
-
-### Revenue Per Base and Per Machine
-
-**Efficiency Metrics:**
-- **Japan Navy bases** generate the highest revenue per installation ($730,765/base), followed by Marine Corps Japan bases ($680,042/base)
-- **Revenue per machine** varies significantly: Japan Navy machines average $118.40, while Korea Navy machines generate only $46.10
-- European Army bases show moderate performance at $80.06 per machine
-- Analysis location: `eda/Revenue_Comparison_EDA.ipynb`
-
-**Manufacturer Contributions:**
-- When machine counts are combined with per-machine revenue estimates, **NOV and BAL manufacturers** contribute the most revenue overall
-- **IGT, AIN, and ITC** also play significant roles in total revenue generation
-- Analysis location: `eda/Revenue_Comparison_EDA.ipynb`
-
-### Methodological Notes
-
-- **FY2021 Data:** Required custom parsing due to COVID-specific reporting categories and irregular table formatting (see `eda/FY2021_Asset_Report_EDA.ipynb`)
-- **Navy Revenue Extraction Issues:** Extremely small font sizes and damaged numeric fields in PDF reports (particularly for Yokosuka, Souda Bay, Sasebo, and Atsugi) caused extraction challenges that have been raised with the client
-- **Revenue Estimation:** Per-base and per-manufacturer revenue estimates assume uniform revenue per machine within each region/branch combination
-
-For complete analysis details, visualizations, and code, please refer to the individual notebooks in the `eda/` directory and the [EDA README](./eda/README.md).
-
-## Data Locations
-
-All data for this project originates from official ARMP records obtained by MuckRock as unstructured PDF files. Due to file size and privacy considerations, raw PDFs are not included in this repository.
-
-### Extracted Datasets (CSV Outputs)
-
-Generated CSV files from the extraction pipeline include:
-
-**Asset Reports:**
-- `assets_by_region_service.csv` - Summary of assets by region and service
-- `assets_by_field_office.csv` - Asset and EGM counts by field office
-- `installed_assets_location_manufacture.csv` - Installed assets by manufacturer and service
-- `asset_details.csv` - Detailed asset listings with serial numbers and acquisition dates
-- `floor_asset_details.csv` - Floor-level installation details
-- `site_operational_status.csv` - Site operational status and service affiliation
-- `years_in_storage.csv` - Asset age versus years in storage
-
-**Revenue Reports:**
-- `Marine_Revenue_FY20-FY24_summary table.csv` - Marine Corps revenue by country and installation
-- `Marine_Revenue_FY20-FY24_detail.csv` - Monthly Marine Corps revenue details
-- `Navy_Revenue_Table.csv` - Navy revenue by country and installation (FY18–FY24)
-- `Navy_Monthly_Revenue_Report.csv` - Detailed monthly Navy revenues by installation
-- `District_Revenue_filtered_FY20-FY24_final.csv` - Multi-region district revenue data
-- `FinancialStatement.csv` - Financial statements with cash flow and asset data
-
-**Revenue Comparison:**
-- `Revenue Comparison_C.xlsx` - Consolidated revenue comparison workbook (manually extracted via Adobe Express)
-
-### Documentation
-- <a href="./PDF%20Extraction/readme.md">PDF Extraction Detailed Documentation</a> - Complete extraction procedures and methodology
-- <a href="./eda/README.md">EDA Findings Summary</a> - Detailed analysis findings and visualizations
-- <a href="./project_definition.md">Project Definition</a> - Official project scope and objectives
-- <a href="./research.md">Research Sources</a> - Academic and policy research on military gambling
+Open a final Pull Request from dev to main.

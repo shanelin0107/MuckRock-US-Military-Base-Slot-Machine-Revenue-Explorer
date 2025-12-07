@@ -6,3 +6,6 @@ PyPDF2
 openpyxl
 ghostscript
 java  
+pymupdf
+pdfplumber
+poppler-utils
