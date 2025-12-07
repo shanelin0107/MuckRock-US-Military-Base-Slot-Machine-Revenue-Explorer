@@ -97,7 +97,7 @@ pip install -r requirements.txt
 
 ### FY2022 Asset Report
 The FY2022 Asset Report data has been fully extracted and cleaned for analysis.
-Since the report uses a different column structure and field alignment, the script includes custom logic to identify each field and map it into the standardized output format.
+Since the report uses a different column structure and field alignment, the script includes custom logic to identify each field and map it into the standardized output format. 
 Data is extracted using pdftotext with layout preservation and processed through seven specialized parsers.
 The script reads each month chronologically and automatically removes duplicate month sections to ensure clean, accurate outputs.
 
@@ -110,28 +110,27 @@ The extraction script generates the following tables:
 -	Site Operational Status
 -	Years in Storage (EGMs Only)
 
-*Setup Instructions** 
-*1.Input PDF
+**Setup Instructions** 
+1.Input PDF
 The required FY2022 Asset Report PDF is already included in the repository at:
 pdf/FY2022 Asset Reports.pdf
 No additional download is required.
 
-*2. Install Required Dependencies
+2. Install Required Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-*3. Install Poppler utilities (required for pdftotext)
+3. Install Poppler utilities (required for pdftotext)
 •	Linux: sudo apt-get install poppler-utils
 •	macOS: brew install poppler
 •	Windows: Download Poppler for Windows and add pdftotext.exe to PATH
 
-*4. Run the extraction script
+4. Run the extraction script
 python FY2022_Asset_Report_Extraction.py
-________________________________________
+
 5. Output Location
-All extracted CSVs are saved to:
-CSVs/FY2022 Asset Report Final/
+All extracted CSVs will appear in the output folder
 
 
 ## 1.2. Marine Revenue
