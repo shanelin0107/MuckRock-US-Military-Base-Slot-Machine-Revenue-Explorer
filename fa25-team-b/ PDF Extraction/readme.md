@@ -256,15 +256,11 @@ runProcess() -> Initializes process, reading
 # Extraction
 To extract on your machine, perform the following steps
 
-1. Download FinancialTexts.txt from project google drive in folder MuckRock: US Military Base Slot Machine Revenue Explorer\Team B\TeamB_Exported_Data\FinancialStatements
-
-2. Install requirements using
+1. Install requirements using
 ```bash
 pip install -r requirements.txt
 ```
-3. In parseFinancialStatements.py, change the variable 'path' to desired output folder on your machine (located at top of file)
-
-4. Run parseFinancialStatements.py
+2. Run parseFinancialStatements.py
 
 ## 1.5. District Revenue
 This module focuses on parsing and structuring revenue data from the **_District Revenues FY20–FY24.pdf_** document, one of the most complex ARMP source files due to its inconsistent table layouts and mixed fiscal formats across pages.
