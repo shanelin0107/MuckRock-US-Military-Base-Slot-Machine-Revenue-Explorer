@@ -14,7 +14,8 @@ import csv
 
 root_dir = str(Path(__file__).resolve().parent.parent)
 pdf = r"\pdf\Financial Statements.pdf"
-csvs = [r'\CSVs\FinancialStatement.csv', r'\CSVs\ActualVsBudget.csv', r'\CSVs\BranchBudget.csv', r'\CSVs\GamingRevenue.csv']
+outPath = r'\CSVs\Financial Statements'
+csvs = [r'\FinancialStatement.csv', r'\ActualVsBudget.csv', r'\BranchBudget.csv', r'\GamingRevenue.csv']
 badDates = [datetime.datetime(2021, 1, 31), datetime.datetime(2020, 5, 31)]
 with open(root_dir + r'\pdf\categoryMap.csv', 'r') as f:
     reader = csv.reader(f)
@@ -64,7 +65,7 @@ def numCleanup(numStr: str) -> str:
 def exportCSV(data: list[list[str]], file: str, headers: list[str]):
     df = pd.DataFrame(data)
     df.columns = headers
-    df.to_csv(root_dir + file, index=False)
+    df.to_csv(root_dir + outPath + file, index=False)
 
 #Build row for the FinancialStatements.csv file
 def buildFinancialRow(date: datetime, category: str, cols: list[str]) -> list[str]:
