@@ -2,26 +2,21 @@ import datetime
 import subprocess
 from dateutil import parser
 from decimal import Decimal
+from pathlib import Path
 import os
 import pandas as pd
 import numpy as np
 import re
 import csv
 
-## FinancialTexts.txt is located at this drive path (which is linked in the README)
-##  - MuckRock: US Military Base Slot Machine Revenue Explorer\Team B\TeamB_Exported_Data\FinancialStatements
+# File is ready to run as is. 
+# Output CSV files can be found at \fa25-team-b\CSVs
 
-## INSTRUCTIONS FOR USAGE
-##  1. Set path to the folder where you want to store the output of this parser
-##  2. Download the FinancialTexts.txt file and put it said folder (this parser uses a Linux based text extraction
-##      tool which requires a custom install, so I've provided the post-extraction text to be read in directly instead of the pdf)
-##  3. Run the file, the CSVs will be created in the same folder.
-
-path = r"C:\Users\Cameron\Documents\muckrock" 
-pdf = r"\Financial Statements.pdf"
-csvs = [r'\FinancialStatement.csv', r'\ActualVsBudget.csv', r'\BranchBudget.csv', r'\GamingRevenue.csv']
+root_dir = str(Path(__file__).resolve().parent.parent)
+pdf = r"\pdf\Financial Statements.pdf"
+csvs = [r'\CSVs\FinancialStatement.csv', r'\CSVs\ActualVsBudget.csv', r'\CSVs\BranchBudget.csv', r'\CSVs\GamingRevenue.csv']
 badDates = [datetime.datetime(2021, 1, 31), datetime.datetime(2020, 5, 31)]
-with open(path + r'\categoryMap.csv', 'r') as f:
+with open(root_dir + r'\pdf\categoryMap.csv', 'r') as f:
     reader = csv.reader(f)
     categoryMap = dict(reader)
 
@@ -69,7 +64,7 @@ def numCleanup(numStr: str) -> str:
 def exportCSV(data: list[list[str]], file: str, headers: list[str]):
     df = pd.DataFrame(data)
     df.columns = headers
-    df.to_csv(path + file, index=False)
+    df.to_csv(root_dir + file, index=False)
 
 #Build row for the FinancialStatements.csv file
 def buildFinancialRow(date: datetime, category: str, cols: list[str]) -> list[str]:
@@ -96,12 +91,11 @@ def buildBudgetRow(date: datetime, location: str, assetType: str, cols: list[str
             else:
                 budgetRow.append(cols[i]) #append row category
         else:
-            #print(str(date) + " | " + location + " | " + assetType + " | " + cols[i])
             cols[i] = numCleanup(cols[i])
-            if cols[i] == '-242631.91': #bad solution but it works and others haven't for some indiscernable reason
+            if cols[i] == '-242631.91': 
                 cols[i] = '-24263.91'
                 
-            budgetRow.append(cols[i]) #TODO: Get regex parser to ensure number, otherwise append np.nan!
+            budgetRow.append(cols[i])
 
     return budgetRow
 
@@ -219,6 +213,7 @@ def parseBranchBudget(pages: list[str]) -> None:
         location = lines[1].split()[0] #get location (Korea, Europe, Japan or Consolidated)
         assetType = ""
 
+        #specific fix for pages with minor error
         if date.month == 1 and date.year == 2020 and location == 'Europe':
             lines[12] = "Operating Expenses"
 
@@ -253,6 +248,7 @@ def parseRevenue(pages: list[str]) -> None:
         lines = page.splitlines() #split page into lines
         date = parseDate(lines[2].strip().split())
 
+        #specific fix for pages with minor error
         if date.year == 2020 and date.month == 1:
             lines[40] = lines[40] + lines[42]
             lines = lines[:42]
@@ -273,6 +269,7 @@ def parseRevenue(pages: list[str]) -> None:
 
 #Run the parser
 def runProcess(pdf: str) -> None:
+
     pageType = {"FinancialStatement" : [],
                 "OperatingBudget" : [],
                 "OperatingBranchBudget" : [],
@@ -280,8 +277,8 @@ def runProcess(pdf: str) -> None:
                 "None" : []} #dict storing pages by type
 
     #read in PDF (The commented section is the parsing method using poppler-utils)
-    #text = subprocess.check_output(['pdftotext', '-layout', path + pdf, '-']).decode('utf-8')
-    with open(path + r'\FinancialTexts.txt') as f: #If poppler is unavailable, read in txt file containing poppler output
+    #text = subprocess.check_output(['pdftotext', '-layout', pdfPath + pdf, '-']).decode('utf-8')
+    with open(root_dir + r'\pdf\FinancialTexts.txt') as f: #If poppler is unavailable, read in txt file containing poppler output
         text = f.read()
 
     pages = text.split('\f') #split into pages
