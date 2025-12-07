@@ -113,13 +113,14 @@ The extraction script generates the following tables:
 
 **Setup Instructions**
 
-1.Input PDF
+1. Input PDF
 
 The required FY2022 Asset Report PDF is already included in the repository at: pdf/FY2022 Asset Reports.pdf
 
 No additional download is required.
 
 2. Install Required Dependencies
+   
 ```bash
 pip install -r requirements.txt
 ```
@@ -132,13 +133,13 @@ pip install -r requirements.txt
 
 •	Windows: Download Poppler for Windows and add pdftotext.exe to PATH
 
-5. Run the extraction script
+4. Run the extraction script
    
 python FY2022_Asset_Report_Extraction.py
 
-7. Output Location
+5. Output Location
    
-All extracted CSVs will appear in the output folder
+All extracted CSVs will appear in the output folder.
 
 
 ## 1.2. Marine Revenue
