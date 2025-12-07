@@ -51,7 +51,6 @@ def parseDate(line: list[str]) -> datetime:
 
 #Clean number strings that have been improperly parsed
 def numCleanup(numStr: str) -> str:
-    #print(numStr)
     trailingMinus = ''
 
     removeSpace = re.sub(r'[\s+]', '', numStr.strip()) #remove spaces
@@ -109,7 +108,6 @@ def buildBudgetRow(date: datetime, location: str, assetType: str, cols: list[str
 #Build row for the GamingRevenue.csv file
 def buildRevenueRow(date: datetime, cols: list[str]) -> list[str]:
     revenueRow = [date]
-
 
     if len(cols) > 7: #Sometimes category will get split up into multiple columns
         cols = [" ".join(cols[:-(7-1)])] + cols[(len(cols) - (7-1)):]
@@ -281,9 +279,9 @@ def runProcess(pdf: str) -> None:
                 "RevenueStatement" : [],
                 "None" : []} #dict storing pages by type
 
-    #read in PDF
+    #read in PDF (The commented section is the parsing method using poppler-utils)
     #text = subprocess.check_output(['pdftotext', '-layout', path + pdf, '-']).decode('utf-8')
-    with open(path + r'\FinancialTexts.txt') as f:
+    with open(path + r'\FinancialTexts.txt') as f: #If poppler is unavailable, read in txt file containing poppler output
         text = f.read()
 
     pages = text.split('\f') #split into pages
@@ -291,8 +289,6 @@ def runProcess(pdf: str) -> None:
     for i in range(len(pages)):
         if len(pages[i]) != 0: 
             pageType[determinePageType(pages[i])].append(pages[i]) #otherwise append page to its list in dict
-
-    print(len(pageType["None"]))
 
     #call to parse each type of page
     parseFinancials(pageType["FinancialStatement"])

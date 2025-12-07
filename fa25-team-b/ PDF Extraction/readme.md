@@ -167,7 +167,66 @@ Our methodology was to first convert the PDF to text using pdftotext -layout so 
 Additional development work focused on standardizing the Navy Revenue extraction pipeline. The updated script introduced dynamic fiscal-year detection, automated multi-line table alignment, and error-handling logic to manage incomplete or irregular records. These enhancements ensured that the extraction process remained consistent across both FY20–FY24-1 and FY20–FY24-2 reports.
 
 ## 1.4. Financial Statements
-The Financial Statements pdf required a bit of expirimentation for both OCR tools as well as formatted text extraction. Due to the size of the document, some extraction libraries and most online tools for OCR would not process the file. For text extraction, we ended up using poppler-utils, which had the best balance between quality of the table formatting during extraction alongside time to extract. For OCR, we initially tried using python libraries, but none worked particularly well or quickly. To solve this, we ended up splitting the document into chunks, running them through Adobe Express's OCR tool, then recombining them into one pdf. This was a successful approach, and the rest of the work done was in cleaning minor issues in extraction/formatting before loading data into our CSV files.
+The Financial Statements are contained in a single pdf, containing high level summary accounting information as well as revenue/expense reports broken down by base and reigon. The report has four distinct table types, which are associated with the four output CSV files.
+
+ - Statement of Financial Condition (FinancialStatement.csv)
+ - Operating Results Actual vs Budget (ActualVsBudget.csv)
+ - Operating Results Branch of Service (BranchBudget.csv)
+ - Statement of Gaming Revenue (GamingRevenue.csv)
+
+| Output CSV                 | Description                                                                         |
+|----------------------------|-------------------------------------------------------------------------------------|
+| `ActualVsBudget.csv`       | Comparison of revenue/expenses compared to budgeted values for a given month        |
+| `BranchBudget.csv`         | Lists revenue/expenses by branch of service for single month & YTD (starting OCT)   |
+| `FinancialStatement.csv`   | High level assets/liabilities for the entire program in a month                     |
+| `GamingRevenue.csv`        | Lists revenue by base and reigon for a given month                                  |
+
+# Parsing Workflow
+
+1. Parse PDF to Text and Identify Page Type
+Using poppler-utils, the pdf is convereted into formatted text retaining table structure from the document. Using the page headers, we identify which table type each page is and send them to their respective parsers
+
+2. Determine Page Variables
+Each page header will be scanned for date and reigon (when applicable). The parser iterates through each line, determining the row's category and splitting each line by the table's column structure. From there, this data will be sent to the row building function
+
+3. Build All Rows and Export
+For each table type, every column will be parsed, data cleaned and appended to the 2D array cooresponding to each output CSV file. Once all pages have been parsed, these arrays are converted into a DataFrame and exported to CSV.
+
+# Functions
+
+There are three function types, page parsers (as described in step 2 above), row parsers (step 3), and utility functions.
+
+1. Page Parsers
+parseFinancials() -> FinancialStatement.csv
+parseTotalBudget() -> ActualVsBudget.csv
+parseBranchBudget() -> BranchBudget.csv
+parseRevenue() -> GamingRevenue.csv
+
+2. Row Parsers
+buildFinancialRow() -> FinancialStatement.csv
+buildBudgetRow() -> ActualVsBudget.csv & Branch Budget (both use the same row headers)
+buildRevenueRow() -> GamingRevenue.csv
+
+3. Utility Functions
+determinePageType() -> Takes in a page and returns a string cooresponding to its table type
+parseDate() -> Parses string list containg date and concats/cleans, then converts into a datetime object
+numCleanup() -> Cleans numerical data cells for parsing errors, returning a properly formatted number string
+exportCSV() -> Converts data to DataFrame and exports to CSV file
+runProcess() -> Initializes process, reading 
+
+# Extraction
+To extract on your machine, perform the following steps
+
+1. Download FinancialTexts.txt from project google drive in folder MuckRock: US Military Base Slot Machine Revenue Explorer\Team B\TeamB_Exported_Data\FinancialStatements
+
+2. Install requirements using
+```bash
+pip install -r requirements.txt
+```
+3. In parseFinancialStatements.py, change the variable 'path' to desired output folder on your machine (located at top of file)
+
+4. Run parseFinancialStatements.py
+
 ## 1.5. District Revenue
 This module focuses on parsing and structuring revenue data from the **_District Revenues FY20–FY24.pdf_** document, one of the most complex ARMP source files due to its inconsistent table layouts and mixed fiscal formats across pages.
 
