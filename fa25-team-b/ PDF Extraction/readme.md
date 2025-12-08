@@ -3,11 +3,11 @@
   <br>
   <a href="https://www.bu.edu/spark/" target="_blank"><img src="https://www.bu.edu/spark/files/2023/08/logo.png" alt="BUSpark" width="200"></a>
   <br>
-  PDF Extraction <change to project name>
+  PDF Extraction & Parsing Pipeline
   <br>
 </h1>
 
-<h4 align="center">A template for the project readme file. </h4> <change to repo short description>
+<h4 align="center">Automated extraction of structured data from complex PDF reports for the Armed Forces Recreation Center (ARFC) Morale, Welfare & Recreation (MWR) Program.</h4>
 
 # 1. Detailed Data Extraction Procedure
 
@@ -143,7 +143,7 @@ All extracted CSVs will appear in the output folder.
 
 
 ## 1.2. Marine Revenue
-`Marine_Revenue_FY20_FY24.ipynb` uses **`pdfplumber`** to extract structured tables from the **Marine_Revenue_FY20–FY24.pdf** report into clean CSV files for downstream analysis or upload to Datasette. The notebook automates the end-to-end process of parsing,  Its main workflow includes:
+`Marine_Revenue_FY20_FY24.ipynb` uses **`pdfplumber`** to extract structured tables from the **Marine_Revenue_FY20–FY24.pdf** report into clean CSV files for downstream analysis or upload to Datasette. The notebook automates the end-to-end process of parsing and structure extraction. Its main workflow includes:
 
 -  **Table Extraction**: Automatically detects and extracts table structures page by page.
 
@@ -214,7 +214,7 @@ Our methodology was to first convert the PDF to text using pdftotext -layout so 
 Additional development work focused on standardizing the Navy Revenue extraction pipeline. The updated script introduced dynamic fiscal-year detection, automated multi-line table alignment, and error-handling logic to manage incomplete or irregular records. These enhancements ensured that the extraction process remained consistent across both FY20–FY24-1 and FY20–FY24-2 reports.
 
 ## 1.4. Financial Statements
-The Financial Statements are contained in a single pdf, containing high level summary accounting information as well as revenue/expense reports broken down by base and reigon. The report has four distinct table types, which are associated with the four output CSV files.
+The Financial Statements are contained in a single pdf, containing high level summary accounting information as well as revenue/expense reports broken down by base and region. The report has four distinct table types, which are associated with the four output CSV files.
 
  - Statement of Financial Condition (FinancialStatement.csv)
  - Operating Results Actual vs Budget (ActualVsBudget.csv)
@@ -226,18 +226,18 @@ The Financial Statements are contained in a single pdf, containing high level su
 | `ActualVsBudget.csv`       | Comparison of revenue/expenses compared to budgeted values for a given month        |
 | `BranchBudget.csv`         | Lists revenue/expenses by branch of service for single month & YTD (starting OCT)   |
 | `FinancialStatement.csv`   | High level assets/liabilities for the entire program in a month                     |
-| `GamingRevenue.csv`        | Lists revenue by base and reigon for a given month                                  |
+| `GamingRevenue.csv`        | Lists revenue by base and region for a given month                                  |
 
 # Parsing Workflow
 
 1. Parse PDF to Text and Identify Page Type
-Using poppler-utils, the pdf is convereted into formatted text retaining table structure from the document. Using the page headers, we identify which table type each page is and send them to their respective parsers
+Using poppler-utils, the pdf is converted into formatted text retaining table structure from the document. Using the page headers, we identify which table type each page is and send them to their respective parsers.
 
 2. Determine Page Variables
-Each page header will be scanned for date and reigon (when applicable). The parser iterates through each line, determining the row's category and splitting each line by the table's column structure. From there, this data will be sent to the row building function
+Each page header will be scanned for date and region (when applicable). The parser iterates through each line, determining the row's category and splitting each line by the table's column structure. From there, this data will be sent to the row building function.
 
 3. Build All Rows and Export
-For each table type, every column will be parsed, data cleaned and appended to the 2D array cooresponding to each output CSV file. Once all pages have been parsed, these arrays are converted into a DataFrame and exported to CSV.
+For each table type, every column will be parsed, data cleaned and appended to the 2D array corresponding to each output CSV file. Once all pages have been parsed, these arrays are converted into a DataFrame and exported to CSV.
 
 # Functions
 
@@ -255,11 +255,11 @@ buildBudgetRow() -> ActualVsBudget.csv & Branch Budget (both use the same row he
 buildRevenueRow() -> GamingRevenue.csv
 
 3. Utility Functions
-determinePageType() -> Takes in a page and returns a string cooresponding to its table type
-parseDate() -> Parses string list containg date and concats/cleans, then converts into a datetime object
+determinePageType() -> Takes in a page and returns a string corresponding to its table type
+parseDate() -> Parses string list containing date and concats/cleans, then converts into a datetime object
 numCleanup() -> Cleans numerical data cells for parsing errors, returning a properly formatted number string
 exportCSV() -> Converts data to DataFrame and exports to CSV file
-runProcess() -> Initializes process, reading 
+runProcess() -> Initializes the extraction process and orchestrates all parsing steps 
 
 # Extraction
 To extract on your machine, perform the following steps
