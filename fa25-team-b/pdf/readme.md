@@ -102,7 +102,7 @@ Files containing asset valuations and inventory information for military install
 | FY2021 | ✅ | ✅ | ✅ | ✅ |
 | FY2022 | ✅ | ✅ | ✅ | ✅ |
 | FY2023 | ✅ | ✅ | ✅ | ✅ |
-| FY2024 | ✅ (Partial) | ✅ | ✅ (Partial) | ✅ (Partial) |
+| FY2024 | ✅ (Partial) | ✅ (Partial) | ✅ (Partial) | ✅ (Partial) |
 
 ---
 
