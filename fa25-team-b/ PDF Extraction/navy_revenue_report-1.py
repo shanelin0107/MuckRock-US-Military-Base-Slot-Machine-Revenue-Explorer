@@ -22,7 +22,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 PDF_PATH = PROJECT_ROOT / "pdf" / "Navy Revenue Report FY20-FY24-1.pdf"
 
 # Output folder (inside CSVs/)
-OUT_DIR = PROJECT_ROOT / "output" / "Navy Report Final"
+OUT_DIR = PROJECT_ROOT / "CSVs" / "Navy Report Final"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -495,4 +495,5 @@ if __name__ == "__main__":
     print(f" - NAFI Reimbursements:  {nafi_out}")
     print(f" - Monthly Summary:      {monthly_out}")
     print(f"   Rows: {n_rows} | Installations: {n_inst}")
+
 
