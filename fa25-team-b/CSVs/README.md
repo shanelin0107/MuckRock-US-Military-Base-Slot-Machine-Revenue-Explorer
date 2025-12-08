@@ -29,7 +29,6 @@ Processed financial data extracted from military financial reports.
 ### **Marine Revenue**
 Marine-specific revenue data for naval facilities.
 
-- **Columns** (typical): Service, Base, Region, Month, Year, Amount, Revenue_Type
 - Contains revenue streams specific to Marine Corps installations
 - Includes geographic coordinates (latitude/longitude) for mapping
 - File: `Marine_Revenue_FY20-FY24_detail_with_gps.csv`
@@ -37,7 +36,6 @@ Marine-specific revenue data for naval facilities.
 ### **Navy Revenue**
 Navy-specific revenue data for naval installations.
 
-- **Columns** (typical): Service, Base, Region, Month, Year, Amount, Revenue_Type
 - Covers Navy bases globally including forward-deployed locations
 - Includes GPS coordinates for geospatial analysis
 
