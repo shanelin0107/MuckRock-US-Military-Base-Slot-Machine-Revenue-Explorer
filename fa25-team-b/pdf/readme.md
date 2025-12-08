@@ -24,7 +24,7 @@ This folder contains original PDF documents provided by **MuckRock** containing 
 
 The documents cover District Revenue, Asset Reports, and Service Branch-specific Revenue data for FY2020–FY2024.
 
-For more details on how these PDFs are processed and extracted, refer to the [PDF Extraction folder](/fa25-team-b/PDF%20Extraction/readme.md).
+For more details on how these PDFs are processed and extracted, refer to the [PDF Extraction folder](/fa25-team-b/%20PDF%20Extraction/readme.md).
 
 ---
 
@@ -96,13 +96,13 @@ Files containing asset valuations and inventory information for military install
 
 # Data Coverage
 
-| Fiscal Year | District Revenue | Asset Reports | Marine Revenue | Navy Revenue | Army Revenue |
-|---|---|---|---|---|---|
-| FY2020 | ✅ | ✅ | ✅ | ✅ | Included |
-| FY2021 | ✅ | ✅ | ✅ | ✅ | Included |
-| FY2022 | ✅ | ✅ | ✅ | ✅ | Included |
-| FY2023 | ✅ | ✅ | ✅ | ✅ | Included |
-| FY2024 | ✅ (Partial) | ✅ | ✅ (Partial) | ✅ (Partial) | Partial |
+| Fiscal Year | District Revenue | Asset Reports | Marine Revenue | Navy Revenue |
+|---|---|---|---|---|
+| FY2020 | ✅ | ✅ | ✅ | ✅ |
+| FY2021 | ✅ | ✅ | ✅ | ✅ |
+| FY2022 | ✅ | ✅ | ✅ | ✅ |
+| FY2023 | ✅ | ✅ | ✅ | ✅ |
+| FY2024 | ✅ (Partial) | ✅ | ✅ (Partial) | ✅ (Partial) |
 
 ---
 
