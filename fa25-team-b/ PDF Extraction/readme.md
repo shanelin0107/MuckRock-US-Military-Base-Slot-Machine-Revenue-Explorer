@@ -3,11 +3,11 @@
   <br>
   <a href="https://www.bu.edu/spark/" target="_blank"><img src="https://www.bu.edu/spark/files/2023/08/logo.png" alt="BUSpark" width="200"></a>
   <br>
-  PDF Extraction & Parsing Pipeline
+  MuckRock: US Military Base Slot Machine Revenue Explorer
   <br>
 </h1>
 
-<h4 align="center">Automated extraction of structured data from complex PDF reports for the Armed Forces Recreation Center (ARFC) Morale, Welfare & Recreation (MWR) Program.</h4>
+<h4 align="center">PDF Extraction & Parsing Pipeline: Automated extraction of structured data from complex PDF reports for the Armed Forces Recreation Center (ARFC) Morale, Welfare & Recreation (MWR) Program.</h4>
 
 # 1. Detailed Data Extraction Procedure
 
