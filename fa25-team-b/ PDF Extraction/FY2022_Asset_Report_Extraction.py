@@ -22,7 +22,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 PDF_PATH = PROJECT_ROOT / "pdf" / "FY2022 Asset Reports.pdf"
 
 # Output directory (CSVs/FY2022 Asset Report Final)
-OUT_DIR = PROJECT_ROOT / "CSVs" / "FY2022 Asset Report Final"
+OUT_DIR = PROJECT_ROOT / "output" / "FY2022 Asset Report Final"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # Output CSV file paths
@@ -1430,3 +1430,4 @@ def run_all_parsers(pdf_path: Path):
 
 if __name__ == "__main__":
     run_all_parsers(PDF_PATH)
+
