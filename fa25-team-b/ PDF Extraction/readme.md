@@ -299,13 +299,25 @@ The resulting CSV follows this schema:
 ### Reproducibility
 Run the following notebook to reproduce extraction:
 ```bash
-PDF Extraction/District_Revenues_FY20_FY24.ipynb
+python -m jupyter notebook "PDF Extraction/District_Revenues_FY20_FY24.ipynb"
 ```
-Steps performed:
-1. Mount Google Drive (if running in Colab).
-2. Load the raw PDF from /content/drive/MyDrive/District Revenues FY20–FY24.pdf.
-3. Apply PyMuPDF-based text-block filtering.
-4. Save the structured CSV to /content/drive/MyDrive/District_Revenue_filtered_FY20-FY24_final.csv.
+
+Alternatively, if running in a Jupyter environment, navigate to the notebook and execute all cells.
+
+#### File Locations
+
+- **Input PDF**: `fa25-team-b/pdf/District Revenues FY20-FY24.pdf`
+- **Output Filtered PDF** (intermediate): `fa25-team-b/pdf/District Revenues FY20-FY24_FILTERED.pdf`
+- **Output CSV** (final): `fa25-team-b/CSVs/District Revenue/District_Revenue_filtered_FY20-FY24_final.csv`
+
+#### Steps Performed
+
+1. Load the raw PDF from the local `pdf/` directory.
+2. Apply PyMuPDF-based text-block filtering to extract only pages with revenue tables.
+3. Parse each page coordinate-by-coordinate to identify months, regions, and monetary values.
+4. Reconstruct multi-line installation names and normalize base names.
+5. Apply manual patch for Sasebo Navy – Hario (FY2020 Feb–Sep).
+6. Save the structured CSV to the output directory (`CSVs/District Revenue/`).
 
 ## 1.6. Revenue Comparison File
  
