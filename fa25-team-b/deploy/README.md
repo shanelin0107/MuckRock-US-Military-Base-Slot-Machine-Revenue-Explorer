@@ -15,7 +15,10 @@ An interactive Datasette deployment that surfaces FY2020–FY2024 slot machine r
 ```
 military-slots-explorer/
 ├── data/
-│   └── District_Revenue_FY20-FY24_with_lat_lon_clean.csv
+│   ├── District_Revenue_FY20-FY24_with_lat_lon_clean.csv
+│   ├── Marine_Revenue_FY20-FY24_detail_with_gps.csv
+│   ├── Navy Revenue Report FY20-FY24-2_monthly_summary.csv
+│   └── Navy_Revenue_Reimburse_Summary_updated.csv
 ├── convert_csv_to_db.py
 ├── military_slots.db
 ├── requirements.txt
@@ -26,6 +29,25 @@ military-slots-explorer/
 ├── README.md
 └── .gitignore
 ```
+
+### Repository files (short descriptions)
+
+- `data/` (directory): Contains source CSVs used to build the SQLite database and for analysis. Current files include:
+   - `District_Revenue_FY20-FY24_with_lat_lon_clean.csv`: Cleaned district revenue CSV with geocoded latitude/longitude used to build the primary `military_slots.db`.
+   - `Marine_Revenue_FY20-FY24_detail_with_gps.csv`: Marine Corps revenue detail file including GPS coordinates and revenue type breakdowns.
+   - `Navy Revenue Report FY20-FY24-2_monthly_summary.csv`: Navy monthly summary (FY2020–FY2024) aggregated by installation and month.
+   - `Navy_Revenue_Reimburse_Summary_updated.csv`: Navy reimbursements and NAFI summary used for reimbursement/other revenue analysis.
+
+- `convert_csv_to_db.py`: Pipeline script that ingests CSV files from `data/`, normalizes columns, computes fiscal-year fields, builds indexes, and outputs `military_slots.db` (used by Datasette).
+- `military_slots.db`: Pre-built SQLite database containing cleaned and indexed tables ready for Datasette. If missing or outdated, regenerate with `convert_csv_to_db.py`.
+- `requirements.txt`: Python package requirements for local development and the conversion pipeline. Includes `pandas`, `datasette` and other analysis dependencies.
+- `Dockerfile`: Container recipe used to build the application image for Render (handles `PORT`, CORS and Datasette launch).
+- `metadata.yaml`: Datasette metadata (table titles, column labels, canned queries and plugin configuration) attached to the published site.
+- `render.yaml`: Render service configuration used to automate the Docker build and deployment.
+- `DATA_DICTIONARY.md`: Field definitions, data types, and notes explaining columns present in the CSV/DB.
+- `README.md`: This deployment README with usage, development and deployment instructions.
+- `.gitignore`: Standard git ignore file listing patterns for local artifacts (venv, DB, IDE configs, etc.).
+
 
 ## Local Development
 1. **Clone the repo**
