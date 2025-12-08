@@ -68,18 +68,47 @@ Because the report contains **eight distinct table layouts**, we implement separ
 | `run_extraction()` | High-level orchestration for processing a single PDF file. |
 
 ### FY2021 Asset Report
-The FY2021 Asset Report data has been fully extracted and cleaned for analysis. Unlike FY2020, FY2022, and FY2023, the FY2021 report contains several COVID-specific cells and temporary reporting categories, which required custom parsing and structural normalization during extraction.
+The FY2021 Asset Report data has been fully extracted and cleaned for analysis.Unlike other fiscal years, the FY2021 report contains temporary COVID-related reporting fields and transitional layout changes, which required additional normalization logic during extraction. Despite these variations, the pipeline standardizes all outputs into the same eight analysis-ready CSV tables used across other fiscal years. Each section of the PDF follows a distinct text layout. To handle this complexity, the pipeline applies dedicated, layout-specific parsing functions and automates extraction into eight standardized CSV outputs for analytics and visualization.
 
-The extraction notebook generates the following tables:
+The extraction notebook generates the following tables(the same as other fiscal years, shown above):
 - Assets by Region, Service
 - Assets by Field Office
 - Installed Assets by Location & Manufacturer
-- Asset Details (blue header)
+- Asset Details (blue header, also contains derived aging and optional geolocation fields) 
 - Floor Asset Details
-- Site Operational Status
+- Site Operational Status (Also has COVID-era operational indicators)
 - Years in Storage
 
-Data was parsed from the PDF using Camelot and Tabula, then cleaned with Pandas. Irregular headers, merged cells, and COVID-specific fields were standardized to match extract formats from other fiscal years.
+#### Workflow Overview #### (SAME AS OTHER FISCAL YEARS)
+1. **PDF Parsing and Month Detection**  
+   The pipeline first uses `pdftotext -layout` to convert each page into structured text while preserving column alignment.  
+   The `detect_month_map()` function then scans pages and assigns each one to its reporting month (e.g., *March 2024*).
+
+2. **Section Identification and Parsing**  
+   Each page is scanned for key headers such as `"Assets by Region, Service"`, `"Assets by Field Office"`, and `"Installed Assets by Location"`.  
+   Based on these headers, specialized parsing functions are applied to extract the corresponding tables.  
+   Extracted rows are validated, cleaned, and merged using `_safe_concat()`.
+   ADDITIONAL!! COVID-era operational pages introduce temporary reporting codes and operational flags, which are decoded and normalized during site status parsing.
+
+4. **Data Assembly and Export**  
+   All parsed DataFrames are combined and exported into **eight standardized CSV files per fiscal year**, each stored in an automatically created output folder (in this GITHUB, CSVs/FY2021 Asset Report Final)
+
+#### Function Summary #####
+
+Because the FY2021 report contains multiple distinct table layouts and transitional COVID-era formatting, separate parsing functions are implemented for each section:
+
+| Function | Purpose |
+|-----------|----------|
+| `read_pdf_text_layout()` | Converts a PDF page layout into raw text. |
+| `parse_region_and_field_office_v1()` | Extracts Region and Field Office summaries. |
+| `parse_installed_assets_v2()` | Extracts Installed Assets by Location. |
+| `extract_region_field_installed_v2()` | Orchestrates summary-level extraction for regions, field offices, and installed assets. |
+| `parse_asset_details_page()` | Extracts detailed asset listings. |
+| `parse_floor_details_page()` | Extracts floor-level installation data. |
+| `parse_site_status_page()` | Extracts site operational status and COVID-era fields (DIFFERENT FROM OTHER FISCAL YEARS)|
+| `extract_detailed_tables()` | Combines all detailed tables and applies month mapping. |
+| `save_outputs()` | Writes all resulting DataFrames to CSV files. |
+| `run_extraction()` | High-level orchestration for processing a single PDF file. |
 
 **Setup Instructions** 
 
@@ -93,7 +122,7 @@ pip install -r requirements.txt
 ```
 *3. Run the notebook cells sequentially to extract and standardize tables.*
 
-*4. Exported CSVs will appear in the output folder and are aligned for merging with other fiscal years.*
+*4. Exported CSVs will appear in the output folder (CSVs) and are aligned for merging with other fiscal years.*
 
 ### FY2022 Asset Report
 The FY2022 Asset Report data has been fully extracted and cleaned for analysis.
