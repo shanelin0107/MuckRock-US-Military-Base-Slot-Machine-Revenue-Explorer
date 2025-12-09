@@ -6,7 +6,7 @@
   <br>
 </h1>
 
-<h4 align="center">Analyzing U.S. Military Slot Machine Revenues and Gambling Risks Across Overseas Bases</h4>
+<h4 align="center">Base Question Python Script</h4>
 
 <p align="center">
   <a href="#overview">Overview</a> •
@@ -18,3 +18,11 @@
   <a href="#where-to-start">Where to start</a> •
   <a href="#environment-setup">Environment Setup</a>
 </p>
+
+# Overview
+This folder contain the python code we use to answer all the base questions.
+We use District Revenue file to answer base question 1 and 2 and we use asset report to answer base question 3.
+
+For more detail of explanation of each question, please refer to [Here](/fa25-team-b/README.md)
+
+

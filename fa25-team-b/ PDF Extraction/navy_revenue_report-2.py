@@ -23,8 +23,12 @@ import pandas as pd
 # =========================================================
 # CONFIG (edit PDF_PATH if needed)
 # =========================================================
-PDF_PATH = Path(r"D:\venv\ds701\Navy Report\Navy Revenue Report FY20-FY24-2.pdf")
-OUT_DIR  = PDF_PATH.parent
+# Get the folder where this .py file is located
+BASE_DIR = Path(__file__).parent
+
+# The PDF is stored in the same folder as this .py file
+PDF_PATH = BASE_DIR / "Navy Revenue Report FY20-FY24-2.pdf"
+OUT_DIR  = BASE_DIR
 
 # =========================================================
 # COMMON UTILITIES

@@ -1,8 +1,21 @@
-pandas
-numpy
-camelot-py
-tabula-py
-PyPDF2
-openpyxl
-ghostscript
-java  
+# PDF Extraction and Parsing Dependencies
+pandas>=1.5.0
+numpy>=1.24.0
+
+# PDF Parsing Libraries
+PyMuPDF>=1.23.0  # Provides the 'fitz' module for coordinate-based PDF parsing
+pdfplumber>=0.10.0  # For table extraction from PDFs
+PyPDF2>=3.0.0  # PDF manipulation utilities
+camelot-py>=0.11.0  # Advanced table extraction
+tabula-py>=2.5.0  # Table extraction from PDFs
+
+# Excel and Data Format Support
+openpyxl>=3.10.0  # Excel file handling
+
+# External Tool Dependencies
+ghostscript>=0.10  # PostScript/PDF processing
+poppler-utils>=1.1.0  # PDF text extraction utilities (requires system poppler)
+
+# Jupyter and Interactive Computing
+jupyter>=1.0.0  # Jupyter notebook environment
+notebook>=7.0.0  # For running .ipynb files

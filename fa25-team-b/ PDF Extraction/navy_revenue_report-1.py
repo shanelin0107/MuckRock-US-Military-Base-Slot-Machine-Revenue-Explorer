@@ -4,14 +4,6 @@
 #   1) Slot Machine Results – Navy         → <PDF stem>_slot_results.csv
 #   2) NAFI Reimbursement from ARMP        → <PDF stem>_nafi_reimbursements.csv
 #   3) Monthly Summary by Location  → monthly_summary_master.csv
-#
-# Works for both FY20–FY24-1 and FY20–FY24-2 PDFs.
-# - Slot/NAFI
-# - Monthly Summary
-#
-# Requirements:
-#   - Poppler `pdftotext` on PATH
-#   - pandas installed
 # =====================================================================
 
 import re
@@ -20,11 +12,19 @@ from pathlib import Path
 from collections import defaultdict
 import pandas as pd
 
-# =========================================================
-# CONFIG (edit PDF_PATH if needed)
-# =========================================================
-PDF_PATH = Path(r"D:\venv\ds701\Navy Report\Navy Revenue Report FY20-FY24-1.pdf")
-OUT_DIR  = PDF_PATH.parent
+# ============================= CONFIGURATION =============================
+from pathlib import Path
+
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+
+# Input PDF file (from pdf/ directory)
+PDF_PATH = PROJECT_ROOT / "pdf" / "Navy Revenue Report FY20-FY24-1.pdf"
+
+# Output folder (inside CSVs/)
+OUT_DIR = PROJECT_ROOT / "CSVs" / "Navy Revenue Report"
+OUT_DIR.mkdir(parents=True, exist_ok=True)
+
 
 
 def normalize_dashes(s: str) -> str:
@@ -495,3 +495,6 @@ if __name__ == "__main__":
     print(f" - NAFI Reimbursements:  {nafi_out}")
     print(f" - Monthly Summary:      {monthly_out}")
     print(f"   Rows: {n_rows} | Installations: {n_inst}")
+
+
+

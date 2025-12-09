@@ -3,11 +3,11 @@
   <br>
   <a href="https://www.bu.edu/spark/" target="_blank"><img src="https://www.bu.edu/spark/files/2023/08/logo.png" alt="BUSpark" width="200"></a>
   <br>
-  PDF Extraction <change to project name>
+  MuckRock: US Military Base Slot Machine Revenue Explorer
   <br>
 </h1>
 
-<h4 align="center">A template for the project readme file. </h4> <change to repo short description>
+<h4 align="center">PDF Extraction & Parsing Pipeline: Automated extraction of structured data from complex PDF reports for the Armed Forces Recreation Center (ARFC) Morale, Welfare & Recreation (MWR) Program.</h4>
 
 # 1. Detailed Data Extraction Procedure
 
@@ -68,18 +68,47 @@ Because the report contains **eight distinct table layouts**, we implement separ
 | `run_extraction()` | High-level orchestration for processing a single PDF file. |
 
 ### FY2021 Asset Report
-The FY2021 Asset Report data has been fully extracted and cleaned for analysis. Unlike FY2020, FY2022, and FY2023, the FY2021 report contains several COVID-specific cells and temporary reporting categories, which required custom parsing and structural normalization during extraction.
+The FY2021 Asset Report data has been fully extracted and cleaned for analysis.Unlike other fiscal years, the FY2021 report contains temporary COVID-related reporting fields and transitional layout changes, which required additional normalization logic during extraction. Despite these variations, the pipeline standardizes all outputs into the same eight analysis-ready CSV tables used across other fiscal years. Each section of the PDF follows a distinct text layout. To handle this complexity, the pipeline applies dedicated, layout-specific parsing functions and automates extraction into eight standardized CSV outputs for analytics and visualization.
 
-The extraction notebook generates the following tables:
+The extraction notebook generates the following tables(the same as other fiscal years, shown above):
 - Assets by Region, Service
 - Assets by Field Office
 - Installed Assets by Location & Manufacturer
-- Asset Details (blue header)
+- Asset Details (blue header, also contains derived aging and optional geolocation fields) 
 - Floor Asset Details
-- Site Operational Status
+- Site Operational Status (Also has COVID-era operational indicators)
 - Years in Storage
 
-Data was parsed from the PDF using Camelot and Tabula, then cleaned with Pandas. Irregular headers, merged cells, and COVID-specific fields were standardized to match extract formats from other fiscal years.
+#### Workflow Overview #### (SAME AS OTHER FISCAL YEARS)
+1. **PDF Parsing and Month Detection**  
+   The pipeline first uses `pdftotext -layout` to convert each page into structured text while preserving column alignment.  
+   The `detect_month_map()` function then scans pages and assigns each one to its reporting month (e.g., *March 2024*).
+
+2. **Section Identification and Parsing**  
+   Each page is scanned for key headers such as `"Assets by Region, Service"`, `"Assets by Field Office"`, and `"Installed Assets by Location"`.  
+   Based on these headers, specialized parsing functions are applied to extract the corresponding tables.  
+   Extracted rows are validated, cleaned, and merged using `_safe_concat()`.
+   ADDITIONAL!! COVID-era operational pages introduce temporary reporting codes and operational flags, which are decoded and normalized during site status parsing.
+
+4. **Data Assembly and Export**  
+   All parsed DataFrames are combined and exported into **eight standardized CSV files per fiscal year**, each stored in an automatically created output folder (in this GITHUB, CSVs/FY2021 Asset Report Final)
+
+#### Function Summary #####
+
+Because the FY2021 report contains multiple distinct table layouts and transitional COVID-era formatting, separate parsing functions are implemented for each section:
+
+| Function | Purpose |
+|-----------|----------|
+| `read_pdf_text_layout()` | Converts a PDF page layout into raw text. |
+| `parse_region_and_field_office_v1()` | Extracts Region and Field Office summaries. |
+| `parse_installed_assets_v2()` | Extracts Installed Assets by Location. |
+| `extract_region_field_installed_v2()` | Orchestrates summary-level extraction for regions, field offices, and installed assets. |
+| `parse_asset_details_page()` | Extracts detailed asset listings. |
+| `parse_floor_details_page()` | Extracts floor-level installation data. |
+| `parse_site_status_page()` | Extracts site operational status and COVID-era fields (DIFFERENT FROM OTHER FISCAL YEARS)|
+| `extract_detailed_tables()` | Combines all detailed tables and applies month mapping. |
+| `save_outputs()` | Writes all resulting DataFrames to CSV files. |
+| `run_extraction()` | High-level orchestration for processing a single PDF file. |
 
 **Setup Instructions** 
 
@@ -93,10 +122,57 @@ pip install -r requirements.txt
 ```
 *3. Run the notebook cells sequentially to extract and standardize tables.*
 
-*4. Exported CSVs will appear in the output folder and are aligned for merging with other fiscal years.*
+*4. Exported CSVs will appear in the output folder (CSVs) and are aligned for merging with other fiscal years.*
+
+### FY2022 Asset Report
+The FY2022 Asset Report data has been fully extracted and cleaned for analysis.
+Since the report uses a different column structure and field alignment, the script includes custom logic to identify each field and map it into the standardized output format. 
+
+Data is extracted using pdftotext with layout preservation and processed through seven specialized parsers.
+The script reads each month chronologically and automatically removes duplicate month sections to ensure clean, accurate outputs.
+
+The extraction script generates the following tables:
+-	Assets by Region, Service
+-	Assets by Field Office
+-	Installed Assets by Location & Manufacturer
+-	Asset Details (Installed Assets by Location)
+-	Floor Asset Details
+-	Site Operational Status
+-	Years in Storage (EGMs Only)
+
+**Setup Instructions**
+
+1. Input PDF
+
+The required FY2022 Asset Report PDF is already included in the repository at: pdf/FY2022 Asset Reports.pdf
+
+No additional download is required.
+
+2. Install Required Dependencies
+   
+```bash
+pip install -r requirements.txt
+```
+
+3. Install Poppler utilities (required for pdftotext)
+   
+•	Linux: sudo apt-get install poppler-utils
+
+•	macOS: brew install poppler
+
+•	Windows: Download Poppler for Windows and add pdftotext.exe to PATH
+
+4. Run the extraction script
+   
+python FY2022_Asset_Report_Extraction.py
+
+5. Output Location
+   
+All extracted CSVs will appear in the output folder.
+
 
 ## 1.2. Marine Revenue
-`Marine_Revenue_FY20_FY24.ipynb` uses **`pdfplumber`** to extract structured tables from the **Marine_Revenue_FY20–FY24.pdf** report into clean CSV files for downstream analysis or upload to Datasette. The notebook automates the end-to-end process of parsing,  Its main workflow includes:
+`Marine_Revenue_FY20_FY24.ipynb` uses **`pdfplumber`** to extract structured tables from the **Marine_Revenue_FY20–FY24.pdf** report into clean CSV files for downstream analysis or upload to Datasette. The notebook automates the end-to-end process of parsing and structure extraction. Its main workflow includes:
 
 -  **Table Extraction**: Automatically detects and extracts table structures page by page.
 
@@ -167,7 +243,62 @@ Our methodology was to first convert the PDF to text using pdftotext -layout so 
 Additional development work focused on standardizing the Navy Revenue extraction pipeline. The updated script introduced dynamic fiscal-year detection, automated multi-line table alignment, and error-handling logic to manage incomplete or irregular records. These enhancements ensured that the extraction process remained consistent across both FY20–FY24-1 and FY20–FY24-2 reports.
 
 ## 1.4. Financial Statements
-The Financial Statements pdf required a bit of expirimentation for both OCR tools as well as formatted text extraction. Due to the size of the document, some extraction libraries and most online tools for OCR would not process the file. For text extraction, we ended up using poppler-utils, which had the best balance between quality of the table formatting during extraction alongside time to extract. For OCR, we initially tried using python libraries, but none worked particularly well or quickly. To solve this, we ended up splitting the document into chunks, running them through Adobe Express's OCR tool, then recombining them into one pdf. This was a successful approach, and the rest of the work done was in cleaning minor issues in extraction/formatting before loading data into our CSV files.
+The Financial Statements are contained in a single pdf, containing high level summary accounting information as well as revenue/expense reports broken down by base and region. The report has four distinct table types, which are associated with the four output CSV files.
+
+ - Statement of Financial Condition (FinancialStatement.csv)
+ - Operating Results Actual vs Budget (ActualVsBudget.csv)
+ - Operating Results Branch of Service (BranchBudget.csv)
+ - Statement of Gaming Revenue (GamingRevenue.csv)
+
+| Output CSV                 | Description                                                                         |
+|----------------------------|-------------------------------------------------------------------------------------|
+| `ActualVsBudget.csv`       | Comparison of revenue/expenses compared to budgeted values for a given month        |
+| `BranchBudget.csv`         | Lists revenue/expenses by branch of service for single month & YTD (starting OCT)   |
+| `FinancialStatement.csv`   | High level assets/liabilities for the entire program in a month                     |
+| `GamingRevenue.csv`        | Lists revenue by base and region for a given month                                  |
+
+# Parsing Workflow
+
+1. Parse PDF to Text and Identify Page Type
+Using poppler-utils, the pdf is converted into formatted text retaining table structure from the document. Using the page headers, we identify which table type each page is and send them to their respective parsers.
+
+2. Determine Page Variables
+Each page header will be scanned for date and region (when applicable). The parser iterates through each line, determining the row's category and splitting each line by the table's column structure. From there, this data will be sent to the row building function.
+
+3. Build All Rows and Export
+For each table type, every column will be parsed, data cleaned and appended to the 2D array corresponding to each output CSV file. Once all pages have been parsed, these arrays are converted into a DataFrame and exported to CSV.
+
+# Functions
+
+There are three function types, page parsers (as described in step 2 above), row parsers (step 3), and utility functions.
+
+1. Page Parsers
+parseFinancials() -> FinancialStatement.csv
+parseTotalBudget() -> ActualVsBudget.csv
+parseBranchBudget() -> BranchBudget.csv
+parseRevenue() -> GamingRevenue.csv
+
+2. Row Parsers
+buildFinancialRow() -> FinancialStatement.csv
+buildBudgetRow() -> ActualVsBudget.csv & Branch Budget (both use the same row headers)
+buildRevenueRow() -> GamingRevenue.csv
+
+3. Utility Functions
+determinePageType() -> Takes in a page and returns a string corresponding to its table type
+parseDate() -> Parses string list containing date and concats/cleans, then converts into a datetime object
+numCleanup() -> Cleans numerical data cells for parsing errors, returning a properly formatted number string
+exportCSV() -> Converts data to DataFrame and exports to CSV file
+runProcess() -> Initializes the extraction process and orchestrates all parsing steps 
+
+# Extraction
+To extract on your machine, perform the following steps
+
+1. Install requirements using
+```bash
+pip install -r requirements.txt
+```
+2. Run parseFinancialStatements.py
+
 ## 1.5. District Revenue
 This module focuses on parsing and structuring revenue data from the **_District Revenues FY20–FY24.pdf_** document, one of the most complex ARMP source files due to its inconsistent table layouts and mixed fiscal formats across pages.
 
@@ -197,13 +328,25 @@ The resulting CSV follows this schema:
 ### Reproducibility
 Run the following notebook to reproduce extraction:
 ```bash
-PDF Extraction/District_Revenues_FY20_FY24.ipynb
+python -m jupyter notebook "PDF Extraction/District_Revenues_FY20_FY24.ipynb"
 ```
-Steps performed:
-1. Mount Google Drive (if running in Colab).
-2. Load the raw PDF from /content/drive/MyDrive/District Revenues FY20–FY24.pdf.
-3. Apply PyMuPDF-based text-block filtering.
-4. Save the structured CSV to /content/drive/MyDrive/District_Revenue_filtered_FY20-FY24_final.csv.
+
+Alternatively, if running in a Jupyter environment, navigate to the notebook and execute all cells.
+
+#### File Locations
+
+- **Input PDF**: `fa25-team-b/pdf/District Revenues FY20-FY24.pdf`
+- **Output Filtered PDF** (intermediate): `fa25-team-b/pdf/District Revenues FY20-FY24_FILTERED.pdf`
+- **Output CSV** (final): `fa25-team-b/CSVs/District Revenue/District_Revenue_filtered_FY20-FY24_final.csv`
+
+#### Steps Performed
+
+1. Load the raw PDF from the local `pdf/` directory.
+2. Apply PyMuPDF-based text-block filtering to extract only pages with revenue tables.
+3. Parse each page coordinate-by-coordinate to identify months, regions, and monetary values.
+4. Reconstruct multi-line installation names and normalize base names.
+5. Apply manual patch for Sasebo Navy – Hario (FY2020 Feb–Sep).
+6. Save the structured CSV to the output directory (`CSVs/District Revenue/`).
 
 ## 1.6. Revenue Comparison File
  
