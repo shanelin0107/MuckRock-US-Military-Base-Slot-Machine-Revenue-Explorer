@@ -1,0 +1,744 @@
+Region,LocationName,FO#,Loc,Svc,NOV,AIN,IGT,WMS,BAL,KON,ITE,Tot_EGMs,FRS,ACM,ITC,Total_PDF,Total_Computed,Month
+Europe,ARMSTRONG'S,2,194,Army,10.0,5.0,9.0,,6.0,2.0,,10.0,32.0,1.0,2.0,37.0,45.0,October 2023
+Europe,LCCC,2,195,Army,8.0,3.0,3.0,,6.0,,,1.0,20.0,1.0,2.0,25.0,24.0,October 2023
+Europe,KAZABRA,2,196,Army,5.0,,3.0,,,2.0,,10.0,1.0,1.0,2.0,14.0,14.0,October 2023
+Europe,STRIKERS,2,218,Army,9.0,4.0,7.0,,6.0,1.0,,3.0,27.0,1.0,2.0,32.0,33.0,October 2023
+Europe,GOLD MINE,2,1038,Army,3.0,4.0,7.0,3.0,3.0,2.0,,22.0,1.0,2.0,2.0,27.0,27.0,October 2023
+Europe,ROB JAVA CAFE,2,2887,Army,4.0,,6.0,,4.0,1.0,,1.0,15.0,1.0,2.0,19.0,19.0,October 2023
+Europe,SEMBACH C/C,2,3072,Army,7.0,,2.0,,3.0,2.0,,3.0,14.0,1.0,2.0,19.0,20.0,October 2023
+Europe,EDO_CARD_LAB,2,3170,Army,,,,,,,,0.0,,,0.0,0.0,0.0,October 2023
+Europe,LIVORNO C/C,4,330,Army,3.0,3.0,6.0,,4.0,,,16.0,1.0,2.0,2.0,21.0,21.0,October 2023
+Europe,ARENA B/C,4,2895,Army,2.0,5.0,6.0,,8.0,4.0,,8.0,25.0,1.0,2.0,30.0,36.0,October 2023
+Europe,DEL DIN C/C,4,3132,Army,,,5.0,,7.0,,,4.0,12.0,1.0,1.0,15.0,18.0,October 2023
+Europe,EDELWEISS,10,2489,Army,2.0,3.0,5.0,,5.0,,,2.0,15.0,1.0,1.0,16.0,19.0,October 2023
+Europe,ACTION LANES,31,437,Army,6.0,,2.0,,5.0,,,5.0,13.0,1.0,1.0,14.0,20.0,October 2023
+Europe,STORCK BRK B/C,31,438,Army,6.0,,3.0,1.0,4.0,2.0,,16.0,1.0,1.0,1.0,18.0,19.0,October 2023
+Europe,THE ANCHOR,39,2618,Navy,16.0,2.0,,,2.0,,,20.0,1.0,2.0,2.0,25.0,25.0,October 2023
+Europe,SIG B/C,40,2595,Navy,4.0,2.0,5.0,2.0,4.0,,,2.0,17.0,1.0,1.0,20.0,21.0,October 2023
+Europe,JOX SPORTS BAR,40,2597,Navy,2.0,2.0,2.0,2.0,3.0,,,11.0,1.0,1.0,1.0,14.0,14.0,October 2023
+Europe,CAPO OLDE TOWN,42,2588,Navy,9.0,,4.0,1.0,4.0,2.0,,20.0,1.0,1.0,2.0,24.0,24.0,October 2023
+Europe,NAPLES B/C,42,2591,Navy,4.0,1.0,4.0,2.0,7.0,5.0,,23.0,1.0,1.0,2.0,27.0,27.0,October 2023
+Europe,LA PLAZA,43,2600,Navy,11.0,4.0,2.0,,5.0,4.0,,2.0,26.0,1.0,2.0,30.0,31.0,October 2023
+Europe,PINZ,43,2601,Navy,2.0,,5.0,,4.0,1.0,,4.0,12.0,1.0,2.0,16.0,19.0,October 2023
+Europe,ROTA FLEET CTR,43,2605,Navy,4.0,,,2.0,,,,6.0,1.0,1.0,1.0,9.0,9.0,October 2023
+Europe,NGIS ROTA,43,2890,Navy,6.0,,3.0,,,1.0,,10.0,1.0,1.0,1.0,13.0,13.0,October 2023
+Europe,PATCH C/C,45,256,Army,13.0,3.0,6.0,,11.0,3.0,,8.0,36.0,1.0,2.0,41.0,47.0,October 2023
+Europe,KELLY C/C,45,280,Army,5.0,,3.0,,2.0,1.0,,6.0,11.0,1.0,1.0,14.0,19.0,October 2023
+Europe,GALAXY B/C,45,298,Army,3.0,2.0,2.0,,7.0,1.0,,4.0,15.0,1.0,1.0,18.0,21.0,October 2023
+Europe,GRAF E/C,46,413,Army,11.0,4.0,5.0,3.0,3.0,,,6.0,26.0,1.0,1.0,30.0,34.0,October 2023
+Europe,HOHENFELS B/C,46,415,Army,6.0,4.0,6.0,,3.0,,,3.0,19.0,1.0,1.0,24.0,24.0,October 2023
+Europe,VILSECK B/C,46,417,Army,4.0,,3.0,2.0,4.0,,,13.0,1.0,2.0,1.0,17.0,17.0,October 2023
+Europe,LANGENBRUCK,46,1858,Army,6.0,4.0,4.0,,9.0,,,7.0,23.0,1.0,1.0,27.0,32.0,October 2023
+Europe,ALGIER R/C,46,3145,Army,,,,,,,,0.0,,,0.0,0.0,0.0,October 2023
+Europe,THE VAULT,47,1669,Army,6.0,4.0,4.0,,4.0,,,2.0,18.0,1.0,1.0,20.0,22.0,October 2023
+Europe,LIBERTY GAMES,47,1881,Army,7.0,,7.0,,8.0,,,22.0,1.0,,1.0,23.0,24.0,October 2023
+Europe,WIESBADEN E/C,47,2976,Army,7.0,4.0,,,4.0,2.0,,17.0,1.0,,1.0,18.0,19.0,October 2023
+Europe,ACE'S GAME RM,47,3108,Army,6.0,,2.0,,2.0,,,10.0,1.0,,1.0,11.0,12.0,October 2023
+Japan,YOKOSUKA B/C,18,3146,Navy,,4.0,3.0,,3.0,1.0,,4.0,11.0,1.0,2.0,15.0,18.0,October 2023
+Japan,CLUB ALLIANCE,18,3147,Navy,2.0,5.0,,,10.0,2.0,,6.0,19.0,1.0,2.0,23.0,28.0,October 2023
+Japan,CPO CLUB,18,3148,Navy,4.0,,6.0,,,1.0,,1.0,11.0,1.0,2.0,15.0,15.0,October 2023
+Japan,TAKEMIYA CLUB,18,3149,Navy,2.0,,2.0,1.0,,1.0,,6.0,1.0,1.0,2.0,10.0,10.0,October 2023
+Japan,OFFICERS CLUB,18,3150,Navy,,,6.0,,,3.0,,1.0,9.0,1.0,2.0,13.0,13.0,October 2023
+Japan,SEASIDE CLUB,18,3151,Navy,,8.0,2.0,,7.0,,,6.0,17.0,1.0,2.0,21.0,26.0,October 2023
+Japan,HARBOR VIEW,19,3096,Navy,3.0,6.0,6.0,,3.0,,,5.0,18.0,1.0,2.0,22.0,26.0,October 2023
+Japan,HARIO,19,3097,Navy,2.0,5.0,5.0,,,2.0,,14.0,1.0,1.0,2.0,18.0,18.0,October 2023
+Japan,GALAXIES,19,3098,Navy,5.0,6.0,6.0,,2.0,3.0,,5.0,22.0,1.0,2.0,26.0,30.0,October 2023
+Japan,ZAMA C/C,22,883,Army,6.0,5.0,3.0,,8.0,,,5.0,22.0,1.0,1.0,25.0,29.0,October 2023
+Japan,SHA CLUB,22,885,Army,,,,,,,,0.0,,,0.0,0.0,0.0,October 2023
+Japan,ZAMA B/C,22,886,Army,3.0,,2.0,,3.0,,,8.0,1.0,1.0,1.0,11.0,11.0,October 2023
+Japan,ROAD HOUSE,22,1127,Marine Corps,3.0,,3.0,,,,,1.0,6.0,1.0,1.0,9.0,9.0,October 2023
+Japan,SANNO HOTEL,22,2664,Navy,7.0,6.0,6.0,,6.0,,,4.0,25.0,1.0,2.0,29.0,32.0,October 2023
+Japan,CORNER POCKET,22,3078,Navy,,,4.0,2.0,,3.0,,5.0,9.0,1.0,1.0,12.0,16.0,October 2023
+Japan,CLUB TRILOGY,22,3079,Navy,2.0,6.0,4.0,,5.0,,,4.0,17.0,1.0,2.0,21.0,24.0,October 2023
+Japan,ZAMA G/C,22,3165,Army,2.0,4.0,,1.0,,,,3.0,7.0,1.0,1.0,10.0,12.0,October 2023
+Japan,HAVANA'S,26,967,Army,2.0,1.0,1.0,,3.0,1.0,,8.0,1.0,1.0,1.0,11.0,11.0,October 2023
+Japan,HASHMARKS,26,1105,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,October 2023
+Japan,COURTNEY B/C,26,1107,Marine Corps,2.0,,6.0,,,2.0,,3.0,10.0,1.0,2.0,14.0,16.0,October 2023
+Japan,TAIYO G/C,26,1109,Marine Corps,9.0,9.0,9.0,,7.0,2.0,,7.0,36.0,1.0,2.0,41.0,46.0,October 2023
+Japan,BUTLER B/C,26,1111,Marine Corps,4.0,4.0,2.0,,7.0,2.0,,3.0,19.0,1.0,2.0,23.0,25.0,October 2023
+Japan,OCEAN BREEZE,26,1114,Marine Corps,12.0,18.0,10.0,,23.0,3.0,,6.0,66.0,1.0,2.0,72.0,75.0,October 2023
+Japan,SURFSIDE,26,1122,Marine Corps,6.0,,,,4.0,2.0,,2.0,12.0,1.0,2.0,16.0,17.0,October 2023
+Japan,PALMS,26,2238,Marine Corps,5.0,6.0,11.0,,5.0,4.0,,7.0,31.0,1.0,2.0,36.0,41.0,October 2023
+Japan,WEST PAC LODGE,26,2317,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,October 2023
+Japan,BEACH HEAD,26,2394,Marine Corps,5.0,3.0,3.0,,,,,11.0,1.0,1.0,2.0,15.0,15.0,October 2023
+Japan,CROW'S NEST,26,2523,Navy,2.0,4.0,2.0,,4.0,,,4.0,12.0,1.0,2.0,16.0,19.0,October 2023
+Japan,PORT CALL,26,2525,Navy,2.0,,2.0,1.0,,3.0,,1.0,8.0,1.0,2.0,12.0,12.0,October 2023
+Japan,WHISPERS,26,3159,Marine Corps,6.0,4.0,8.0,,,,,4.0,18.0,1.0,2.0,22.0,25.0,October 2023
+Japan,HANSEN TLF,26,3169,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,October 2023
+OKINAWA,TORII PINES TLF,27,3164,Marine Corps,4.0,4.0,4.0,,5.0,,,6.0,17.0,1.0,2.0,21.0,26.0,October 2023
+OKINAWA,IWAKUNI CLUB,27,1137,Marine Corps,12.0,4.0,6.0,,3.0,4.0,,4.0,29.0,1.0,2.0,34.0,36.0,October 2023
+OKINAWA,TERROR CLUB,17,3156,Navy,10.0,,,,,,,10.0,1.0,1.0,2.0,14.0,14.0,October 2023
+Korea,DRAGON HILL,20,770,Army,19.0,,6.0,,25.0,,,10.0,50.0,1.0,3.0,56.0,64.0,October 2023
+Korea,K-16 C/C,20,776,Army,7.0,,5.0,,,,,12.0,1.0,1.0,2.0,16.0,16.0,October 2023
+Korea,STATE'S GRILL,21,866,Army,6.0,,2.0,,,2.0,,10.0,1.0,,1.0,11.0,12.0,October 2023
+Korea,HILLTOP,21,867,Army,5.0,10.0,,,8.0,,,4.0,23.0,1.0,1.0,24.0,29.0,October 2023
+Korea,PERIMETER PUB,21,869,Army,6.0,,8.0,,,3.0,,3.0,17.0,1.0,1.0,18.0,22.0,October 2023
+Korea,WINDY CITY,21,870,Army,,,,,,,,0.0,,,0.0,0.0,0.0,October 2023
+Korea,EL GUERRERO,21,891,Army,7.0,,4.0,,3.0,2.0,,4.0,16.0,1.0,1.0,17.0,22.0,October 2023
+Korea,TURTLE COVE,21,2521,Navy,6.0,,2.0,5.0,,,,13.0,1.0,,1.0,14.0,15.0,October 2023
+Korea,IMPACT ZONE,23,797,Army,5.0,5.0,2.0,,4.0,,,6.0,16.0,1.0,1.0,17.0,24.0,October 2023
+Korea,WARRIOR'S,23,798,Army,8.0,,4.0,,,2.0,,14.0,1.0,,1.0,15.0,16.0,October 2023
+Korea,CASEY B/C,23,819,Army,6.0,4.0,4.0,,4.0,2.0,,20.0,1.0,,1.0,21.0,22.0,October 2023
+Korea,CASEY LODGE,23,1940,Army,1.0,,,,2.0,,,4.0,3.0,1.0,1.0,4.0,9.0,October 2023
+Korea,FLIGHTLINE,24,3166,Army,,,,,,,,0.0,,,0.0,0.0,0.0,October 2023
+Korea,CAVE,24,3168,Army,14.0,6.0,8.0,,6.0,,,8.0,34.0,1.0,3.0,41.0,46.0,October 2023
+Korea,HUMPHREYS B/C,24,839,Army,2.0,4.0,4.0,,4.0,,,14.0,1.0,1.0,2.0,18.0,18.0,October 2023
+Korea,MORNING CALM,24,3158,Army,15.0,12.0,3.0,,24.0,3.0,,6.0,57.0,1.0,2.0,62.0,66.0,October 2023
+Europe,ARMSTRONG'S,2,194,Army,10.0,5.0,9.0,,6.0,2.0,,10.0,32.0,1.0,2.0,37.0,45.0,November 2023
+Europe,LCCC,2,195,Army,8.0,3.0,3.0,,6.0,,,1.0,20.0,1.0,2.0,25.0,24.0,November 2023
+Europe,KAZABRA,2,196,Army,,,,,,,,0.0,,,0.0,0.0,0.0,November 2023
+Europe,STRIKERS,2,218,Army,9.0,4.0,7.0,,6.0,1.0,,3.0,27.0,1.0,2.0,31.0,33.0,November 2023
+Europe,GOLD MINE,2,1038,Army,3.0,4.0,7.0,3.0,3.0,2.0,,22.0,1.0,2.0,2.0,27.0,27.0,November 2023
+Europe,ROB JAVA CAFE,2,2887,Army,4.0,,6.0,,4.0,1.0,,1.0,15.0,1.0,2.0,19.0,19.0,November 2023
+Europe,SEMBACH C/C,2,3072,Army,7.0,,2.0,,3.0,2.0,,3.0,14.0,1.0,2.0,19.0,20.0,November 2023
+Europe,EDO_CARD_LAB,2,3170,Army,,,,,,,,0.0,,,0.0,0.0,0.0,November 2023
+Europe,LIVORNO C/C,4,330,Army,3.0,3.0,6.0,,4.0,,,16.0,1.0,2.0,2.0,21.0,21.0,November 2023
+Europe,ARENA B/C,4,2895,Army,2.0,5.0,6.0,,8.0,4.0,,8.0,25.0,1.0,2.0,30.0,36.0,November 2023
+Europe,DEL DIN C/C,4,3132,Army,,,5.0,,7.0,,,4.0,12.0,1.0,1.0,15.0,18.0,November 2023
+Europe,EDELWEISS,10,2489,Army,2.0,3.0,5.0,,5.0,,,2.0,15.0,1.0,1.0,16.0,19.0,November 2023
+Europe,ACTION LANES,31,437,Army,6.0,,2.0,,5.0,,,5.0,13.0,1.0,1.0,14.0,20.0,November 2023
+Europe,STORCK BRK B/C,31,438,Army,6.0,,3.0,1.0,4.0,2.0,,16.0,1.0,1.0,1.0,18.0,19.0,November 2023
+Europe,THE ANCHOR,39,2618,Navy,16.0,2.0,,,2.0,,,20.0,1.0,2.0,2.0,25.0,25.0,November 2023
+Europe,SIG B/C,40,2595,Navy,4.0,2.0,5.0,2.0,4.0,,,2.0,17.0,1.0,1.0,20.0,21.0,November 2023
+Europe,JOX SPORTS BAR,40,2597,Navy,2.0,2.0,4.0,,3.0,,,11.0,1.0,1.0,1.0,14.0,14.0,November 2023
+Europe,CAPO OLDE TOWN,42,2588,Navy,8.0,,6.0,,4.0,2.0,,20.0,1.0,1.0,2.0,24.0,24.0,November 2023
+Europe,NAPLES B/C,42,2591,Navy,4.0,1.0,4.0,2.0,7.0,5.0,,23.0,1.0,1.0,2.0,27.0,27.0,November 2023
+Europe,LA PLAZA,43,2600,Navy,10.0,4.0,6.0,,,4.0,,2.0,24.0,1.0,2.0,28.0,29.0,November 2023
+Europe,PINZ,43,2601,Navy,2.0,,5.0,,5.0,1.0,,4.0,13.0,1.0,2.0,17.0,20.0,November 2023
+Europe,ROTA FLEET CTR,43,2605,Navy,3.0,,,1.0,3.0,,,7.0,1.0,1.0,1.0,10.0,10.0,November 2023
+Europe,NGIS ROTA,43,2890,Navy,7.0,,2.0,,,1.0,,10.0,1.0,1.0,1.0,13.0,13.0,November 2023
+Europe,PATCH C/C,45,256,Army,13.0,3.0,6.0,,11.0,3.0,,8.0,36.0,1.0,2.0,41.0,47.0,November 2023
+Europe,KELLY C/C,45,280,Army,5.0,,3.0,,2.0,1.0,,6.0,11.0,1.0,1.0,14.0,19.0,November 2023
+Europe,GALAXY B/C,45,298,Army,3.0,2.0,2.0,,7.0,1.0,,4.0,15.0,1.0,1.0,18.0,21.0,November 2023
+Europe,GRAF E/C,46,413,Army,11.0,4.0,5.0,3.0,3.0,,,6.0,26.0,1.0,1.0,30.0,34.0,November 2023
+Europe,HOHENFELS B/C,46,415,Army,6.0,4.0,6.0,,3.0,,,3.0,19.0,1.0,1.0,24.0,24.0,November 2023
+Europe,VILSECK B/C,46,417,Army,4.0,,3.0,2.0,4.0,,,13.0,1.0,2.0,1.0,17.0,17.0,November 2023
+Europe,LANGENBRUCK,46,1858,Army,6.0,4.0,4.0,,7.0,,,7.0,21.0,1.0,1.0,25.0,30.0,November 2023
+Europe,ALGIER R/C,46,3145,Army,,,,,,,,0.0,,,0.0,0.0,0.0,November 2023
+Europe,THE VAULT,47,1669,Army,6.0,4.0,4.0,,4.0,,,2.0,18.0,1.0,1.0,20.0,22.0,November 2023
+Europe,LIBERTY GAMES,47,1881,Army,7.0,,7.0,,8.0,,,22.0,1.0,,1.0,23.0,24.0,November 2023
+Europe,WIESBADEN E/C,47,2976,Army,7.0,4.0,,,4.0,2.0,,17.0,1.0,,1.0,18.0,19.0,November 2023
+Europe,ACE'S GAME RM,47,3108,Army,6.0,,,,2.0,,,2.0,8.0,1.0,1.0,9.0,12.0,November 2023
+Japan,YOKOSUKA B/C,18,3146,Navy,,4.0,3.0,,3.0,1.0,,4.0,11.0,1.0,2.0,15.0,18.0,November 2023
+Japan,CLUB ALLIANCE,18,3147,Navy,2.0,5.0,,,10.0,2.0,,6.0,19.0,1.0,2.0,23.0,28.0,November 2023
+Japan,CPO CLUB,18,3148,Navy,4.0,,6.0,,,1.0,,1.0,11.0,1.0,2.0,15.0,15.0,November 2023
+Japan,TAKEMIYA CLUB,18,3149,Navy,2.0,,2.0,1.0,,1.0,,6.0,1.0,1.0,2.0,10.0,10.0,November 2023
+Japan,OFFICERS CLUB,18,3150,Navy,,,6.0,,,3.0,,1.0,9.0,1.0,2.0,13.0,13.0,November 2023
+Japan,SEASIDE CLUB,18,3151,Navy,,8.0,2.0,,7.0,,,6.0,17.0,1.0,2.0,21.0,26.0,November 2023
+Japan,HARBOR VIEW,19,3096,Navy,3.0,6.0,6.0,,3.0,,,5.0,18.0,1.0,2.0,22.0,26.0,November 2023
+Japan,HARIO,19,3097,Navy,2.0,5.0,5.0,,,2.0,,14.0,1.0,1.0,2.0,18.0,18.0,November 2023
+Japan,GALAXIES,19,3098,Navy,5.0,6.0,6.0,,2.0,3.0,,5.0,22.0,1.0,2.0,26.0,30.0,November 2023
+Japan,ZAMA C/C,22,883,Army,6.0,5.0,3.0,,8.0,,,5.0,22.0,1.0,1.0,25.0,29.0,November 2023
+Japan,SHA CLUB,22,885,Army,,,,,,,,0.0,,,0.0,0.0,0.0,November 2023
+Japan,ZAMA B/C,22,886,Army,2.0,,3.0,,3.0,,,8.0,1.0,1.0,1.0,11.0,11.0,November 2023
+Japan,ROAD HOUSE,22,1127,Marine Corps,3.0,,3.0,,,,,1.0,6.0,1.0,1.0,9.0,9.0,November 2023
+Japan,SANNO HOTEL,22,2664,Navy,6.0,7.0,4.0,,6.0,,,4.0,23.0,1.0,2.0,27.0,30.0,November 2023
+Japan,CORNER POCKET,22,3078,Navy,,,4.0,2.0,,3.0,,5.0,9.0,1.0,1.0,12.0,16.0,November 2023
+Japan,CLUB TRILOGY,22,3079,Navy,2.0,6.0,4.0,,5.0,,,4.0,17.0,1.0,2.0,21.0,24.0,November 2023
+Japan,ZAMA G/C,22,3165,Army,2.0,4.0,2.0,1.0,,,,3.0,9.0,1.0,1.0,12.0,14.0,November 2023
+Japan,HAVANA'S,26,967,Army,2.0,1.0,1.0,,3.0,1.0,,8.0,1.0,1.0,1.0,11.0,11.0,November 2023
+Japan,HASHMARKS,26,1105,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,November 2023
+Japan,COURTNEY B/C,26,1107,Marine Corps,2.0,,6.0,,,2.0,,3.0,10.0,1.0,2.0,14.0,16.0,November 2023
+Japan,TAIYO G/C,26,1109,Marine Corps,9.0,9.0,9.0,,7.0,2.0,,7.0,36.0,1.0,2.0,41.0,46.0,November 2023
+Japan,BUTLER B/C,26,1111,Marine Corps,4.0,4.0,2.0,,7.0,2.0,,3.0,19.0,1.0,2.0,23.0,25.0,November 2023
+Japan,OCEAN BREEZE,26,1114,Marine Corps,12.0,18.0,10.0,,23.0,3.0,,6.0,66.0,1.0,2.0,72.0,75.0,November 2023
+Japan,SURFSIDE,26,1122,Marine Corps,6.0,,,,4.0,2.0,,2.0,12.0,1.0,2.0,16.0,17.0,November 2023
+Japan,PALMS,26,2238,Marine Corps,5.0,6.0,11.0,,5.0,4.0,,7.0,31.0,1.0,2.0,36.0,41.0,November 2023
+Japan,WEST PAC LODGE,26,2317,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,November 2023
+Japan,BEACH HEAD,26,2394,Marine Corps,5.0,3.0,3.0,,,,,11.0,1.0,1.0,2.0,15.0,15.0,November 2023
+Japan,CROW'S NEST,26,2523,Navy,2.0,4.0,2.0,,4.0,,,4.0,12.0,1.0,2.0,16.0,19.0,November 2023
+Japan,PORT CALL,26,2525,Navy,2.0,,,,3.0,3.0,,1.0,8.0,1.0,2.0,12.0,12.0,November 2023
+Japan,WHISPERS,26,3159,Marine Corps,6.0,4.0,8.0,,,,,4.0,18.0,1.0,2.0,22.0,25.0,November 2023
+Japan,HANSEN TLF,26,3169,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,November 2023
+OKINAWA,TORII PINES TLF,27,3164,Marine Corps,4.0,4.0,4.0,,5.0,,,6.0,17.0,1.0,2.0,21.0,26.0,November 2023
+OKINAWA,IWAKUNI CLUB,27,1137,Marine Corps,12.0,4.0,6.0,,3.0,4.0,,4.0,29.0,1.0,2.0,34.0,36.0,November 2023
+OKINAWA,TERROR CLUB,17,3156,Navy,10.0,,,,,,,10.0,1.0,1.0,2.0,14.0,14.0,November 2023
+Korea,DRAGON HILL,20,770,Army,19.0,,6.0,,25.0,,,10.0,50.0,1.0,3.0,56.0,64.0,November 2023
+Korea,K-16 C/C,20,776,Army,7.0,,5.0,,,,,12.0,1.0,1.0,2.0,16.0,16.0,November 2023
+Korea,STATE'S GRILL,21,866,Army,6.0,,2.0,,,2.0,,10.0,1.0,,1.0,11.0,12.0,November 2023
+Korea,HILLTOP,21,867,Army,5.0,10.0,,,8.0,,,4.0,23.0,1.0,1.0,24.0,29.0,November 2023
+Korea,PERIMETER PUB,21,869,Army,6.0,,8.0,,,3.0,,3.0,17.0,1.0,1.0,18.0,22.0,November 2023
+Korea,WINDY CITY,21,870,Army,,,,,,,,0.0,,,0.0,0.0,0.0,November 2023
+Korea,EL GUERRERO,21,891,Army,8.0,,4.0,,3.0,2.0,,4.0,17.0,1.0,1.0,18.0,23.0,November 2023
+Korea,TURTLE COVE,21,2521,Navy,6.0,,2.0,5.0,,,,13.0,1.0,,1.0,14.0,15.0,November 2023
+Korea,IMPACT ZONE,23,797,Army,5.0,5.0,2.0,,4.0,,,6.0,16.0,1.0,1.0,17.0,24.0,November 2023
+Korea,WARRIOR'S,23,798,Army,8.0,,4.0,,,2.0,,14.0,1.0,,1.0,15.0,16.0,November 2023
+Korea,CASEY B/C,23,819,Army,6.0,4.0,4.0,,4.0,2.0,,20.0,1.0,,1.0,21.0,22.0,November 2023
+Korea,CASEY LODGE,23,1940,Army,1.0,,,,2.0,,,4.0,3.0,1.0,1.0,4.0,9.0,November 2023
+Korea,FLIGHTLINE,24,3166,Army,,,,,,,,0.0,,,0.0,0.0,0.0,November 2023
+Korea,CAVE,24,3168,Army,14.0,9.0,8.0,,6.0,,,8.0,37.0,1.0,2.0,42.0,48.0,November 2023
+Korea,HUMPHREYS B/C,24,839,Army,2.0,4.0,4.0,,4.0,,,14.0,1.0,1.0,2.0,18.0,18.0,November 2023
+Korea,MORNING CALM,24,3158,Army,15.0,12.0,3.0,,24.0,3.0,,6.0,57.0,1.0,2.0,62.0,66.0,November 2023
+Europe,ARMSTRONG'S,2,194,Army,10.0,5.0,9.0,,6.0,2.0,,10.0,32.0,1.0,2.0,37.0,45.0,December 2023
+Europe,LCCC,2,195,Army,8.0,3.0,3.0,,6.0,,,1.0,20.0,1.0,2.0,25.0,24.0,December 2023
+Europe,KAZABRA,2,196,Army,,,,,,,,0.0,,,0.0,0.0,0.0,December 2023
+Europe,STRIKERS,2,218,Army,9.0,4.0,7.0,,6.0,1.0,,3.0,27.0,1.0,2.0,31.0,33.0,December 2023
+Europe,GOLD MINE,2,1038,Army,3.0,4.0,7.0,3.0,3.0,2.0,,22.0,1.0,2.0,2.0,27.0,27.0,December 2023
+Europe,ROB JAVA CAFE,2,2887,Army,4.0,,6.0,,4.0,1.0,,1.0,15.0,1.0,2.0,19.0,19.0,December 2023
+Europe,SEMBACH C/C,2,3072,Army,7.0,,2.0,,3.0,2.0,,3.0,14.0,1.0,2.0,19.0,20.0,December 2023
+Europe,EDO_CARD_LAB,2,3170,Army,,,,,,,,0.0,,,0.0,0.0,0.0,December 2023
+Europe,LIVORNO C/C,4,330,Army,3.0,3.0,6.0,,4.0,,,16.0,1.0,2.0,2.0,21.0,21.0,December 2023
+Europe,ARENA B/C,4,2895,Army,2.0,5.0,6.0,,8.0,4.0,,8.0,25.0,1.0,2.0,30.0,36.0,December 2023
+Europe,DEL DIN C/C,4,3132,Army,,,5.0,,7.0,,,4.0,12.0,1.0,1.0,15.0,18.0,December 2023
+Europe,EDELWEISS,10,2489,Army,2.0,3.0,5.0,,5.0,,,2.0,15.0,1.0,1.0,16.0,19.0,December 2023
+Europe,ACTION LANES,31,437,Army,6.0,,2.0,,5.0,,,5.0,13.0,1.0,1.0,14.0,20.0,December 2023
+Europe,STORCK BRK B/C,31,438,Army,4.0,,3.0,1.0,2.0,2.0,,12.0,1.0,1.0,1.0,14.0,15.0,December 2023
+Europe,THE ANCHOR,39,2618,Navy,16.0,2.0,,,2.0,,,20.0,1.0,2.0,2.0,25.0,25.0,December 2023
+Europe,SIG B/C,40,2595,Navy,4.0,2.0,5.0,2.0,4.0,,,2.0,17.0,1.0,1.0,20.0,21.0,December 2023
+Europe,JOX SPORTS BAR,40,2597,Navy,2.0,2.0,4.0,,3.0,,,11.0,1.0,1.0,1.0,14.0,14.0,December 2023
+Europe,CAPO OLDE TOWN,42,2588,Navy,8.0,,6.0,,4.0,2.0,,20.0,1.0,1.0,2.0,24.0,24.0,December 2023
+Europe,NAPLES B/C,42,2591,Navy,4.0,1.0,4.0,,7.0,5.0,,21.0,1.0,1.0,2.0,25.0,25.0,December 2023
+Europe,LA PLAZA,43,2600,Navy,10.0,4.0,6.0,,,4.0,,2.0,24.0,1.0,2.0,28.0,29.0,December 2023
+Europe,PINZ,43,2601,Navy,2.0,,5.0,,5.0,1.0,,4.0,13.0,1.0,2.0,17.0,20.0,December 2023
+Europe,ROTA FLEET CTR,43,2605,Navy,3.0,,,1.0,3.0,,,7.0,1.0,1.0,1.0,10.0,10.0,December 2023
+Europe,NGIS ROTA,43,2890,Navy,7.0,,2.0,,,1.0,,10.0,1.0,1.0,1.0,13.0,13.0,December 2023
+Europe,PATCH C/C,45,256,Army,13.0,3.0,6.0,,11.0,3.0,,8.0,36.0,1.0,2.0,41.0,47.0,December 2023
+Europe,KELLY C/C,45,280,Army,5.0,,3.0,,2.0,1.0,,6.0,11.0,1.0,1.0,14.0,19.0,December 2023
+Europe,GALAXY B/C,45,298,Army,3.0,2.0,2.0,,7.0,1.0,,4.0,15.0,1.0,1.0,18.0,21.0,December 2023
+Europe,GRAF E/C,46,413,Army,11.0,4.0,5.0,3.0,3.0,,,6.0,26.0,1.0,1.0,30.0,34.0,December 2023
+Europe,HOHENFELS B/C,46,415,Army,6.0,4.0,6.0,,3.0,,,3.0,19.0,1.0,1.0,24.0,24.0,December 2023
+Europe,VILSECK B/C,46,417,Army,4.0,,3.0,2.0,4.0,,,13.0,1.0,2.0,1.0,17.0,17.0,December 2023
+Europe,LANGENBRUCK,46,1858,Army,6.0,4.0,4.0,,7.0,,,7.0,21.0,1.0,1.0,25.0,30.0,December 2023
+Europe,ALGIER R/C,46,3145,Army,,,,,,,,0.0,,,0.0,0.0,0.0,December 2023
+Europe,THE VAULT,47,1669,Army,6.0,4.0,4.0,,4.0,,,2.0,18.0,1.0,1.0,20.0,22.0,December 2023
+Europe,LIBERTY GAMES,47,1881,Army,7.0,,7.0,,8.0,,,22.0,1.0,,1.0,23.0,24.0,December 2023
+Europe,WIESBADEN E/C,47,2976,Army,6.0,4.0,,,4.0,,,14.0,1.0,,1.0,15.0,16.0,December 2023
+Europe,ACE'S GAME RM,47,3108,Army,6.0,,,,2.0,,,2.0,8.0,1.0,1.0,9.0,12.0,December 2023
+Japan,YOKOSUKA B/C,18,3146,Navy,,4.0,3.0,,3.0,1.0,,4.0,11.0,1.0,2.0,15.0,18.0,December 2023
+Japan,CLUB ALLIANCE,18,3147,Navy,2.0,5.0,,,10.0,2.0,,6.0,19.0,1.0,2.0,23.0,28.0,December 2023
+Japan,CPO CLUB,18,3148,Navy,4.0,,6.0,,,1.0,,1.0,11.0,1.0,2.0,15.0,15.0,December 2023
+Japan,TAKEMIYA CLUB,18,3149,Navy,2.0,,2.0,1.0,,1.0,,6.0,1.0,1.0,2.0,10.0,10.0,December 2023
+Japan,OFFICERS CLUB,18,3150,Navy,,,6.0,,,3.0,,1.0,9.0,1.0,2.0,13.0,13.0,December 2023
+Japan,SEASIDE CLUB,18,3151,Navy,,8.0,2.0,,7.0,,,6.0,17.0,1.0,2.0,21.0,26.0,December 2023
+Japan,HARBOR VIEW,19,3096,Navy,3.0,6.0,6.0,,3.0,,,5.0,18.0,1.0,2.0,22.0,26.0,December 2023
+Japan,HARIO,19,3097,Navy,2.0,5.0,5.0,,,2.0,,14.0,1.0,1.0,2.0,18.0,18.0,December 2023
+Japan,GALAXIES,19,3098,Navy,5.0,6.0,6.0,,2.0,3.0,,5.0,22.0,1.0,2.0,26.0,30.0,December 2023
+Japan,ZAMA C/C,22,883,Army,6.0,5.0,3.0,,8.0,,,5.0,22.0,1.0,1.0,25.0,29.0,December 2023
+Japan,MOUNTAIN VIEW INN,22,3171,Marine Corps,,,,,,,,3.0,0.0,1.0,1.0,3.0,5.0,December 2023
+Japan,ZAMA B/C,22,886,Army,1.0,,3.0,,3.0,,,1.0,7.0,1.0,1.0,10.0,10.0,December 2023
+Japan,ROAD HOUSE,22,1127,Marine Corps,3.0,,3.0,,,,,1.0,6.0,1.0,1.0,9.0,9.0,December 2023
+Japan,SANNO HOTEL,22,2664,Navy,6.0,7.0,4.0,,6.0,,,4.0,23.0,1.0,2.0,27.0,30.0,December 2023
+Japan,CORNER POCKET,22,3078,Navy,,,6.0,1.0,,3.0,,4.0,10.0,1.0,1.0,13.0,16.0,December 2023
+Japan,CLUB TRILOGY,22,3079,Navy,2.0,6.0,4.0,,5.0,,,4.0,17.0,1.0,2.0,21.0,24.0,December 2023
+Japan,ZAMA G/C,22,3165,Army,2.0,4.0,2.0,1.0,,,,3.0,9.0,1.0,1.0,12.0,14.0,December 2023
+Japan,#N/A,26,967,#N/A,2.0,1.0,1.0,,3.0,1.0,,8.0,1.0,1.0,1.0,11.0,11.0,December 2023
+Japan,HASHMARKS,26,1105,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,December 2023
+Japan,COURTNEY B/C,26,1107,Marine Corps,2.0,,6.0,,,2.0,,3.0,10.0,1.0,2.0,14.0,16.0,December 2023
+Japan,TAIYO G/C,26,1109,Marine Corps,9.0,9.0,9.0,,7.0,2.0,,7.0,36.0,1.0,2.0,41.0,46.0,December 2023
+Japan,BUTLER B/C,26,1111,Marine Corps,4.0,4.0,2.0,,7.0,2.0,,3.0,19.0,1.0,2.0,23.0,25.0,December 2023
+Japan,OCEAN BREEZE,26,1114,Marine Corps,12.0,18.0,10.0,,23.0,3.0,,6.0,66.0,1.0,2.0,72.0,75.0,December 2023
+Japan,SURFSIDE,26,1122,Marine Corps,6.0,,,,4.0,2.0,,2.0,12.0,1.0,2.0,16.0,17.0,December 2023
+Japan,PALMS,26,2238,Marine Corps,5.0,6.0,11.0,,5.0,4.0,,7.0,31.0,1.0,2.0,36.0,41.0,December 2023
+Japan,WEST PAC LODGE,26,2317,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,December 2023
+Japan,BEACH HEAD,26,2394,Marine Corps,5.0,3.0,3.0,,,,,11.0,1.0,1.0,2.0,15.0,15.0,December 2023
+Japan,CROW'S NEST,26,2523,Navy,2.0,4.0,2.0,,4.0,,,4.0,12.0,1.0,2.0,16.0,19.0,December 2023
+Japan,PORT CALL,26,2525,Navy,2.0,,,,3.0,3.0,,1.0,8.0,1.0,2.0,12.0,12.0,December 2023
+Japan,WHISPERS,26,3159,Marine Corps,6.0,4.0,8.0,,,,,4.0,18.0,1.0,2.0,22.0,25.0,December 2023
+Japan,HANSEN TLF,26,3169,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,December 2023
+OKINAWA,TORII PINES TLF,27,3164,Marine Corps,2.0,4.0,4.0,,5.0,,,6.0,15.0,1.0,2.0,19.0,24.0,December 2023
+OKINAWA,IWAKUNI CLUB,27,1137,Marine Corps,11.0,4.0,6.0,,3.0,4.0,,4.0,28.0,1.0,2.0,33.0,35.0,December 2023
+OKINAWA,TERROR CLUB,17,3156,Navy,10.0,,,,,,,10.0,1.0,2.0,2.0,13.0,15.0,December 2023
+Korea,DRAGON HILL,20,770,Army,19.0,,6.0,,25.0,,,10.0,50.0,1.0,3.0,56.0,64.0,December 2023
+Korea,K-16 C/C,20,776,Army,7.0,,5.0,,,,,12.0,1.0,1.0,2.0,16.0,16.0,December 2023
+Korea,STATE'S GRILL,21,866,Army,6.0,,2.0,,,2.0,,10.0,1.0,,1.0,11.0,12.0,December 2023
+Korea,HILLTOP,21,867,Army,5.0,10.0,,,8.0,,,4.0,23.0,1.0,1.0,24.0,29.0,December 2023
+Korea,PERIMETER PUB,21,869,Army,6.0,,8.0,,,3.0,,3.0,17.0,1.0,1.0,18.0,22.0,December 2023
+Korea,EVERGREEN,21,934,Army,2.0,3.0,3.0,,,,,3.0,8.0,1.0,1.0,9.0,13.0,December 2023
+Korea,EL GUERRERO,21,891,Army,8.0,,4.0,,3.0,2.0,,4.0,17.0,1.0,1.0,18.0,23.0,December 2023
+Korea,TURTLE COVE,21,2521,Navy,6.0,,2.0,5.0,,,,13.0,1.0,,1.0,14.0,15.0,December 2023
+Korea,IMPACT ZONE,23,797,Army,5.0,5.0,2.0,,4.0,,,6.0,16.0,1.0,1.0,17.0,24.0,December 2023
+Korea,WARRIOR'S,23,798,Army,8.0,,4.0,,,2.0,,14.0,1.0,,1.0,15.0,16.0,December 2023
+Korea,CASEY B/C,23,819,Army,6.0,4.0,4.0,,4.0,2.0,,20.0,1.0,,1.0,21.0,22.0,December 2023
+Korea,CASEY LODGE,23,1940,Army,1.0,,,,2.0,,,4.0,3.0,1.0,1.0,4.0,9.0,December 2023
+Korea,FLIGHTLINE,24,3166,Army,,,,,,,,0.0,,,0.0,0.0,0.0,December 2023
+Korea,CAVE,24,3168,Army,14.0,9.0,8.0,,6.0,,,8.0,37.0,1.0,2.0,42.0,48.0,December 2023
+Korea,HUMPHREYS B/C,24,839,Army,2.0,4.0,4.0,,4.0,,,14.0,1.0,1.0,2.0,18.0,18.0,December 2023
+Korea,MORNING CALM,24,3158,Army,15.0,12.0,3.0,,24.0,3.0,,6.0,57.0,1.0,2.0,62.0,66.0,December 2023
+Europe,ARMSTRONG'S,2,194,Army,10.0,5.0,11.0,,6.0,2.0,,10.0,6.0,50.0,2.0,55.0,68.0,January 2024
+Europe,LCCC,2,195,Army,8.0,3.0,3.0,,6.0,,,1.0,5.0,26.0,2.0,31.0,34.0,January 2024
+Europe,KAZABRA,2,196,Army,,,,,,,,0.0,,,0.0,0.0,0.0,January 2024
+Europe,STRIKERS,2,218,Army,9.0,4.0,7.0,,6.0,1.0,,3.0,2.0,32.0,2.0,36.0,39.0,January 2024
+Europe,GOLD MINE,2,1038,Army,3.0,4.0,7.0,3.0,3.0,2.0,,22.0,1.0,2.0,2.0,27.0,27.0,January 2024
+Europe,ROB JAVA CAFE,2,2887,Army,4.0,,6.0,,4.0,1.0,,1.0,16.0,1.0,2.0,20.0,20.0,January 2024
+Europe,SEMBACH C/C,2,3072,Army,7.0,,2.0,,3.0,2.0,,3.0,2.0,19.0,2.0,24.0,26.0,January 2024
+Europe,EDO_CARD_LAB,2,3170,Army,,,,,,,,0.0,,,0.0,0.0,0.0,January 2024
+Europe,LIVORNO C/C,4,330,Army,3.0,3.0,6.0,,4.0,,,16.0,1.0,2.0,2.0,21.0,21.0,January 2024
+Europe,ARENA B/C,4,2895,Army,2.0,5.0,6.0,,8.0,4.0,2.0,8.0,6.0,41.0,2.0,46.0,57.0,January 2024
+Europe,DEL DIN C/C,4,3132,Army,,,5.0,,7.0,,,4.0,16.0,1.0,1.0,19.0,22.0,January 2024
+Europe,EDELWEISS,10,2489,Army,2.0,3.0,5.0,,5.0,,,2.0,17.0,1.0,1.0,18.0,21.0,January 2024
+Europe,ACTION LANES,31,437,Army,6.0,,2.0,,5.0,,,5.0,2.0,20.0,1.0,21.0,28.0,January 2024
+Europe,STORCK BRK B/C,31,438,Army,4.0,,3.0,1.0,2.0,2.0,,12.0,1.0,1.0,1.0,14.0,15.0,January 2024
+Europe,THE ANCHOR,39,2618,Navy,16.0,2.0,,,2.0,,,20.0,1.0,2.0,2.0,25.0,25.0,January 2024
+Europe,SIG B/C,40,2595,Navy,4.0,2.0,5.0,2.0,4.0,,,2.0,2.0,21.0,1.0,24.0,26.0,January 2024
+Europe,JOX SPORTS BAR,40,2597,Navy,2.0,2.0,4.0,,3.0,,,11.0,1.0,1.0,1.0,14.0,14.0,January 2024
+Europe,CAPO OLDE TOWN,42,2588,Navy,8.0,,6.0,,4.0,2.0,,2.0,22.0,1.0,2.0,26.0,27.0,January 2024
+Europe,NAPLES B/C,42,2591,Navy,3.0,,6.0,,7.0,5.0,,4.0,25.0,1.0,2.0,29.0,32.0,January 2024
+Europe,LA PLAZA,43,2600,Navy,10.0,4.0,6.0,,,4.0,,2.0,4.0,30.0,2.0,34.0,38.0,January 2024
+Europe,PINZ,43,2601,Navy,2.0,,5.0,,5.0,1.0,,4.0,17.0,1.0,2.0,21.0,24.0,January 2024
+Europe,ROTA FLEET CTR,43,2605,Navy,2.0,,2.0,1.0,,,,5.0,1.0,1.0,1.0,8.0,8.0,January 2024
+Europe,NGIS ROTA,43,2890,Navy,7.0,,2.0,,,1.0,,10.0,1.0,1.0,1.0,13.0,13.0,January 2024
+Europe,PATCH C/C,45,256,Army,13.0,3.0,6.0,,11.0,3.0,,8.0,4.0,48.0,2.0,53.0,62.0,January 2024
+Europe,KELLY C/C,45,280,Army,4.0,,3.0,,2.0,2.0,,6.0,2.0,19.0,1.0,22.0,28.0,January 2024
+Europe,GALAXY B/C,45,298,Army,3.0,2.0,2.0,,7.0,1.0,,4.0,2.0,21.0,1.0,24.0,28.0,January 2024
+Europe,GRAF E/C,46,413,Army,11.0,4.0,5.0,3.0,3.0,,,6.0,6.0,38.0,1.0,42.0,51.0,January 2024
+Europe,HOHENFELS B/C,46,415,Army,6.0,4.0,6.0,,3.0,,,3.0,22.0,1.0,1.0,27.0,27.0,January 2024
+Europe,VILSECK B/C,46,417,Army,4.0,,3.0,2.0,4.0,,,13.0,1.0,2.0,1.0,17.0,17.0,January 2024
+Europe,LANGENBRUCK,46,1858,Army,6.0,4.0,4.0,,7.0,,,7.0,5.0,33.0,1.0,37.0,46.0,January 2024
+Europe,ALGIER R/C,46,3145,Army,,,,,,,,0.0,,,0.0,0.0,0.0,January 2024
+Europe,THE VAULT,47,1669,Army,6.0,4.0,4.0,,4.0,,,2.0,6.0,4.0,1.0,32.0,13.0,January 2024
+Europe,LIBERTY GAMES,47,1881,Army,7.0,,10.0,,8.0,,,25.0,1.0,,1.0,26.0,27.0,January 2024
+Europe,WIESBADEN E/C,47,2976,Army,6.0,4.0,,,4.0,,,4.0,2.0,20.0,1.0,21.0,27.0,January 2024
+Europe,ACE'S GAME RM,47,3108,Army,6.0,,,,2.0,,,2.0,10.0,1.0,1.0,11.0,14.0,January 2024
+Japan,YOKOSUKA B/C,18,3146,Navy,,4.0,3.0,,3.0,1.0,,4.0,3.0,18.0,2.0,22.0,27.0,January 2024
+Japan,CLUB ALLIANCE,18,3147,Navy,,5.0,2.0,,10.0,2.0,,6.0,4.0,29.0,2.0,33.0,41.0,January 2024
+Japan,CPO CLUB,18,3148,Navy,2.0,,8.0,,,1.0,,1.0,12.0,1.0,2.0,16.0,16.0,January 2024
+Japan,TAKEMIYA CLUB,18,3149,Navy,2.0,,3.0,,,1.0,,6.0,1.0,1.0,2.0,10.0,10.0,January 2024
+Japan,OFFICERS CLUB,18,3150,Navy,,,6.0,,,3.0,,1.0,3.0,13.0,2.0,17.0,19.0,January 2024
+Japan,SEASIDE CLUB,18,3151,Navy,,8.0,2.0,,7.0,,,6.0,9.0,32.0,2.0,36.0,49.0,January 2024
+Japan,HARBOR VIEW,19,3096,Navy,3.0,6.0,6.0,,3.0,,,4.0,4.0,26.0,2.0,30.0,36.0,January 2024
+Japan,HARIO,19,3097,Navy,2.0,5.0,5.0,,,2.0,,14.0,1.0,1.0,2.0,18.0,18.0,January 2024
+Japan,GALAXIES,19,3098,Navy,5.0,6.0,6.0,,2.0,3.0,,6.0,4.0,32.0,2.0,36.0,44.0,January 2024
+Japan,ZAMA C/C,22,883,Army,2.0,5.0,7.0,,8.0,,,5.0,6.0,33.0,1.0,36.0,45.0,January 2024
+Japan,MOUNTAIN VIEW INN,22,3171,Marine Corps,,,,,,,,3.0,3.0,6.0,1.0,9.0,13.0,January 2024
+Japan,ZAMA B/C,22,886,Army,1.0,,3.0,,3.0,,,1.0,8.0,1.0,1.0,11.0,11.0,January 2024
+Japan,ROAD HOUSE,22,1127,Marine Corps,3.0,,3.0,,,,,1.0,7.0,1.0,1.0,10.0,10.0,January 2024
+Japan,SANNO HOTEL,22,2664,Navy,4.0,7.0,6.0,,6.0,,,4.0,5.0,32.0,2.0,36.0,43.0,January 2024
+Japan,CORNER POCKET,22,3078,Navy,,,6.0,1.0,,3.0,,4.0,3.0,17.0,1.0,20.0,25.0,January 2024
+Japan,CLUB TRILOGY,22,3079,Navy,2.0,6.0,4.0,,5.0,,,4.0,5.0,26.0,2.0,30.0,37.0,January 2024
+Japan,ZAMA G/C,22,3165,Army,2.0,4.0,3.0,,,,,3.0,3.0,15.0,1.0,18.0,22.0,January 2024
+Japan,HAVANA'S,26,967,Army,2.0,1.0,1.0,,3.0,1.0,,8.0,1.0,1.0,1.0,11.0,11.0,January 2024
+Japan,HASHMARKS,26,1105,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,January 2024
+Japan,COURTNEY B/C,26,1107,Marine Corps,2.0,,6.0,,,2.0,,3.0,2.0,15.0,2.0,19.0,22.0,January 2024
+Japan,TAIYO G/C,26,1109,Marine Corps,9.0,9.0,9.0,,7.0,2.0,,7.0,10.0,53.0,2.0,58.0,72.0,January 2024
+Japan,BUTLER B/C,26,1111,Marine Corps,4.0,4.0,2.0,,7.0,2.0,,3.0,4.0,26.0,2.0,30.0,35.0,January 2024
+Japan,OCEAN BREEZE,26,1114,Marine Corps,12.0,18.0,10.0,,23.0,3.0,,6.0,6.0,78.0,2.0,84.0,92.0,January 2024
+Japan,SURFSIDE,26,1122,Marine Corps,6.0,,,,4.0,2.0,,2.0,4.0,18.0,2.0,22.0,26.0,January 2024
+Japan,PALMS,26,2238,Marine Corps,5.0,6.0,11.0,,5.0,4.0,,7.0,8.0,46.0,2.0,51.0,63.0,January 2024
+Japan,WEST PAC LODGE,26,2317,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,January 2024
+Japan,BEACH HEAD,26,2394,Marine Corps,5.0,3.0,3.0,,,,,11.0,1.0,1.0,2.0,15.0,15.0,January 2024
+Japan,CROW'S NEST,26,2523,Navy,2.0,4.0,2.0,,4.0,,,4.0,4.0,20.0,2.0,24.0,30.0,January 2024
+Japan,PORT CALL,26,2525,Navy,2.0,,,,3.0,3.0,,1.0,9.0,1.0,2.0,13.0,13.0,January 2024
+Japan,WHISPERS,26,3159,Marine Corps,6.0,4.0,8.0,,,,,4.0,4.0,26.0,2.0,30.0,36.0,January 2024
+Japan,HANSEN TLF,26,3169,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,January 2024
+OKINAWA,TORII PINES TLF,27,3164,Marine Corps,2.0,4.0,6.0,,5.0,,,6.0,2.0,25.0,2.0,29.0,35.0,January 2024
+OKINAWA,IWAKUNI CLUB,27,1137,Marine Corps,11.0,4.0,7.0,,3.0,4.0,,4.0,8.0,41.0,2.0,46.0,55.0,January 2024
+OKINAWA,TERROR CLUB,17,3156,Navy,10.0,,,,,,,10.0,1.0,2.0,2.0,13.0,15.0,January 2024
+Korea,DRAGON HILL,20,770,Army,19.0,,8.0,,25.0,,,10.0,12.0,74.0,3.0,80.0,99.0,January 2024
+Korea,K-16 C/C,20,776,Army,7.0,,5.0,,,,,12.0,1.0,1.0,2.0,16.0,16.0,January 2024
+Korea,STATE'S GRILL,21,866,Army,6.0,,2.0,,,2.0,,10.0,1.0,,1.0,11.0,12.0,January 2024
+Korea,HILLTOP,21,867,Army,3.0,10.0,2.0,,8.0,,,4.0,2.0,29.0,1.0,30.0,36.0,January 2024
+Korea,PERIMETER PUB,21,869,Army,2.0,,12.0,,,3.0,,3.0,4.0,2.0,1.0,27.0,10.0,January 2024
+Korea,EVERGREEN,21,934,Army,2.0,3.0,3.0,,,,,3.0,4.0,15.0,1.0,16.0,23.0,January 2024
+Korea,EL GUERRERO,21,891,Army,8.0,,4.0,,3.0,2.0,,4.0,4.0,25.0,1.0,26.0,34.0,January 2024
+Korea,TURTLE COVE,21,2521,Navy,6.0,,2.0,5.0,,,,13.0,1.0,,1.0,14.0,15.0,January 2024
+Korea,IMPACT ZONE,23,797,Army,5.0,5.0,2.0,,4.0,,,6.0,2.0,24.0,1.0,25.0,33.0,January 2024
+Korea,WARRIOR'S,23,798,Army,4.0,,7.0,,,2.0,,13.0,1.0,,1.0,14.0,15.0,January 2024
+Korea,CASEY B/C,23,819,Army,6.0,4.0,4.0,,4.0,2.0,,4.0,24.0,1.0,1.0,25.0,30.0,January 2024
+Korea,CASEY LODGE,23,1940,Army,1.0,,,,2.0,,,4.0,2.0,2.0,1.0,12.0,9.0,January 2024
+Korea,FLIGHTLINE,24,3166,Army,,,,,,,,0.0,,,0.0,0.0,0.0,January 2024
+Korea,CAVE,24,3168,Army,14.0,9.0,8.0,,6.0,,,8.0,8.0,53.0,2.0,58.0,71.0,January 2024
+Korea,HUMPHREYS B/C,24,839,Army,2.0,4.0,4.0,,4.0,,,14.0,1.0,1.0,2.0,18.0,18.0,January 2024
+Korea,MORNING CALM,24,3158,Army,12.0,12.0,9.0,,24.0,3.0,,6.0,8.0,74.0,2.0,79.0,90.0,January 2024
+Europe,ARMSTRONG'S,2,194,Army,10.0,5.0,11.0,,6.0,2.0,,6.0,6.0,46.0,2.0,51.0,60.0,February 2024
+Europe,LCCC,2,195,Army,8.0,3.0,3.0,,6.0,,,5.0,5.0,30.0,2.0,35.0,42.0,February 2024
+Europe,KAZABRA,2,196,Army,,,,,,,,0.0,,,0.0,0.0,0.0,February 2024
+Europe,STRIKERS,2,218,Army,9.0,4.0,7.0,,6.0,1.0,,3.0,2.0,32.0,2.0,36.0,39.0,February 2024
+Europe,GOLD MINE,2,1038,Army,1.0,4.0,7.0,3.0,5.0,2.0,,22.0,1.0,2.0,2.0,27.0,27.0,February 2024
+Europe,ROB JAVA CAFE,2,2887,Army,1.0,2.0,6.0,,4.0,1.0,,2.0,16.0,1.0,2.0,20.0,21.0,February 2024
+Europe,SEMBACH C/C,2,3072,Army,7.0,,2.0,,3.0,2.0,,3.0,2.0,19.0,2.0,24.0,26.0,February 2024
+Europe,EDO_CARD_LAB,2,3170,Army,,,,,,,,0.0,,,0.0,0.0,0.0,February 2024
+Europe,LIVORNO C/C,4,330,Army,3.0,3.0,6.0,,4.0,,,16.0,1.0,2.0,2.0,21.0,21.0,February 2024
+Europe,ARENA B/C,4,2895,Army,2.0,5.0,6.0,,8.0,4.0,2.0,8.0,6.0,41.0,2.0,46.0,57.0,February 2024
+Europe,DEL DIN C/C,4,3132,Army,,,5.0,,7.0,,,4.0,16.0,1.0,1.0,19.0,22.0,February 2024
+Europe,EDELWEISS,10,2489,Army,2.0,3.0,5.0,,5.0,,,2.0,17.0,1.0,1.0,18.0,21.0,February 2024
+Europe,ACTION LANES,31,437,Army,4.0,,2.0,,5.0,,,5.0,2.0,18.0,1.0,19.0,26.0,February 2024
+Europe,STORCK BRK B/C,31,438,Army,4.0,,3.0,1.0,2.0,2.0,,12.0,1.0,1.0,1.0,14.0,15.0,February 2024
+Europe,THE ANCHOR,39,2618,Navy,16.0,2.0,,,2.0,,,20.0,1.0,2.0,2.0,25.0,25.0,February 2024
+Europe,SIG B/C,40,2595,Navy,4.0,2.0,5.0,2.0,4.0,,,2.0,2.0,21.0,1.0,24.0,26.0,February 2024
+Europe,JOX SPORTS BAR,40,2597,Navy,2.0,2.0,4.0,,3.0,,,11.0,1.0,1.0,1.0,14.0,14.0,February 2024
+Europe,CAPO OLDE TOWN,42,2588,Navy,8.0,,6.0,,4.0,2.0,,2.0,22.0,1.0,2.0,26.0,27.0,February 2024
+Europe,NAPLES B/C,42,2591,Navy,3.0,,6.0,,7.0,5.0,,4.0,25.0,1.0,2.0,29.0,32.0,February 2024
+Europe,LA PLAZA,43,2600,Navy,10.0,4.0,6.0,,,4.0,,2.0,4.0,30.0,2.0,34.0,38.0,February 2024
+Europe,PINZ,43,2601,Navy,2.0,,5.0,,5.0,1.0,,4.0,17.0,1.0,2.0,21.0,24.0,February 2024
+Europe,ROTA FLEET CTR,43,2605,Navy,2.0,,2.0,1.0,,,,5.0,1.0,1.0,1.0,8.0,8.0,February 2024
+Europe,NGIS ROTA,43,2890,Navy,7.0,,2.0,,,1.0,,10.0,1.0,1.0,1.0,13.0,13.0,February 2024
+Europe,PATCH C/C,45,256,Army,13.0,3.0,9.0,,8.0,3.0,,8.0,4.0,48.0,2.0,53.0,62.0,February 2024
+Europe,KELLY C/C,45,280,Army,4.0,,3.0,,2.0,2.0,,6.0,2.0,19.0,1.0,22.0,28.0,February 2024
+Europe,GALAXY B/C,45,298,Army,1.0,2.0,4.0,,7.0,1.0,,4.0,2.0,21.0,1.0,24.0,28.0,February 2024
+Europe,GRAF E/C,46,413,Army,11.0,4.0,5.0,3.0,3.0,,,6.0,6.0,38.0,1.0,42.0,51.0,February 2024
+Europe,HOHENFELS B/C,46,415,Army,6.0,4.0,6.0,,3.0,,,3.0,22.0,1.0,1.0,27.0,27.0,February 2024
+Europe,VILSECK B/C,46,417,Army,4.0,,3.0,2.0,4.0,,,13.0,1.0,2.0,1.0,17.0,17.0,February 2024
+Europe,LANGENBRUCK,46,1858,Army,6.0,4.0,4.0,,7.0,,,7.0,5.0,33.0,1.0,37.0,46.0,February 2024
+Europe,ALGIER R/C,46,3145,Army,,,,,,,,0.0,,,0.0,0.0,0.0,February 2024
+Europe,THE VAULT,47,1669,Army,4.0,4.0,4.0,,4.0,,,2.0,6.0,4.0,1.0,30.0,13.0,February 2024
+Europe,LIBERTY GAMES,47,1881,Army,4.0,,8.0,,4.0,,,16.0,1.0,,1.0,17.0,18.0,February 2024
+Europe,WIESBADEN E/C,47,2976,Army,6.0,4.0,,,4.0,,,4.0,2.0,20.0,1.0,21.0,27.0,February 2024
+Europe,ACE'S GAME RM,47,3108,Army,4.0,,,,2.0,,,2.0,8.0,1.0,1.0,9.0,12.0,February 2024
+Japan,YOKOSUKA B/C,18,3146,Navy,,4.0,3.0,,3.0,1.0,,4.0,3.0,18.0,2.0,22.0,27.0,February 2024
+Japan,CLUB ALLIANCE,18,3147,Navy,,5.0,2.0,,10.0,2.0,,6.0,4.0,29.0,2.0,33.0,41.0,February 2024
+Japan,CPO CLUB,18,3148,Navy,2.0,,8.0,,,1.0,,1.0,12.0,1.0,2.0,16.0,16.0,February 2024
+Japan,TAKEMIYA CLUB,18,3149,Navy,2.0,,3.0,,,1.0,,6.0,1.0,1.0,2.0,10.0,10.0,February 2024
+Japan,OFFICERS CLUB,18,3150,Navy,,,6.0,,,3.0,,1.0,3.0,13.0,2.0,17.0,19.0,February 2024
+Japan,SEASIDE CLUB,18,3151,Navy,,8.0,2.0,,7.0,,,6.0,9.0,32.0,2.0,36.0,49.0,February 2024
+Japan,HARBOR VIEW,19,3096,Navy,3.0,6.0,6.0,,3.0,,,4.0,4.0,26.0,2.0,30.0,36.0,February 2024
+Japan,HARIO,19,3097,Navy,2.0,5.0,5.0,,,2.0,,14.0,1.0,1.0,2.0,18.0,18.0,February 2024
+Japan,GALAXIES,19,3098,Navy,5.0,6.0,6.0,,2.0,3.0,,6.0,4.0,32.0,2.0,36.0,44.0,February 2024
+Japan,ZAMA C/C,22,883,Army,2.0,5.0,7.0,,8.0,,,5.0,6.0,33.0,1.0,36.0,45.0,February 2024
+Japan,MOUNTAIN VIEW INN,22,3171,Marine Corps,,,,,,,,3.0,3.0,6.0,1.0,9.0,13.0,February 2024
+Japan,ZAMA B/C,22,886,Army,1.0,,3.0,,3.0,,,1.0,8.0,1.0,1.0,11.0,11.0,February 2024
+Japan,ROAD HOUSE,22,1127,Marine Corps,3.0,,3.0,,,,,1.0,7.0,1.0,1.0,10.0,10.0,February 2024
+Japan,SANNO HOTEL,22,2664,Navy,4.0,7.0,6.0,,6.0,,,4.0,5.0,32.0,2.0,36.0,43.0,February 2024
+Japan,CORNER POCKET,22,3078,Navy,,,7.0,1.0,,3.0,,4.0,3.0,18.0,1.0,21.0,26.0,February 2024
+Japan,CLUB TRILOGY,22,3079,Navy,2.0,6.0,4.0,,5.0,,,4.0,5.0,26.0,2.0,30.0,37.0,February 2024
+Japan,ZAMA G/C,22,3165,Army,2.0,4.0,3.0,,,,,3.0,3.0,15.0,1.0,18.0,22.0,February 2024
+Japan,HAVANA'S,26,967,Army,2.0,1.0,1.0,,3.0,1.0,,8.0,1.0,1.0,1.0,11.0,11.0,February 2024
+Japan,HASHMARKS,26,1105,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,February 2024
+Japan,COURTNEY B/C,26,1107,Marine Corps,2.0,,6.0,,,2.0,,3.0,2.0,15.0,2.0,19.0,22.0,February 2024
+Japan,TAIYO G/C,26,1109,Marine Corps,9.0,9.0,9.0,,7.0,2.0,,7.0,10.0,53.0,2.0,58.0,72.0,February 2024
+Japan,BUTLER B/C,26,1111,Marine Corps,2.0,4.0,4.0,,7.0,2.0,,3.0,4.0,26.0,2.0,30.0,35.0,February 2024
+Japan,OCEAN BREEZE,26,1114,Marine Corps,12.0,18.0,11.0,,23.0,3.0,,6.0,6.0,79.0,2.0,85.0,93.0,February 2024
+Japan,SURFSIDE,26,1122,Marine Corps,6.0,,4.0,,,2.0,,2.0,4.0,18.0,2.0,22.0,26.0,February 2024
+Japan,PALMS,26,2238,Marine Corps,5.0,6.0,11.0,,5.0,4.0,,7.0,8.0,46.0,2.0,51.0,63.0,February 2024
+Japan,WEST PAC LODGE,26,2317,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,February 2024
+Japan,BEACH HEAD,26,2394,Marine Corps,5.0,3.0,3.0,,,,,11.0,1.0,1.0,2.0,15.0,15.0,February 2024
+Japan,CROW'S NEST,26,2523,Navy,2.0,4.0,2.0,,4.0,,,4.0,4.0,20.0,2.0,24.0,30.0,February 2024
+Japan,PORT CALL,26,2525,Navy,2.0,,,,3.0,3.0,,1.0,9.0,1.0,2.0,13.0,13.0,February 2024
+Japan,WHISPERS,26,3159,Marine Corps,6.0,4.0,8.0,,,,,4.0,4.0,26.0,2.0,30.0,36.0,February 2024
+Japan,HANSEN TLF,26,3169,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,February 2024
+OKINAWA,TORII PINES TLF,27,3164,Marine Corps,2.0,4.0,6.0,,5.0,,,6.0,2.0,25.0,2.0,29.0,35.0,February 2024
+OKINAWA,IWAKUNI CLUB,27,1137,Marine Corps,11.0,4.0,7.0,,3.0,4.0,,4.0,8.0,41.0,2.0,45.0,55.0,February 2024
+OKINAWA,TERROR CLUB,17,3156,Navy,10.0,,,,,,,10.0,1.0,2.0,2.0,13.0,15.0,February 2024
+Korea,DRAGON HILL,20,770,Army,13.0,5.0,14.0,,25.0,,,10.0,12.0,79.0,3.0,85.0,104.0,February 2024
+Korea,K-16 C/C,20,776,Army,7.0,,5.0,,,,,12.0,1.0,1.0,2.0,16.0,16.0,February 2024
+Korea,STATE'S GRILL,21,866,Army,6.0,,3.0,,,1.0,,10.0,1.0,,1.0,11.0,12.0,February 2024
+Korea,HILLTOP,21,867,Army,3.0,10.0,2.0,,8.0,,,4.0,2.0,29.0,1.0,30.0,36.0,February 2024
+Korea,PERIMETER PUB,21,869,Army,2.0,,12.0,,,3.0,,3.0,4.0,2.0,1.0,27.0,10.0,February 2024
+Korea,EVERGREEN,21,934,Army,2.0,3.0,3.0,,,,,3.0,4.0,15.0,1.0,16.0,23.0,February 2024
+Korea,EL GUERRERO,21,891,Army,8.0,,4.0,,3.0,2.0,,4.0,4.0,25.0,1.0,26.0,34.0,February 2024
+Korea,TURTLE COVE,21,2521,Navy,6.0,,2.0,5.0,,,,13.0,1.0,,1.0,14.0,15.0,February 2024
+Korea,IMPACT ZONE,23,797,Army,2.0,5.0,4.0,,7.0,,,4.0,2.0,24.0,1.0,25.0,31.0,February 2024
+Korea,WARRIOR'S,23,798,Army,5.0,,7.0,,,2.0,,14.0,1.0,,1.0,15.0,16.0,February 2024
+Korea,CASEY B/C,23,819,Army,6.0,4.0,6.0,,2.0,,,2.0,4.0,24.0,1.0,25.0,31.0,February 2024
+Korea,CASEY LODGE,23,1940,Army,1.0,,2.0,,2.0,,,4.0,2.0,2.0,1.0,14.0,9.0,February 2024
+Korea,FLIGHTLINE,24,3166,Army,,,,,,,,0.0,,,0.0,0.0,0.0,February 2024
+Korea,CAVE,24,3168,Army,12.0,9.0,8.0,,6.0,,,8.0,8.0,2.0,2.0,58.0,20.0,February 2024
+Korea,HUMPHREYS B/C,24,839,Army,2.0,4.0,4.0,,4.0,,,14.0,1.0,1.0,2.0,18.0,18.0,February 2024
+Korea,MORNING CALM,24,3158,Army,12.0,12.0,9.0,,24.0,3.0,,6.0,8.0,74.0,2.0,79.0,90.0,February 2024
+Europe,ARMSTRONG'S,2,194,Army,10.0,5.0,11.0,,6.0,2.0,,6.0,6.0,46.0,2.0,51.0,60.0,March 2024
+Europe,LCCC,2,195,Army,6.0,3.0,5.0,,6.0,,,5.0,5.0,30.0,2.0,35.0,42.0,March 2024
+Europe,KAZABRA,2,196,Army,,,,,,,,0.0,,,0.0,0.0,0.0,March 2024
+Europe,STRIKERS,2,218,Army,9.0,4.0,7.0,,6.0,1.0,,3.0,2.0,32.0,2.0,36.0,39.0,March 2024
+Europe,GOLD MINE,2,1038,Army,1.0,4.0,7.0,3.0,5.0,2.0,,22.0,1.0,2.0,2.0,27.0,27.0,March 2024
+Europe,ROB JAVA CAFE,2,2887,Army,1.0,2.0,6.0,,4.0,1.0,,2.0,16.0,1.0,2.0,20.0,21.0,March 2024
+Europe,SEMBACH C/C,2,3072,Army,7.0,,2.0,,3.0,2.0,,3.0,2.0,19.0,2.0,24.0,26.0,March 2024
+Europe,EDO_CARD_LAB,2,3170,Army,,,,,,,,0.0,,,0.0,0.0,0.0,March 2024
+Europe,LIVORNO C/C,4,330,Army,3.0,3.0,6.0,,4.0,,,16.0,1.0,2.0,2.0,21.0,21.0,March 2024
+Europe,ARENA B/C,4,2895,Army,2.0,5.0,6.0,,8.0,4.0,2.0,8.0,6.0,41.0,2.0,46.0,57.0,March 2024
+Europe,DEL DIN C/C,4,3132,Army,,,5.0,,7.0,,,4.0,16.0,1.0,1.0,19.0,22.0,March 2024
+Europe,EDELWEISS,10,2489,Army,2.0,3.0,5.0,,5.0,,,2.0,17.0,1.0,1.0,18.0,21.0,March 2024
+Europe,ACTION LANES,31,437,Army,4.0,,2.0,,5.0,,,5.0,2.0,18.0,1.0,19.0,26.0,March 2024
+Europe,STORCK BRK B/C,31,438,Army,4.0,,3.0,1.0,2.0,2.0,,12.0,1.0,1.0,1.0,14.0,15.0,March 2024
+Europe,THE ANCHOR,39,2618,Navy,16.0,2.0,,,2.0,,,20.0,1.0,2.0,2.0,25.0,25.0,March 2024
+Europe,SIG B/C,40,2595,Navy,4.0,2.0,7.0,2.0,2.0,,,2.0,2.0,21.0,1.0,24.0,26.0,March 2024
+Europe,JOX SPORTS BAR,40,2597,Navy,2.0,2.0,4.0,,3.0,,,11.0,1.0,1.0,1.0,14.0,14.0,March 2024
+Europe,CAPO OLDE TOWN,42,2588,Navy,5.0,3.0,6.0,,4.0,2.0,,2.0,22.0,1.0,2.0,26.0,27.0,March 2024
+Europe,NAPLES B/C,42,2591,Navy,3.0,,6.0,,7.0,5.0,,4.0,25.0,1.0,2.0,29.0,32.0,March 2024
+Europe,LA PLAZA,43,2600,Navy,10.0,4.0,6.0,,,4.0,,2.0,4.0,30.0,2.0,34.0,38.0,March 2024
+Europe,PINZ,43,2601,Navy,2.0,,5.0,,5.0,1.0,,4.0,17.0,1.0,2.0,21.0,24.0,March 2024
+Europe,ROTA FLEET CTR,43,2605,Navy,2.0,,2.0,1.0,,,,5.0,1.0,1.0,1.0,8.0,8.0,March 2024
+Europe,NGIS ROTA,43,2890,Navy,7.0,,2.0,,,1.0,,10.0,1.0,1.0,1.0,13.0,13.0,March 2024
+Europe,PATCH C/C,45,256,Army,13.0,3.0,9.0,,8.0,3.0,,8.0,4.0,48.0,2.0,53.0,62.0,March 2024
+Europe,KELLY C/C,45,280,Army,4.0,,3.0,,2.0,2.0,,6.0,2.0,19.0,1.0,22.0,28.0,March 2024
+Europe,GALAXY B/C,45,298,Army,1.0,,6.0,,7.0,1.0,,4.0,2.0,21.0,1.0,24.0,28.0,March 2024
+Europe,GRAF E/C,46,413,Army,11.0,4.0,5.0,3.0,3.0,,,6.0,6.0,38.0,1.0,42.0,51.0,March 2024
+Europe,HOHENFELS B/C,46,415,Army,6.0,4.0,6.0,,3.0,,,3.0,22.0,1.0,1.0,27.0,27.0,March 2024
+Europe,VILSECK B/C,46,417,Army,4.0,,3.0,2.0,4.0,,,13.0,1.0,2.0,1.0,17.0,17.0,March 2024
+Europe,LANGENBRUCK,46,1858,Army,6.0,4.0,4.0,,7.0,,,7.0,5.0,33.0,1.0,37.0,46.0,March 2024
+Europe,ALGIER R/C,46,3145,Army,,,,,,,,0.0,,,0.0,0.0,0.0,March 2024
+Europe,THE VAULT,47,1669,Army,4.0,4.0,4.0,,5.0,,,6.0,6.0,4.0,1.0,35.0,17.0,March 2024
+Europe,LIBERTY GAMES,47,1881,Army,4.0,,8.0,,5.0,,,6.0,2.0,25.0,1.0,26.0,34.0,March 2024
+Europe,WIESBADEN E/C,47,2976,Army,6.0,4.0,,,4.0,,,4.0,6.0,2.0,1.0,27.0,13.0,March 2024
+Europe,ACE'S GAME RM,47,3108,Army,4.0,,,,4.0,,,2.0,10.0,1.0,1.0,11.0,14.0,March 2024
+Japan,YOKOSUKA B/C,18,3146,Navy,,4.0,3.0,,3.0,1.0,,4.0,3.0,18.0,2.0,22.0,27.0,March 2024
+Japan,CLUB ALLIANCE,18,3147,Navy,,5.0,2.0,,10.0,2.0,,6.0,4.0,29.0,2.0,33.0,41.0,March 2024
+Japan,CPO CLUB,18,3148,Navy,2.0,,8.0,,,1.0,,1.0,12.0,1.0,2.0,16.0,16.0,March 2024
+Japan,TAKEMIYA CLUB,18,3149,Navy,2.0,,3.0,,,1.0,,6.0,1.0,1.0,2.0,10.0,10.0,March 2024
+Japan,OFFICERS CLUB,18,3150,Navy,,,6.0,,,3.0,,1.0,3.0,13.0,2.0,17.0,19.0,March 2024
+Japan,SEASIDE CLUB,18,3151,Navy,,8.0,2.0,,7.0,,,6.0,9.0,32.0,2.0,36.0,49.0,March 2024
+Japan,HARBOR VIEW,19,3096,Navy,3.0,6.0,6.0,,3.0,,,4.0,4.0,26.0,2.0,30.0,36.0,March 2024
+Japan,HARIO,19,3097,Navy,2.0,5.0,7.0,,,,,14.0,1.0,1.0,2.0,18.0,18.0,March 2024
+Japan,GALAXIES,19,3098,Navy,4.0,6.0,4.0,,2.0,3.0,,6.0,4.0,2.0,2.0,35.0,14.0,March 2024
+Japan,ZAMA C/C,22,883,Army,2.0,5.0,7.0,,5.0,,,5.0,6.0,3.0,1.0,36.0,15.0,March 2024
+Japan,MOUNTAIN VIEW INN,22,3171,Marine Corps,,,,,,,,3.0,3.0,6.0,1.0,9.0,13.0,March 2024
+Japan,ZAMA B/C,22,886,Army,1.0,,3.0,,3.0,,,1.0,8.0,1.0,1.0,11.0,11.0,March 2024
+Japan,ROAD HOUSE,22,1127,Marine Corps,3.0,,3.0,,,,,1.0,7.0,1.0,1.0,10.0,10.0,March 2024
+Japan,SANNO HOTEL,22,2664,Navy,4.0,7.0,6.0,,6.0,,,4.0,5.0,32.0,2.0,36.0,43.0,March 2024
+Japan,CORNER POCKET,22,3078,Navy,,,7.0,,3.0,,,4.0,3.0,17.0,1.0,20.0,25.0,March 2024
+Japan,CLUB TRILOGY,22,3079,Navy,2.0,6.0,4.0,,5.0,,,4.0,5.0,26.0,2.0,30.0,37.0,March 2024
+Japan,ZAMA G/C,22,3165,Army,2.0,4.0,3.0,,,,,3.0,3.0,15.0,1.0,18.0,22.0,March 2024
+Japan,HAVANA'S,26,967,Army,2.0,1.0,1.0,,3.0,1.0,,8.0,1.0,1.0,1.0,11.0,11.0,March 2024
+Japan,HASHMARKS,26,1105,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,March 2024
+Japan,COURTNEY B/C,26,1107,Marine Corps,2.0,,6.0,,,2.0,,3.0,2.0,15.0,2.0,19.0,22.0,March 2024
+Japan,TAIYO G/C,26,1109,Marine Corps,7.0,9.0,9.0,,7.0,2.0,,7.0,10.0,2.0,2.0,58.0,21.0,March 2024
+Japan,BUTLER B/C,26,1111,Marine Corps,2.0,4.0,4.0,,7.0,2.0,,3.0,4.0,26.0,2.0,30.0,35.0,March 2024
+Japan,OCEAN BREEZE,26,1114,Marine Corps,12.0,18.0,13.0,,21.0,3.0,,6.0,6.0,2.0,2.0,87.0,16.0,March 2024
+Japan,SURFSIDE,26,1122,Marine Corps,3.0,,7.0,,,2.0,,2.0,4.0,18.0,2.0,22.0,26.0,March 2024
+Japan,PALMS,26,2238,Marine Corps,5.0,6.0,11.0,,5.0,4.0,,7.0,8.0,46.0,2.0,51.0,63.0,March 2024
+Japan,WEST PAC LODGE,26,2317,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,March 2024
+Japan,BEACH HEAD,26,2394,Marine Corps,5.0,3.0,3.0,,,,,11.0,1.0,1.0,2.0,15.0,15.0,March 2024
+Japan,CROW'S NEST,26,2523,Navy,2.0,4.0,2.0,,4.0,,,4.0,4.0,20.0,2.0,24.0,30.0,March 2024
+Japan,PORT CALL,26,2525,Navy,2.0,,,,3.0,3.0,,1.0,9.0,1.0,2.0,13.0,13.0,March 2024
+Japan,WHISPERS,26,3159,Marine Corps,6.0,4.0,8.0,,,,,4.0,4.0,26.0,2.0,30.0,36.0,March 2024
+Japan,HANSEN TLF,26,3169,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,March 2024
+OKINAWA,TORII PINES TLF,27,3164,Marine Corps,2.0,4.0,6.0,,5.0,,,6.0,2.0,25.0,2.0,30.0,35.0,March 2024
+OKINAWA,IWAKUNI CLUB,27,1137,Marine Corps,6.0,4.0,7.0,,3.0,4.0,,4.0,8.0,3.0,2.0,44.0,17.0,March 2024
+OKINAWA,TERROR CLUB,17,3156,Navy,10.0,,,,,,,10.0,1.0,2.0,2.0,13.0,15.0,March 2024
+Korea,DRAGON HILL,20,770,Army,13.0,5.0,14.0,,22.0,,,10.0,12.0,3.0,3.0,85.0,28.0,March 2024
+Korea,K-16 C/C,20,776,Army,7.0,,5.0,,,,,12.0,1.0,1.0,2.0,16.0,16.0,March 2024
+Korea,STATE'S GRILL,21,866,Army,6.0,,3.0,,,1.0,,10.0,1.0,,1.0,11.0,12.0,March 2024
+Korea,HILLTOP,21,867,Army,3.0,10.0,2.0,,8.0,,,4.0,2.0,29.0,1.0,30.0,36.0,March 2024
+Korea,PERIMETER PUB,21,869,Army,2.0,,12.0,,,3.0,,3.0,4.0,2.0,1.0,27.0,10.0,March 2024
+Korea,EVERGREEN,21,934,Army,2.0,3.0,3.0,,,,,3.0,4.0,15.0,1.0,16.0,23.0,March 2024
+Korea,EL GUERRERO,21,891,Army,8.0,,4.0,,3.0,2.0,,4.0,4.0,25.0,1.0,26.0,34.0,March 2024
+Korea,TURTLE COVE,21,2521,Navy,6.0,,2.0,5.0,,,,13.0,1.0,,1.0,14.0,15.0,March 2024
+Korea,IMPACT ZONE,23,797,Army,2.0,5.0,4.0,,7.0,,,4.0,2.0,24.0,1.0,25.0,31.0,March 2024
+Korea,WARRIOR'S,23,798,Army,5.0,,7.0,,,2.0,,14.0,1.0,,1.0,15.0,16.0,March 2024
+Korea,CASEY B/C,23,819,Army,6.0,4.0,6.0,,2.0,,,2.0,4.0,24.0,1.0,25.0,31.0,March 2024
+Korea,CASEY LODGE,23,1940,Army,1.0,,2.0,,2.0,,,4.0,2.0,2.0,1.0,14.0,9.0,March 2024
+Korea,FLIGHTLINE,24,3166,Army,,,,,,,,0.0,,,0.0,0.0,0.0,March 2024
+Korea,CAVE,24,3168,Army,12.0,9.0,8.0,,6.0,,,8.0,8.0,2.0,2.0,58.0,20.0,March 2024
+Korea,HUMPHREYS B/C,24,839,Army,2.0,4.0,4.0,,4.0,,,14.0,1.0,1.0,2.0,18.0,18.0,March 2024
+Korea,MORNING CALM,24,3158,Army,12.0,12.0,9.0,,24.0,3.0,,6.0,8.0,74.0,2.0,79.0,90.0,March 2024
+Europe,ARMSTRONG'S,2,194,Army,10.0,5.0,11.0,,6.0,2.0,,6.0,6.0,46.0,2.0,51.0,60.0,April 2024
+Europe,LCCC,2,195,Army,6.0,3.0,4.0,,6.0,,,6.0,5.0,30.0,2.0,35.0,43.0,April 2024
+Europe,KAZABRA,2,196,Army,,,,,,,,0.0,,,0.0,0.0,0.0,April 2024
+Europe,STRIKERS,2,218,Army,9.0,4.0,7.0,,6.0,1.0,,3.0,2.0,32.0,2.0,36.0,39.0,April 2024
+Europe,GOLD MINE,2,1038,Army,1.0,4.0,7.0,3.0,5.0,2.0,,22.0,1.0,2.0,2.0,27.0,27.0,April 2024
+Europe,ROB JAVA CAFE,2,2887,Army,1.0,2.0,6.0,,4.0,1.0,,2.0,16.0,1.0,2.0,20.0,21.0,April 2024
+Europe,SEMBACH C/C,2,3072,Army,7.0,,2.0,,3.0,2.0,,3.0,2.0,19.0,2.0,24.0,26.0,April 2024
+Europe,EDO_CARD_LAB,2,3170,Army,,,,,,,,0.0,,,0.0,0.0,0.0,April 2024
+Europe,LIVORNO C/C,4,330,Army,3.0,3.0,6.0,,4.0,,,16.0,1.0,2.0,2.0,21.0,21.0,April 2024
+Europe,ARENA B/C,4,2895,Army,2.0,5.0,6.0,,8.0,4.0,2.0,8.0,6.0,41.0,2.0,46.0,57.0,April 2024
+Europe,DEL DIN C/C,4,3132,Army,,,5.0,,7.0,,,4.0,16.0,1.0,1.0,19.0,22.0,April 2024
+Europe,EDELWEISS,10,2489,Army,2.0,3.0,5.0,,5.0,,,2.0,17.0,1.0,1.0,18.0,21.0,April 2024
+Europe,ACTION LANES,31,437,Army,4.0,,2.0,,5.0,,,5.0,2.0,18.0,1.0,19.0,26.0,April 2024
+Europe,STORCK BRK B/C,31,438,Army,4.0,,3.0,1.0,2.0,2.0,,12.0,1.0,1.0,1.0,14.0,15.0,April 2024
+Europe,THE ANCHOR,39,2618,Navy,16.0,2.0,,,2.0,,,20.0,1.0,2.0,2.0,25.0,25.0,April 2024
+Europe,SIG B/C,40,2595,Navy,4.0,2.0,7.0,2.0,2.0,,,2.0,2.0,21.0,1.0,24.0,26.0,April 2024
+Europe,JOX SPORTS BAR,40,2597,Navy,3.0,2.0,4.0,,2.0,,,11.0,1.0,1.0,1.0,14.0,14.0,April 2024
+Europe,CAPO OLDE TOWN,42,2588,Navy,5.0,3.0,6.0,,4.0,2.0,,2.0,22.0,1.0,2.0,26.0,27.0,April 2024
+Europe,NAPLES B/C,42,2591,Navy,3.0,,6.0,,7.0,5.0,,4.0,25.0,1.0,2.0,29.0,32.0,April 2024
+Europe,LA PLAZA,43,2600,Navy,10.0,4.0,6.0,,,4.0,,2.0,4.0,30.0,2.0,34.0,38.0,April 2024
+Europe,PINZ,43,2601,Navy,2.0,,5.0,,5.0,1.0,,4.0,17.0,1.0,2.0,21.0,24.0,April 2024
+Europe,ROTA FLEET CTR,43,2605,Navy,2.0,,2.0,1.0,,,,2.0,7.0,1.0,1.0,10.0,11.0,April 2024
+Europe,NGIS ROTA,43,2890,Navy,7.0,,2.0,,,1.0,,10.0,1.0,1.0,1.0,13.0,13.0,April 2024
+Europe,PATCH C/C,45,256,Army,13.0,3.0,9.0,,8.0,3.0,,8.0,4.0,48.0,2.0,53.0,62.0,April 2024
+Europe,KELLY C/C,45,280,Army,2.0,2.0,3.0,,2.0,2.0,,6.0,2.0,19.0,1.0,22.0,28.0,April 2024
+Europe,GALAXY B/C,45,298,Army,1.0,,6.0,,7.0,1.0,,4.0,2.0,21.0,1.0,24.0,28.0,April 2024
+Europe,GRAF E/C,46,413,Army,11.0,4.0,5.0,3.0,3.0,,,6.0,6.0,38.0,1.0,42.0,51.0,April 2024
+Europe,HOHENFELS B/C,46,415,Army,6.0,4.0,6.0,,3.0,,,3.0,22.0,1.0,1.0,27.0,27.0,April 2024
+Europe,VILSECK B/C,46,417,Army,4.0,,3.0,2.0,4.0,,,13.0,1.0,2.0,1.0,17.0,17.0,April 2024
+Europe,LANGENBRUCK,46,1858,Army,6.0,4.0,4.0,,7.0,,,7.0,5.0,33.0,1.0,37.0,46.0,April 2024
+Europe,ALGIER R/C,46,3145,Army,,,,,,,,0.0,,,0.0,0.0,0.0,April 2024
+Europe,THE VAULT,47,1669,Army,4.0,4.0,4.0,,5.0,,,6.0,6.0,4.0,1.0,35.0,17.0,April 2024
+Europe,LIBERTY GAMES,47,1881,Army,4.0,,8.0,,5.0,,,6.0,2.0,25.0,1.0,26.0,34.0,April 2024
+Europe,WIESBADEN E/C,47,2976,Army,6.0,4.0,,,4.0,,,4.0,6.0,2.0,1.0,27.0,13.0,April 2024
+Europe,ACE'S GAME RM,47,3108,Army,4.0,,,,4.0,,,2.0,10.0,1.0,1.0,11.0,14.0,April 2024
+Japan,YOKOSUKA B/C,18,3146,Navy,,4.0,3.0,,3.0,1.0,,4.0,3.0,18.0,2.0,22.0,27.0,April 2024
+Japan,CLUB ALLIANCE,18,3147,Navy,,5.0,2.0,,10.0,2.0,,6.0,4.0,29.0,2.0,33.0,41.0,April 2024
+Japan,CPO CLUB,18,3148,Navy,2.0,,8.0,,,1.0,,1.0,12.0,1.0,2.0,16.0,16.0,April 2024
+Japan,TAKEMIYA CLUB,18,3149,Navy,2.0,,3.0,,,1.0,,6.0,1.0,1.0,2.0,10.0,10.0,April 2024
+Japan,OFFICERS CLUB,18,3150,Navy,,,5.0,,,2.0,,1.0,5.0,13.0,2.0,17.0,21.0,April 2024
+Japan,SEASIDE CLUB,18,3151,Navy,,8.0,2.0,,7.0,,,6.0,9.0,32.0,2.0,36.0,49.0,April 2024
+Japan,HARBOR VIEW,19,3096,Navy,3.0,6.0,3.0,,3.0,,,4.0,7.0,26.0,2.0,30.0,39.0,April 2024
+Japan,HARIO,19,3097,Navy,2.0,5.0,7.0,,,,,14.0,1.0,1.0,2.0,18.0,18.0,April 2024
+Japan,GALAXIES,19,3098,Navy,4.0,6.0,4.0,,2.0,3.0,,6.0,4.0,2.0,2.0,35.0,14.0,April 2024
+Japan,ZAMA C/C,22,883,Army,2.0,5.0,7.0,,5.0,,,5.0,6.0,3.0,1.0,36.0,15.0,April 2024
+Japan,MOUNTAIN VIEW INN,22,3171,Marine Corps,,,,,,,,3.0,3.0,6.0,1.0,9.0,13.0,April 2024
+Japan,ZAMA B/C,22,886,Army,1.0,,3.0,,3.0,,,1.0,8.0,1.0,1.0,11.0,11.0,April 2024
+Japan,ROAD HOUSE,22,1127,Marine Corps,3.0,,3.0,,,,,1.0,7.0,1.0,1.0,10.0,10.0,April 2024
+Japan,SANNO HOTEL,22,2664,Navy,4.0,4.0,6.0,,4.0,,,4.0,7.0,3.0,2.0,36.0,16.0,April 2024
+Japan,CORNER POCKET,22,3078,Navy,,,7.0,,3.0,,,4.0,3.0,17.0,1.0,20.0,25.0,April 2024
+Japan,CLUB TRILOGY,22,3079,Navy,2.0,6.0,4.0,,5.0,,,4.0,5.0,26.0,2.0,30.0,37.0,April 2024
+Japan,ZAMA G/C,22,3165,Army,2.0,4.0,3.0,,,,,3.0,3.0,15.0,1.0,18.0,22.0,April 2024
+Japan,HAVANA'S,26,967,Army,2.0,1.0,1.0,,3.0,1.0,,8.0,1.0,1.0,1.0,11.0,11.0,April 2024
+Japan,HASHMARKS,26,1105,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,April 2024
+Japan,COURTNEY B/C,26,1107,Marine Corps,2.0,,6.0,,,2.0,,3.0,2.0,15.0,2.0,19.0,22.0,April 2024
+Japan,TAIYO G/C,26,1109,Marine Corps,7.0,9.0,9.0,,4.0,2.0,,7.0,12.0,2.0,2.0,57.0,23.0,April 2024
+Japan,BUTLER B/C,26,1111,Marine Corps,2.0,4.0,4.0,,7.0,2.0,,3.0,4.0,26.0,2.0,30.0,35.0,April 2024
+Japan,OCEAN BREEZE,26,1114,Marine Corps,12.0,18.0,13.0,,21.0,3.0,,6.0,6.0,2.0,2.0,87.0,16.0,April 2024
+Japan,SURFSIDE,26,1122,Marine Corps,3.0,,7.0,,,2.0,,2.0,4.0,18.0,2.0,22.0,26.0,April 2024
+Japan,PALMS,26,2238,Marine Corps,5.0,6.0,11.0,,5.0,4.0,,7.0,8.0,46.0,2.0,51.0,63.0,April 2024
+Japan,WEST PAC LODGE,26,2317,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,April 2024
+Japan,BEACH HEAD,26,2394,Marine Corps,5.0,3.0,3.0,,,,,11.0,1.0,1.0,2.0,15.0,15.0,April 2024
+Japan,CROW'S NEST,26,2523,Navy,2.0,4.0,2.0,,4.0,,,4.0,4.0,20.0,2.0,24.0,30.0,April 2024
+Japan,PORT CALL,26,2525,Navy,2.0,,,,3.0,3.0,,1.0,9.0,1.0,2.0,13.0,13.0,April 2024
+Japan,WHISPERS,26,3159,Marine Corps,4.0,4.0,8.0,,,,,4.0,6.0,26.0,2.0,30.0,38.0,April 2024
+Japan,HANSEN TLF,26,3169,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,April 2024
+OKINAWA,TORII PINES TLF,27,3164,Marine Corps,2.0,4.0,6.0,,5.0,,,6.0,2.0,25.0,2.0,30.0,35.0,April 2024
+OKINAWA,IWAKUNI CLUB,27,1137,Marine Corps,6.0,4.0,7.0,,3.0,4.0,,4.0,10.0,3.0,2.0,46.0,19.0,April 2024
+OKINAWA,TERROR CLUB,17,3156,Navy,10.0,,,,,,,10.0,1.0,2.0,2.0,13.0,15.0,April 2024
+Korea,DRAGON HILL,20,770,Army,10.0,5.0,14.0,,19.0,,,10.0,12.0,3.0,3.0,79.0,28.0,April 2024
+Korea,K-16 C/C,20,776,Army,7.0,,5.0,,,,,12.0,1.0,1.0,2.0,16.0,16.0,April 2024
+Korea,STATE'S GRILL,21,866,Army,6.0,,3.0,,,1.0,,10.0,1.0,,1.0,11.0,12.0,April 2024
+Korea,HILLTOP,21,867,Army,3.0,10.0,2.0,,8.0,,,4.0,2.0,29.0,1.0,30.0,36.0,April 2024
+Korea,PERIMETER PUB,21,869,Army,2.0,2.0,10.0,,,3.0,,3.0,4.0,2.0,1.0,27.0,10.0,April 2024
+Korea,EVERGREEN,21,934,Army,,3.0,3.0,,,,,3.0,6.0,15.0,1.0,16.0,25.0,April 2024
+Korea,EL GUERRERO,21,891,Army,8.0,,4.0,,3.0,2.0,,6.0,4.0,27.0,1.0,28.0,38.0,April 2024
+Korea,TURTLE COVE,21,2521,Navy,4.0,,2.0,5.0,,,,2.0,13.0,1.0,1.0,14.0,17.0,April 2024
+Korea,IMPACT ZONE,23,797,Army,2.0,5.0,2.0,,7.0,,,4.0,4.0,24.0,1.0,25.0,33.0,April 2024
+Korea,WARRIOR'S,23,798,Army,6.0,,6.0,,,2.0,,14.0,1.0,,1.0,15.0,16.0,April 2024
+Korea,CASEY B/C,23,819,Army,6.0,4.0,6.0,,2.0,,,2.0,4.0,24.0,1.0,25.0,31.0,April 2024
+Korea,CASEY LODGE,23,1940,Army,1.0,,2.0,,2.0,,,4.0,2.0,2.0,1.0,14.0,9.0,April 2024
+Korea,FLIGHTLINE,24,3166,Army,,,,,,,,0.0,,,0.0,0.0,0.0,April 2024
+Korea,CAVE,24,3168,Army,10.0,9.0,8.0,,6.0,,,8.0,10.0,2.0,2.0,58.0,22.0,April 2024
+Korea,HUMPHREYS B/C,24,839,Army,2.0,4.0,4.0,,4.0,,,14.0,1.0,1.0,2.0,18.0,18.0,April 2024
+Korea,MORNING CALM,24,3158,Army,9.0,12.0,9.0,,24.0,3.0,,6.0,11.0,74.0,2.0,79.0,93.0,April 2024
+Europe,ARMSTRONG'S,2,194,Army,10.0,5.0,11.0,,2.0,2.0,,6.0,8.0,2.0,2.0,51.0,18.0,May 2024
+Europe,LCCC,2,195,Army,6.0,3.0,4.0,,6.0,,,6.0,5.0,30.0,2.0,35.0,43.0,May 2024
+Europe,KAZABRA,2,196,Army,,,,,,,,0.0,,,0.0,0.0,0.0,May 2024
+Europe,STRIKERS,2,218,Army,10.0,3.0,7.0,,6.0,1.0,,3.0,2.0,32.0,2.0,36.0,39.0,May 2024
+Europe,GOLD MINE,2,1038,Army,1.0,4.0,7.0,3.0,5.0,2.0,,22.0,1.0,2.0,2.0,27.0,27.0,May 2024
+Europe,ROB JAVA CAFE,2,2887,Army,1.0,2.0,6.0,,4.0,1.0,,2.0,16.0,1.0,2.0,20.0,21.0,May 2024
+Europe,SEMBACH C/C,2,3072,Army,7.0,,2.0,,3.0,2.0,,3.0,2.0,19.0,2.0,24.0,26.0,May 2024
+Europe,EDO_CARD_LAB,2,3170,Army,,,,,,,,0.0,,,0.0,0.0,0.0,May 2024
+Europe,LIVORNO C/C,4,330,Army,3.0,3.0,6.0,,4.0,,,16.0,1.0,2.0,2.0,21.0,21.0,May 2024
+Europe,ARENA B/C,4,2895,Army,2.0,5.0,6.0,,8.0,4.0,2.0,8.0,6.0,41.0,2.0,46.0,57.0,May 2024
+Europe,DEL DIN C/C,4,3132,Army,,,5.0,,7.0,,,4.0,16.0,1.0,1.0,19.0,22.0,May 2024
+Europe,EDELWEISS,10,2489,Army,2.0,3.0,5.0,,5.0,,,2.0,17.0,1.0,1.0,18.0,21.0,May 2024
+Europe,ACTION LANES,31,437,Army,4.0,,2.0,,5.0,,,5.0,2.0,18.0,1.0,19.0,26.0,May 2024
+Europe,STORCK BRK B/C,31,438,Army,4.0,,3.0,1.0,2.0,2.0,,12.0,1.0,1.0,1.0,14.0,15.0,May 2024
+Europe,THE ANCHOR,39,2618,Navy,16.0,2.0,,,2.0,,,20.0,1.0,2.0,2.0,25.0,25.0,May 2024
+Europe,SIG B/C,40,2595,Navy,4.0,2.0,7.0,2.0,2.0,,,2.0,2.0,21.0,1.0,24.0,26.0,May 2024
+Europe,JOX SPORTS BAR,40,2597,Navy,3.0,2.0,4.0,,2.0,,,11.0,1.0,1.0,1.0,14.0,14.0,May 2024
+Europe,CAPO OLDE TOWN,42,2588,Navy,5.0,3.0,6.0,,4.0,2.0,,2.0,22.0,1.0,2.0,26.0,27.0,May 2024
+Europe,NAPLES B/C,42,2591,Navy,3.0,,6.0,,7.0,5.0,,4.0,25.0,1.0,2.0,30.0,32.0,May 2024
+Europe,LA PLAZA,43,2600,Navy,10.0,4.0,6.0,,,4.0,,2.0,4.0,30.0,2.0,34.0,38.0,May 2024
+Europe,PINZ,43,2601,Navy,2.0,,5.0,,5.0,1.0,,4.0,17.0,1.0,2.0,21.0,24.0,May 2024
+Europe,ROTA FLEET CTR,43,2605,Navy,2.0,,2.0,1.0,,,,2.0,7.0,1.0,1.0,10.0,11.0,May 2024
+Europe,NGIS ROTA,43,2890,Navy,7.0,,2.0,,,1.0,,10.0,1.0,1.0,1.0,13.0,13.0,May 2024
+Europe,PATCH C/C,45,256,Army,13.0,3.0,9.0,,8.0,3.0,,8.0,4.0,48.0,2.0,53.0,62.0,May 2024
+Europe,KELLY C/C,45,280,Army,2.0,2.0,3.0,,2.0,2.0,,6.0,2.0,19.0,1.0,22.0,28.0,May 2024
+Europe,GALAXY B/C,45,298,Army,1.0,,6.0,,7.0,1.0,,4.0,2.0,21.0,1.0,24.0,28.0,May 2024
+Europe,GRAF E/C,46,413,Army,11.0,4.0,5.0,,3.0,,,6.0,6.0,35.0,1.0,39.0,48.0,May 2024
+Europe,HOHENFELS B/C,46,415,Army,6.0,4.0,6.0,,3.0,,,3.0,22.0,1.0,1.0,27.0,27.0,May 2024
+Europe,VILSECK B/C,46,417,Army,4.0,4.0,3.0,2.0,,,,13.0,1.0,2.0,1.0,17.0,17.0,May 2024
+Europe,LANGENBRUCK,46,1858,Army,6.0,4.0,4.0,,7.0,,,7.0,5.0,2.0,1.0,39.0,15.0,May 2024
+Europe,ALGIER R/C,46,3145,Army,,,,,,,,0.0,,,0.0,0.0,0.0,May 2024
+Europe,THE VAULT,47,1669,Army,4.0,4.0,4.0,,5.0,,,6.0,6.0,4.0,2.0,36.0,18.0,May 2024
+Europe,LIBERTY GAMES,47,1881,Army,4.0,,8.0,,5.0,,,6.0,2.0,25.0,1.0,26.0,34.0,May 2024
+Europe,WIESBADEN E/C,47,2976,Army,6.0,4.0,,,4.0,,,4.0,6.0,2.0,1.0,27.0,13.0,May 2024
+Europe,ACE'S GAME RM,47,3108,Army,4.0,,,,3.0,,,2.0,1.0,10.0,1.0,11.0,14.0,May 2024
+Japan,YOKOSUKA B/C,18,3146,Navy,,4.0,3.0,,3.0,1.0,,4.0,3.0,18.0,2.0,22.0,27.0,May 2024
+Japan,CLUB ALLIANCE,18,3147,Navy,,5.0,2.0,,10.0,2.0,,6.0,4.0,29.0,2.0,33.0,41.0,May 2024
+Japan,CPO CLUB,18,3148,Navy,2.0,,8.0,,,1.0,,1.0,12.0,1.0,2.0,16.0,16.0,May 2024
+Japan,TAKEMIYA CLUB,18,3149,Navy,2.0,,3.0,,,1.0,,6.0,1.0,1.0,2.0,10.0,10.0,May 2024
+Japan,OFFICERS CLUB,18,3150,Navy,,,5.0,,,2.0,,1.0,5.0,13.0,2.0,17.0,21.0,May 2024
+Japan,SEASIDE CLUB,18,3151,Navy,,8.0,2.0,,7.0,,,6.0,9.0,32.0,2.0,36.0,49.0,May 2024
+Japan,HARBOR VIEW,19,3096,Navy,3.0,6.0,3.0,,3.0,,,4.0,7.0,26.0,2.0,31.0,39.0,May 2024
+Japan,HARIO,19,3097,Navy,2.0,5.0,7.0,,,,,14.0,1.0,2.0,2.0,19.0,19.0,May 2024
+Japan,GALAXIES,19,3098,Navy,4.0,6.0,4.0,,2.0,3.0,,6.0,4.0,2.0,2.0,36.0,14.0,May 2024
+Japan,ZAMA C/C,22,883,Army,2.0,5.0,7.0,,5.0,,,5.0,6.0,3.0,1.0,36.0,15.0,May 2024
+Japan,0,22,3171,Marine Corps,,,,,,,,3.0,3.0,6.0,1.0,9.0,13.0,May 2024
+Japan,ZAMA B/C,22,886,Army,1.0,,3.0,,3.0,,,1.0,8.0,1.0,1.0,11.0,11.0,May 2024
+Japan,ROAD HOUSE,22,1127,Marine Corps,3.0,,3.0,,,,,1.0,7.0,1.0,1.0,10.0,10.0,May 2024
+Japan,SANNO HOTEL,22,2664,Navy,4.0,4.0,6.0,,4.0,,,4.0,7.0,3.0,2.0,36.0,16.0,May 2024
+Japan,CORNER POCKET,22,3078,Navy,,,7.0,,3.0,,,4.0,3.0,17.0,1.0,20.0,25.0,May 2024
+Japan,CLUB TRILOGY,22,3079,Navy,2.0,6.0,4.0,,5.0,,,4.0,5.0,26.0,2.0,30.0,37.0,May 2024
+Japan,ZAMA G/C,22,3165,Army,1.0,4.0,3.0,,,,,3.0,3.0,14.0,1.0,17.0,21.0,May 2024
+Japan,HAVANA'S,26,967,Army,2.0,1.0,1.0,,3.0,1.0,,8.0,1.0,1.0,1.0,11.0,11.0,May 2024
+Japan,HASHMARKS,26,1105,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,May 2024
+Japan,COURTNEY B/C,26,1107,Marine Corps,2.0,,6.0,,,,,3.0,4.0,15.0,2.0,19.0,24.0,May 2024
+Japan,TAIYO G/C,26,1109,Marine Corps,7.0,9.0,9.0,,4.0,2.0,,7.0,12.0,2.0,2.0,57.0,23.0,May 2024
+Japan,BUTLER B/C,26,1111,Marine Corps,2.0,4.0,4.0,,7.0,2.0,,3.0,4.0,26.0,2.0,30.0,35.0,May 2024
+Japan,OCEAN BREEZE,26,1114,Marine Corps,12.0,18.0,13.0,,21.0,3.0,,6.0,6.0,2.0,2.0,87.0,16.0,May 2024
+Japan,SURFSIDE,26,1122,Marine Corps,3.0,,7.0,,,2.0,,2.0,4.0,18.0,2.0,22.0,26.0,May 2024
+Japan,PALMS,26,2238,Marine Corps,5.0,6.0,11.0,,5.0,4.0,,7.0,8.0,46.0,2.0,51.0,63.0,May 2024
+Japan,WEST PAC LODGE,26,2317,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,May 2024
+Japan,BEACH HEAD,26,2394,Marine Corps,5.0,3.0,3.0,,,,,11.0,1.0,1.0,2.0,15.0,15.0,May 2024
+Japan,CROW'S NEST,26,2523,Navy,2.0,4.0,2.0,,4.0,,,4.0,4.0,20.0,2.0,24.0,30.0,May 2024
+Japan,PORT CALL,26,2525,Navy,2.0,,,,3.0,3.0,,1.0,9.0,1.0,2.0,13.0,13.0,May 2024
+Japan,WHISPERS,26,3159,Marine Corps,4.0,4.0,8.0,,,,,4.0,6.0,26.0,2.0,30.0,38.0,May 2024
+Japan,HANSEN TLF,26,3169,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,May 2024
+OKINAWA,TORII PINES TLF,27,3164,Marine Corps,2.0,4.0,6.0,,5.0,,,6.0,2.0,25.0,2.0,30.0,35.0,May 2024
+OKINAWA,IWAKUNI CLUB,27,1137,Marine Corps,6.0,4.0,7.0,,3.0,4.0,,4.0,10.0,3.0,2.0,46.0,19.0,May 2024
+OKINAWA,TERROR CLUB,17,3156,Navy,10.0,,,,,,,10.0,1.0,2.0,2.0,13.0,15.0,May 2024
+Korea,DRAGON HILL,20,770,Army,10.0,5.0,14.0,,19.0,,,10.0,12.0,3.0,3.0,79.0,28.0,May 2024
+Korea,K-16 C/C,20,776,Army,4.0,,5.0,,4.0,,,13.0,1.0,1.0,2.0,17.0,17.0,May 2024
+Korea,STATE'S GRILL,21,866,Army,6.0,,3.0,,,1.0,,10.0,1.0,,1.0,11.0,12.0,May 2024
+Korea,HILLTOP,21,867,Army,3.0,10.0,2.0,,8.0,,,4.0,2.0,29.0,1.0,30.0,36.0,May 2024
+Korea,PERIMETER PUB,21,869,Army,,2.0,10.0,,,,,3.0,7.0,2.0,1.0,25.0,13.0,May 2024
+Korea,0,21,934,Army,,3.0,3.0,,,,,3.0,6.0,15.0,1.0,16.0,25.0,May 2024
+Korea,EL GUERRERO,21,891,Army,8.0,,4.0,,3.0,2.0,,4.0,4.0,25.0,1.0,26.0,34.0,May 2024
+Korea,TURTLE COVE,21,2521,Navy,4.0,,2.0,5.0,,,,2.0,13.0,1.0,1.0,14.0,17.0,May 2024
+Korea,IMPACT ZONE,23,797,Army,2.0,5.0,2.0,,7.0,,,4.0,4.0,24.0,1.0,25.0,33.0,May 2024
+Korea,WARRIOR'S,23,798,Army,6.0,,6.0,,,2.0,,14.0,1.0,,1.0,15.0,16.0,May 2024
+Korea,CASEY B/C,23,819,Army,6.0,4.0,6.0,,2.0,,,2.0,4.0,24.0,1.0,25.0,31.0,May 2024
+Korea,CASEY LODGE,23,1940,Army,1.0,,2.0,,2.0,,,4.0,2.0,2.0,1.0,14.0,9.0,May 2024
+Korea,FLIGHTLINE,24,3166,Army,,,,,,,,0.0,,,0.0,0.0,0.0,May 2024
+Korea,CAVE,24,3168,Army,10.0,9.0,8.0,,6.0,,,8.0,10.0,2.0,2.0,58.0,22.0,May 2024
+Korea,HUMPHREYS B/C,24,839,Army,2.0,4.0,4.0,,4.0,,,14.0,1.0,1.0,2.0,18.0,18.0,May 2024
+Korea,MORNING CALM,24,3158,Army,9.0,12.0,9.0,,24.0,3.0,,6.0,11.0,74.0,2.0,79.0,93.0,May 2024
+Europe,ARMSTRONG'S,2,194,Army,10.0,5.0,11.0,,3.0,2.0,,31.0,1.0,2.0,2.0,36.0,36.0,June 2024
+Europe,LCCC,2,195,Army,6.0,3.0,4.0,,6.0,,,19.0,1.0,2.0,2.0,24.0,24.0,June 2024
+Europe,KAZABRA,2,196,Army,,,,,,,,0.0,,,0.0,0.0,0.0,June 2024
+Europe,STRIKERS,2,218,Army,10.0,3.0,7.0,,6.0,1.0,,27.0,1.0,1.0,2.0,31.0,31.0,June 2024
+Europe,GOLD MINE,2,1038,Army,1.0,4.0,7.0,3.0,5.0,2.0,,22.0,1.0,2.0,2.0,27.0,27.0,June 2024
+Europe,ROB JAVA CAFE,2,2887,Army,1.0,2.0,6.0,,4.0,1.0,,14.0,1.0,1.0,2.0,18.0,18.0,June 2024
+Europe,SEMBACH C/C,2,3072,Army,7.0,,2.0,,3.0,2.0,,14.0,1.0,2.0,2.0,19.0,19.0,June 2024
+Europe,EDO_CARD_LAB,2,3170,Army,,,,,,,,0.0,,,0.0,0.0,0.0,June 2024
+Europe,LA PLAZA,43,2600,Navy,10.0,4.0,6.0,,,4.0,,24.0,1.0,1.0,2.0,28.0,28.0,June 2024
+Europe,PINZ,43,2601,Navy,1.0,,4.0,,5.0,1.0,,11.0,1.0,1.0,1.0,14.0,14.0,June 2024
+Europe,ROTA FLEET CTR,43,2605,Navy,,,,,,,,0.0,,,0.0,0.0,0.0,June 2024
+Europe,NGIS ROTA,43,2890,Navy,5.0,,2.0,,,1.0,,8.0,1.0,1.0,1.0,11.0,11.0,June 2024
+Europe,GRAF E/C,46,413,Army,11.0,4.0,5.0,,3.0,,,23.0,1.0,2.0,1.0,27.0,27.0,June 2024
+Europe,HOHENFELS B/C,46,415,Army,6.0,4.0,6.0,,3.0,,,19.0,1.0,3.0,1.0,24.0,24.0,June 2024
+Europe,VILSECK B/C,46,417,Army,4.0,4.0,3.0,2.0,,,,13.0,1.0,2.0,1.0,17.0,17.0,June 2024
+Europe,LANGENBRUCK,46,1858,Army,6.0,4.0,4.0,,7.0,,,21.0,1.0,2.0,1.0,25.0,25.0,June 2024
+Europe,ALGIER R/C,46,3145,Army,,,,,,,,0.0,,,0.0,0.0,0.0,June 2024
+Europe,THE VAULT,47,1669,Army,4.0,4.0,4.0,,5.0,,,17.0,1.0,2.0,2.0,20.0,22.0,June 2024
+Europe,LIBERTY GAMES,47,1881,Army,4.0,,8.0,,5.0,,,17.0,1.0,,1.0,18.0,19.0,June 2024
+Europe,WIESBADEN E/C,47,2976,Army,6.0,4.0,,,4.0,,,14.0,1.0,,1.0,15.0,16.0,June 2024
+Europe,ACE'S GAME RM,47,3108,Army,4.0,,,,3.0,,,7.0,1.0,,1.0,8.0,9.0,June 2024
+Japan,YOKOSUKA B/C,18,3146,Navy,,4.0,3.0,,3.0,1.0,,11.0,1.0,1.0,2.0,15.0,15.0,June 2024
+Japan,CLUB ALLIANCE,18,3147,Navy,,5.0,2.0,,10.0,2.0,,19.0,1.0,1.0,2.0,23.0,23.0,June 2024
+Japan,CPO CLUB,18,3148,Navy,2.0,,8.0,,,1.0,,11.0,1.0,1.0,2.0,15.0,15.0,June 2024
+Japan,TAKEMIYA CLUB,18,3149,Navy,2.0,,3.0,,,1.0,,6.0,1.0,1.0,2.0,10.0,10.0,June 2024
+Japan,OFFICERS CLUB,18,3150,Navy,,,5.0,,,2.0,,7.0,1.0,1.0,2.0,11.0,11.0,June 2024
+Japan,SEASIDE CLUB,18,3151,Navy,,8.0,2.0,,7.0,,,17.0,1.0,1.0,2.0,21.0,21.0,June 2024
+,ZAMA C/C,22,883,Army,2.0,5.0,7.0,,5.0,,,19.0,1.0,1.0,1.0,22.0,22.0,June 2024
+,SHA CLUB,22,885,Army,,,,,,,,0.0,,,0.0,0.0,0.0,June 2024
+,ZAMA B/C,22,886,Army,1.0,,3.0,,3.0,,,7.0,1.0,1.0,1.0,10.0,10.0,June 2024
+,ROAD HOUSE,22,1127,Marine Corps,1.0,2.0,3.0,,,,,6.0,1.0,1.0,1.0,9.0,9.0,June 2024
+,SANNO HOTEL,22,2664,Navy,3.0,4.0,6.0,,4.0,,,17.0,1.0,1.0,2.0,21.0,21.0,June 2024
+,CORNER POCKET,22,3078,Navy,,,7.0,,3.0,,,10.0,1.0,1.0,1.0,13.0,13.0,June 2024
+,CLUB TRILOGY,22,3079,Navy,2.0,6.0,4.0,,5.0,,,17.0,1.0,1.0,1.0,20.0,20.0,June 2024
+,ZAMA G/C,22,3165,Army,1.0,4.0,3.0,,,,,8.0,1.0,1.0,1.0,11.0,11.0,June 2024
+,HAVANA'S,26,967,Army,2.0,1.0,1.0,,3.0,1.0,,8.0,1.0,1.0,1.0,11.0,11.0,June 2024
+,HASHMARKS,26,1105,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,June 2024
+,COURTNEY B/C,26,1107,Marine Corps,2.0,,6.0,,,,,8.0,1.0,1.0,2.0,12.0,12.0,June 2024
+,TAIYO G/C,26,1109,Marine Corps,7.0,9.0,9.0,,4.0,2.0,,31.0,1.0,2.0,2.0,36.0,36.0,June 2024
+,BUTLER B/C,26,1111,Marine Corps,2.0,4.0,4.0,,7.0,2.0,,19.0,1.0,1.0,2.0,23.0,23.0,June 2024
+,OCEAN BREEZE,26,1114,Marine Corps,12.0,18.0,13.0,,21.0,3.0,,67.0,1.0,3.0,2.0,73.0,73.0,June 2024
+,SURFSIDE,26,1122,Marine Corps,3.0,,7.0,,,2.0,,12.0,1.0,1.0,2.0,16.0,16.0,June 2024
+,PALMS,26,2238,Marine Corps,5.0,6.0,11.0,,5.0,4.0,,31.0,1.0,2.0,2.0,36.0,36.0,June 2024
+,WEST PAC LODGE,26,2317,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,June 2024
+,BEACH HEAD,26,2394,Marine Corps,5.0,3.0,3.0,,,,,11.0,1.0,1.0,2.0,15.0,15.0,June 2024
+,CROW'S NEST,26,2523,Navy,2.0,4.0,2.0,,4.0,,,12.0,1.0,1.0,2.0,16.0,16.0,June 2024
+,PORT CALL,26,2525,Navy,2.0,,,,3.0,3.0,,8.0,1.0,1.0,2.0,12.0,12.0,June 2024
+,WHISPERS,26,3159,Marine Corps,4.0,4.0,8.0,,,,,16.0,1.0,1.0,2.0,20.0,20.0,June 2024
+,HANSEN TLF,26,3169,Marine Corps,,,,,,,,0.0,,,0.0,0.0,0.0,June 2024
+Korea,STATE'S GRILL,21,866,Army,6.0,,3.0,,,1.0,,10.0,1.0,,1.0,11.0,12.0,June 2024
+Korea,HILLTOP,21,867,Army,3.0,10.0,2.0,,8.0,,,23.0,1.0,,1.0,24.0,25.0,June 2024
+Korea,PERIMETER PUB,21,869,Army,5.0,2.0,7.0,,2.0,,,16.0,1.0,,1.0,17.0,18.0,June 2024
+Korea,WINDY CITY,21,870,Army,,,,,,,,0.0,,,0.0,0.0,0.0,June 2024
+Korea,EL GUERRERO,21,891,Army,3.0,,,,,,,3.0,,,3.0,3.0,6.0,June 2024
+Korea,TURTLE COVE,21,2521,Navy,4.0,,2.0,5.0,,,,11.0,1.0,,1.0,12.0,13.0,June 2024
+Korea,IMPACT ZONE,23,797,Army,2.0,5.0,2.0,,7.0,,,16.0,1.0,,1.0,17.0,18.0,June 2024
+Korea,WARRIOR'S,23,798,Army,6.0,,6.0,,,2.0,,14.0,1.0,,1.0,15.0,16.0,June 2024
+Korea,CASEY B/C,23,819,Army,6.0,4.0,6.0,,2.0,,,18.0,1.0,,1.0,19.0,20.0,June 2024
+Korea,CASEY LODGE,23,1940,Army,1.0,,2.0,,2.0,,,5.0,1.0,,1.0,6.0,7.0,June 2024
+Korea,FLIGHTLINE,24,3166,Army,,,,,,,,0.0,,,0.0,0.0,0.0,June 2024
+Korea,CAVE,24,3168,Army,10.0,9.0,8.0,,6.0,,,33.0,1.0,2.0,2.0,38.0,38.0,June 2024
+Korea,HUMPHREYS B/C,24,839,Army,2.0,4.0,4.0,,4.0,,,14.0,1.0,1.0,2.0,18.0,18.0,June 2024
+Korea,MORNING CALM,24,3158,Army,9.0,12.0,9.0,,24.0,3.0,,57.0,1.0,2.0,2.0,62.0,62.0,June 2024
